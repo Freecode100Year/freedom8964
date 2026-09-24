@@ -124,7 +124,7 @@ def layout(loc, file, body):
 <meta property="og:description" content="{html.escape(desc)}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{url_of(loc, file) if file != '404.html' else SITE}">
-<meta name="theme-color" content="#0a0a0a">
+<meta name="theme-color" content="#000000">
 <meta name="color-scheme" content="dark">
 {alternates}
 <link rel="icon" href="{up}assets/favicon.svg" type="image/svg+xml">
