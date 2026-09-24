@@ -30,7 +30,7 @@ PAGES = [
     ("victims.html", "遇难者与天安门母亲", "他们有名字。天安门母亲群体三十多年的寻访与记录。"),
     ("documents.html", "史料与解密档案", "死亡人数的各方说法、解密外交电报与可查阅的原始资料。"),
     ("hongkong.html", "香港维园烛光：1990–2019", "三十年的烛光，以及它如何被禁止。"),
-    ("videos.html", "影像：经核实的 YouTube 视频", "来自新闻机构、公共媒体与人权组织官方频道的视频，按六四事件、亲历者、黄雀行动、天安门母亲、香港、各地纪念分类，逐一核实标题、频道与链接。"),
+    ("videos.html", "影像：经核实的 YouTube 视频", "经核实的六四相关视频，按六四事件、亲历者、黄雀行动、天安门母亲、香港、各地纪念、柴静访谈、王剑每日观察分类。"),
     ("candle.html", "点一支蜡烛", "为 1989 年的遇难者点一支蜡烛。不收集任何数据。"),
     ("about.html", "关于本站", "编辑原则、来源标准、更正方式与隐私说明。"),
     ("en/index.html", "Freedom · June Fourth 1989", "Remembering Beijing, spring 1989: timeline, victims, sources and verified video."),
