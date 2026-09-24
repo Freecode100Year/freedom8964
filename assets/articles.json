@@ -2,7 +2,7 @@
  {
   "key": "1989",
   "heading": "1989 年的现场报道",
-  "intro": "镇压发生当时，外国记者从北京发回的报道。",
+  "intro": "1989 年当时的报道。",
   "items": [
    {
     "title": "CRACKDOWN IN BEIJING; TROOPS ATTACK AND CRUSH BEIJING PROTEST; THOUSANDS FIGHT BACK, SCORES ARE KILLED",
@@ -16,7 +16,7 @@
  {
   "key": "explain",
   "heading": "回顾与解读",
-  "intro": "主流媒体和机构对 1989 年事件的梳理、回顾与分析。",
+  "intro": "回顾、解读与专题页。",
   "items": [
    {
     "title": "Tiananmen Square: What happened in the protests of 1989?",
@@ -79,7 +79,7 @@
  {
   "key": "tankman",
   "heading": "坦克人",
-  "intro": "那张照片是怎么拍下、又是怎么带出中国的。",
+  "intro": "坦克人照片相关。",
   "items": [
    {
     "title": "Tank Man at 25: Behind the Iconic Tiananmen Square Photo",
@@ -121,7 +121,7 @@
  {
   "key": "toll",
   "heading": "死亡人数与解密档案",
-  "intro": "关于死亡人数的报道与解密文件。各方说法的对照见本站“史料”页。",
+  "intro": "死亡人数与解密档案相关。",
   "items": [
    {
     "title": "Tiananmen Square protest death toll 'was 10,000'",
@@ -142,7 +142,7 @@
  {
   "key": "mothers",
   "heading": "天安门母亲与遇难者家属",
-  "intro": "家属们年复一年的诉求，以及她们受到的限制。",
+  "intro": "天安门母亲与遇难者家属。",
   "items": [
    {
     "title": "六四37周年前夕 天安门母亲再促公布真相",
@@ -170,7 +170,7 @@
  {
   "key": "hongkong",
   "heading": "香港：悼念被禁与支联会案",
-  "intro": "从“最后一次”维园悼念到支联会领导人被判刑。",
+  "intro": "维园悼念、禁令、支联会案。",
   "items": [
    {
     "title": "Hong Kong marks Tiananmen massacre for what many fear will be the last time",
@@ -226,7 +226,7 @@
  {
   "key": "anniv",
   "heading": "周年纪念与各地悼念",
-  "intro": "近年六四周年前后的报道：北京和香港的戒备，以及台北、华盛顿等地的悼念。",
+  "intro": "周年纪念与各地悼念。",
   "items": [
    {
     "title": "Heavy security in China and Hong Kong on 35th anniversary of Tiananmen crackdown",
@@ -282,7 +282,7 @@
  {
   "key": "gov",
   "heading": "各国政府声明",
-  "intro": "周年之际各国政府的公开声明（附报道或原文）。",
+  "intro": "各国政府声明（原文或报道）。",
   "items": [
    {
     "title": "六四死难者终将得到昭雪：卢比奥国务卿就天安门广场屠杀事件37周年发表声明",

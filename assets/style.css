@@ -132,3 +132,12 @@ button.btn[disabled] { opacity: .6; cursor: default; }
 .vlist .d { font-size: 15px; color: var(--text); opacity: .85; margin: 2px 0; }
 .tag { display: inline-block; font-size: 12px; line-height: 1.6; padding: 0 6px; border: 1px solid var(--line); border-radius: 4px; color: var(--muted); }
 h2[id] { scroll-margin-top: 110px; }
+/* 手机上表格改为每条记录竖排 */
+@media (max-width: 600px) {
+  .table-wrap table, .table-wrap tbody, .table-wrap tr, .table-wrap td { display: block; width: 100%; }
+  .table-wrap tr:first-child { display: none; }
+  .table-wrap tr { padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .table-wrap td { border: 0; padding: 2px 0; }
+  .table-wrap td:first-child { color: var(--candle); font-weight: 700; font-size: 14px; }
+  .table-wrap td:last-child { font-size: 13px; }
+}

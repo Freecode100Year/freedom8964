@@ -13,7 +13,7 @@ UPDATED = "2026-09-24"
 
 NAV = [
     ("index.html", "首页"),
-    ("timeline.html", "时间线"),
+    ("timeline.html", "大事记"),
     ("victims.html", "遇难者"),
     ("documents.html", "史料"),
     ("hongkong.html", "香港烛光"),
@@ -27,8 +27,8 @@ NAV = [
 
 # (文件名, 标题, 描述)
 PAGES = [
-    ("index.html", "自由 · 八九六四", "六四事件相关信息导航：时间线、遇难者、史料、纪念馆、经核实的视频与媒体报道链接，每条都指向原始出处。"),
-    ("timeline.html", "时间线：1989 年春夏", "从胡耀邦逝世到六四清场与通缉，逐日记录，附来源。"),
+    ("index.html", "自由 · 八九六四", "六四事件相关信息的采集、整理与归档导航。本站不生产内容，每条记录指向原始出处。"),
+    ("timeline.html", "大事记", "1989 年 4 月至 6 月的日期记录，附出处。"),
     ("victims.html", "遇难者与天安门母亲", "他们有名字。天安门母亲群体三十多年的寻访与记录。"),
     ("documents.html", "史料与解密档案", "死亡人数的各方说法、解密外交电报与可查阅的原始资料。"),
     ("hongkong.html", "香港维园烛光：1990–2019", "三十年的烛光，以及它如何被禁止。"),
@@ -37,7 +37,7 @@ PAGES = [
     ("reports.html", "报道：世界媒体的六四报道", "纽约时报、BBC、CNN、华盛顿邮报、时代周刊、NPR、自由亚洲电台、美国之音等的六四报道与各国政府声明，逐一核实。"),
     ("candle.html", "点一支蜡烛", "为 1989 年的遇难者点一支蜡烛。不收集任何数据。"),
     ("about.html", "关于本站", "编辑原则、来源标准、更正方式与隐私说明。"),
-    ("en/index.html", "Freedom · June Fourth 1989", "Remembering Beijing, spring 1989: timeline, victims, sources and verified video."),
+    ("en/index.html", "Freedom · June Fourth 1989", "A directory of information about June Fourth 1989. Links to original sources only."),
 ]
 
 
@@ -77,7 +77,7 @@ def layout(path, title, desc, body):
 {body}
 <footer class="site-foot">
   <div class="wrap">
-    <p>本站是六四事件相关信息的<strong>导航站</strong>：整理公开资料的链接与出处，不生产、不转载原创内容；文章与视频版权归原作者和原发布方。</p>
+    <p>本站不生产内容，只采集、收集、整理、记录、归档六四事件相关信息的链接与出处；文章与视频版权归原作者和原发布方。</p>
     <p>不使用 Cookie，不做任何访问统计。最后更新：{UPDATED} · <a href="{up}about.html">编辑原则与更正</a></p>
   </div>
 </footer>
