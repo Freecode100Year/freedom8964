@@ -32,7 +32,6 @@
       <a href="../en/museum">Museum</a>
       <a href="../en/videos">Video</a>
       <a href="../en/reports">Press</a>
-      <a href="../en/candle">Candle</a>
       <a href="../en/about">About</a>
     </nav>
     <nav class="langs" aria-label="Language">
@@ -44,10 +43,14 @@
 </header>
 <section class="hero">
   <div class="wrap">
-    <div class="flame" aria-hidden="true"></div>
+    <div class="candle hero-candle" id="candle" aria-hidden="true">
+      <div class="flame"></div><div class="wick"></div><div class="body"></div>
+    </div>
     <h1>Freedom · <span class="num">June Fourth</span></h1>
     <div class="rule"></div>
     <p class="lead">A directory for collecting, organising and archiving information about the 1989 Tiananmen Square protests and massacre.<br>This site does not produce content. Every record points to its original source.</p>
+    <p class="hero-light"><button class="btn" id="light" type="button" data-done="Lit">Light a candle</button></p>
+    <p class="small muted">The candle is lit only in your browser. Nothing is sent or counted.</p>
   </div>
 </section>
 
@@ -61,7 +64,6 @@
       <a class="card" href="museum"><h3>June 4th Memorial Museum (USA)</h3><p>Records of the museum; visitor information.</p></a>
       <a class="card" href="videos"><h3>Video</h3><p>84 verified YouTube links, by topic.</p></a>
       <a class="card" href="reports"><h3>Press</h3><p>36 press reports and government statements, by topic.</p></a>
-      <a class="card" href="candle"><h3>Light a Candle</h3><p>No data collected.</p></a>
     </div>
 
     <h2>Key websites</h2>
@@ -81,6 +83,7 @@
     <p class="small muted">Principles, corrections and privacy: <a href="about">About</a>.</p>
   </div>
 </main>
+<script src="/assets/candle.js" defer></script>
 
 <footer class="site-foot">
   <div class="wrap">

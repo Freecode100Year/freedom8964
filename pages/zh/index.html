@@ -1,9 +1,13 @@
 <section class="hero">
   <div class="wrap">
-    <div class="flame" aria-hidden="true"></div>
+    <div class="candle hero-candle" id="candle" aria-hidden="true">
+      <div class="flame"></div><div class="wick"></div><div class="body"></div>
+    </div>
     <h1>自由 · <span class="num">八九六四</span></h1>
     <div class="rule"></div>
     <p class="lead">六四事件相关信息的采集、整理与归档导航。<br>本站不生产内容，每条记录都指向原始出处。</p>
+    <p class="hero-light"><button class="btn" id="light" type="button" data-done="已点亮">点亮</button></p>
+    <p class="small muted">点蜡烛只在你的浏览器里发生，不上传、不计数。</p>
   </div>
 </section>
 
@@ -17,7 +21,6 @@
       <a class="card" href="museum.html"><h3>六四纪念馆（美国）</h3><p>纪念馆筹建与发展的记录，参观信息。</p></a>
       <a class="card" href="videos.html"><h3>影像</h3><p>{{VIDEO_COUNT}} 个经核实的 YouTube 视频链接，按主题分类。</p></a>
       <a class="card" href="reports.html"><h3>报道</h3><p>{{ARTICLE_COUNT}} 篇媒体报道与政府声明链接，按主题分类。</p></a>
-      <a class="card" href="candle.html"><h3>点一支蜡烛</h3><p>不收集任何数据。</p></a>
     </div>
 
 
@@ -39,3 +42,4 @@
     <p class="small muted">收录原则、更正方式与隐私说明见 <a href="about.html">关于本站</a>。</p>
   </div>
 </main>
+<script src="/assets/candle.js" defer></script>

@@ -17,7 +17,7 @@ UPDATED = "2026-09-24"
 S2T = opencc.OpenCC("s2t.json")
 
 FILES = ["index.html", "timeline.html", "victims.html", "documents.html", "hongkong.html",
-         "museum.html", "videos.html", "reports.html", "candle.html", "about.html"]
+         "museum.html", "videos.html", "reports.html", "about.html"]
 
 LOCALES = {
     "zh": {"prefix": "", "lang": "zh-Hans", "label": "简体", "src": "zh"},
@@ -28,7 +28,7 @@ LOCALES = {
 # 每种语言的界面文字；繁體由简体自动转换
 T = {
     "zh": {
-        "nav": ["首页", "大事记", "遇难者", "史料", "香港烛光", "纪念馆", "影像", "报道", "点一支蜡烛", "关于"],
+        "nav": ["首页", "大事记", "遇难者", "史料", "香港烛光", "纪念馆", "影像", "报道", "关于"],
         "pages": {
             "index.html": ("自由 · 八九六四", "六四事件相关信息的采集、整理与归档导航。本站不生产内容，每条记录指向原始出处。"),
             "timeline.html": ("大事记", "1989 年 4 月至 6 月的日期记录，附出处。"),
@@ -38,7 +38,6 @@ T = {
             "museum.html": ("六四纪念馆（美国）", "纪念馆筹建与发展的记录，参观信息。"),
             "videos.html": ("影像", "经核实的六四相关 YouTube 视频链接，按主题分类。"),
             "reports.html": ("报道", "媒体报道与各国政府声明链接，按主题分类，逐一核实。"),
-            "candle.html": ("点一支蜡烛", "为 1989 年的遇难者。不收集任何数据。"),
             "about.html": ("关于本站", "本站定位、收录原则、更正方式与隐私说明。"),
             "404.html": ("找不到页面", "页面不存在"),
         },
@@ -48,7 +47,7 @@ T = {
         "channel": "频道：", "paywall": "需订阅", "count": "（{}）", "navlabel": "主导航", "langlabel": "语言",
     },
     "en": {
-        "nav": ["Home", "Chronology", "Victims", "Records", "Hong Kong", "Museum", "Video", "Press", "Candle", "About"],
+        "nav": ["Home", "Chronology", "Victims", "Records", "Hong Kong", "Museum", "Video", "Press", "About"],
         "pages": {
             "index.html": ("Freedom · June Fourth 1989", "A directory for collecting, organising and archiving information about June Fourth 1989. Every record points to its original source."),
             "timeline.html": ("Chronology", "Dated records, April to June 1989, with sources."),
@@ -58,7 +57,6 @@ T = {
             "museum.html": ("June 4th Memorial Museum (USA)", "Records of the museum; visitor information."),
             "videos.html": ("Video", "Verified YouTube links about June Fourth, by topic."),
             "reports.html": ("Press", "Press reports and government statements, by topic, each verified."),
-            "candle.html": ("Light a Candle", "For the victims of 1989. No data collected."),
             "about.html": ("About", "What this site is, principles, corrections and privacy."),
             "404.html": ("Page not found", "Page not found"),
         },
@@ -73,7 +71,9 @@ T = {
 def to_hant(text):
     """简体转繁體，只转标签外的文字，不动网址和属性。"""
     parts = re.split(r"(<[^>]+>)", text)
-    return "".join(p if p.startswith("<") else S2T.convert(p) for p in parts)
+    text = "".join(p if p.startswith("<") else S2T.convert(p) for p in parts)
+    # 按钮点亮后显示的文字存在 data-done 属性里，也要转换
+    return re.sub(r'data-done="([^"]*)"', lambda m: f'data-done="{S2T.convert(m.group(1))}"', text)
 
 
 def strings(loc):
@@ -227,7 +227,7 @@ def main():
         shutil.rmtree(DIST)
     DIST.mkdir()
     shutil.copytree(ROOT / "assets", DIST / "assets", ignore=shutil.ignore_patterns("videos.json", "articles.json"))
-    for f in ("_headers", "robots.txt"):
+    for f in ("_headers", "_redirects", "robots.txt"):
         shutil.copy(ROOT / f, DIST / f)
 
     videos = json.loads((ROOT / "assets/videos.json").read_text())

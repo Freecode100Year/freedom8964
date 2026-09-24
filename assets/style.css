@@ -155,3 +155,9 @@ button.btn[disabled] { color: var(--muted); border-color: var(--line); cursor: d
   .langs { order: 2; margin-left: auto; }
   .nav { order: 3; width: 100%; }
 }
+/* 首页蜡烛 */
+.hero-candle { width: 32px; height: 118px; margin: 0 auto 36px; }
+.hero-candle .body { height: 84px; }
+.hero-candle .wick { bottom: 84px; }
+.hero-candle .flame { bottom: 90px; margin-left: -7px; }
+.hero-light { margin: 2em 0 .6em; }
