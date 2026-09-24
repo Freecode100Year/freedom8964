@@ -1,5 +1,5 @@
 // freedom8964.com 的 Cloudflare Worker：
-//  1. 网站自己每天定时采集（美东凌晨 1 点开始，由 Durable Object 闹钟驱动，每分钟处理一批来源）：
+//  1. 网站自己每天定时采集（美东凌晨 3 点开始，由 Durable Object 闹钟驱动，每分钟处理一批来源）：
 //     白名单新闻订阅源 + 影像栏目已收录的 YouTube 官方频道，只取标题和网址，关键词过滤，视频经 oEmbed 核实。
 //     结果存在 KV（F8964_AUTO），不依赖 VPS。
 //  2. “最新收录”页（/latest、/en/latest、/zh-hant/latest）在返回时把 KV 里的条目填进静态页面。
@@ -149,28 +149,32 @@ function renderList(items, kind, lang) {
   return `<h2 id="${kind}">${l[kind]} <span class="muted small">${lang === "en" ? ` (${sorted.length})` : `（${sorted.length}）`}</span></h2>\n<ul class="vlist">\n${lis || `  <li class="muted">${l.none}</li>`}\n</ul>`;
 }
 
-// 下一个美东凌晨 1:00 对应的时间戳（自动适应夏令时）
-function next1amNY(from = Date.now()) {
+// 每天采集的时间：美东凌晨 3 点
+const RUN_HOUR_NY = 3;
+const hourInNY = (t) => +new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", hour: "2-digit", hourCycle: "h23" }).format(t);
+// 下一个美东凌晨 RUN_HOUR_NY 点对应的时间戳（自动适应夏令时：美东比 UTC 晚 4 或 5 小时）
+function nextRunNY(from = Date.now()) {
   for (let d = 0; d <= 2; d++) {
-    for (const h of [5, 6]) {
+    for (const h of [RUN_HOUR_NY + 4, RUN_HOUR_NY + 5]) {
       const t = new Date(from);
       t.setUTCDate(t.getUTCDate() + d); t.setUTCHours(h, 0, 30, 0);
-      const hourNY = +new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", hour: "2-digit", hourCycle: "h23" }).format(t);
-      if (hourNY === 1 && t.getTime() > from) return t.getTime();
+      if (hourInNY(t) === RUN_HOUR_NY && t.getTime() > from) return t.getTime();
     }
   }
   return from + 86400000;
 }
 
-// 网站自己的“闹钟”：不占用账户的 Cron 名额。每天美东 1:00 响，逐批处理来源（每批间隔 1 分钟），处理完定下一天。
+// 网站自己的“闹钟”：不占用账户的 Cron 名额。每天美东 3:00 响，逐批处理来源（每批间隔 1 分钟），处理完定下一天。
 export class Collector extends DurableObject {
   async ensure() {
-    if (!(await this.ctx.storage.getAlarm())) await this.ctx.storage.setAlarm(next1amNY());
+    const a = await this.ctx.storage.getAlarm();
+    // 没有闹钟，或者闹钟定在别的钟点（比如改了采集时间），就重新定到下一个采集时间；正在分批处理中（1 分钟内的闹钟）不动
+    if (!a || (a - Date.now() > 120000 && hourInNY(new Date(a)) !== RUN_HOUR_NY)) await this.ctx.storage.setAlarm(nextRunNY());
     return new Date(await this.ctx.storage.getAlarm()).toISOString();
   }
   async alarm() {
     const r = await runBatch(this.env, nyNow().date);
-    await this.ctx.storage.setAlarm(r.done ? next1amNY() : Date.now() + 60000);
+    await this.ctx.storage.setAlarm(r.done ? nextRunNY() : Date.now() + 60000);
   }
   async runNow() {
     const r = await runBatch(this.env, nyNow().date);
