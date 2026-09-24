@@ -1,0 +1,11 @@
+const { chromium } = require('playwright');
+(async () => { const b = await chromium.launch(); const c = await b.newContext({ locale:'zh-CN', userAgent:'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36' }); const p = await c.newPage();
+  const reqs=[]; p.on('request', r => { if (/admin-ajax|wp-json|page/.test(r.url())) reqs.push(r.method()+' '+r.url()+' '+(r.postData()||'').slice(0,300)); });
+  await p.goto('https://chinadigitaltimes.net/chinese/tag/%E5%85%AD%E5%9B%9B', { waitUntil:'domcontentloaded', timeout:60000 });
+  await p.waitForSelector('article h2.entry-title a', { timeout:40000 });
+  const html = await p.$eval('.pagination, .wp-pagenavi, nav', n => n.outerHTML.slice(0,800)).catch(()=> 'no pag');
+  console.log(html);
+  await p.click('text="2"').catch(e=>console.log('click fail', e.message.slice(0,100)));
+  await p.waitForTimeout(6000);
+  console.log('url now', p.url()); console.log('first title', await p.$eval('article h2.entry-title a', a=>a.textContent));
+  console.log(reqs.slice(-5).join('\n')); await b.close(); })();

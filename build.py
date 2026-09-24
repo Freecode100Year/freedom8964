@@ -17,7 +17,7 @@ UPDATED = "2026-09-24"
 S2T = opencc.OpenCC("s2t.json")
 
 FILES = ["index.html", "timeline.html", "victims.html", "documents.html", "hongkong.html",
-         "museum.html", "videos.html", "reports.html", "about.html"]
+         "museum.html", "videos.html", "reports.html", "cdt.html", "latest.html", "about.html"]
 
 LOCALES = {
     "zh": {"prefix": "", "lang": "zh-Hans", "label": "简体", "src": "zh"},
@@ -28,7 +28,7 @@ LOCALES = {
 # 每种语言的界面文字；繁體由简体自动转换
 T = {
     "zh": {
-        "nav": ["首页", "大事记", "遇难者", "史料", "香港烛光", "纪念馆", "影像", "报道", "关于"],
+        "nav": ["首页", "大事记", "遇难者", "史料", "香港烛光", "纪念馆", "影像", "报道", "中国数字时代", "最新", "关于"],
         "pages": {
             "index.html": ("自由 · 八九六四", "六四事件相关信息的采集、整理与归档导航。本站不生产内容，每条记录指向原始出处。"),
             "timeline.html": ("大事记", "1989 年 4 月至 6 月的日期记录，附出处。"),
@@ -38,6 +38,8 @@ T = {
             "museum.html": ("六四纪念馆（美国）", "纪念馆筹建与发展的记录，参观信息。"),
             "videos.html": ("影像", "经核实的六四相关 YouTube 视频链接，按主题分类。"),
             "reports.html": ("报道", "媒体报道与各国政府声明链接，按主题分类，逐一核实。"),
+            "cdt.html": ("中国数字时代", "中国数字时代“六四”相关标签下的文章，按年份排列，只收标题和网址。"),
+            "latest.html": ("最新收录", "每天自动采集的六四相关报道、视频与中国数字时代文章，只收标题和网址。"),
             "about.html": ("关于本站", "本站定位、收录原则、更正方式与隐私说明。"),
             "404.html": ("找不到页面", "页面不存在"),
         },
@@ -45,9 +47,10 @@ T = {
         "foot2": "不使用 Cookie，不做任何访问统计。最后更新：",
         "foot_link": "收录原则与更正",
         "channel": "频道：", "paywall": "需订阅", "count": "（{}）", "navlabel": "主导航", "langlabel": "语言",
+        "l_articles": "报道", "l_videos": "视频", "l_cdt": "中国数字时代", "l_more": "全部 {} 篇 →", "l_none": "暂无", "l_added": "收录于",
     },
     "en": {
-        "nav": ["Home", "Chronology", "Victims", "Records", "Hong Kong", "Museum", "Video", "Press", "About"],
+        "nav": ["Home", "Chronology", "Victims", "Records", "Hong Kong", "Museum", "Video", "Press", "CDT", "Latest", "About"],
         "pages": {
             "index.html": ("Freedom · June Fourth 1989", "A directory for collecting, organising and archiving information about June Fourth 1989. Every record points to its original source."),
             "timeline.html": ("Chronology", "Dated records, April to June 1989, with sources."),
@@ -57,6 +60,8 @@ T = {
             "museum.html": ("June 4th Memorial Museum (USA)", "Records of the museum; visitor information."),
             "videos.html": ("Video", "Verified YouTube links about June Fourth, by topic."),
             "reports.html": ("Press", "Press reports and government statements, by topic, each verified."),
+            "cdt.html": ("China Digital Times", "China Digital Times articles tagged with June Fourth, by year. Titles and links only."),
+            "latest.html": ("Latest", "June Fourth reports, videos and China Digital Times articles collected daily. Titles and links only."),
             "about.html": ("About", "What this site is, principles, corrections and privacy."),
             "404.html": ("Page not found", "Page not found"),
         },
@@ -64,6 +69,7 @@ T = {
         "foot2": "No cookies, no analytics. Last updated: ",
         "foot_link": "Principles and corrections",
         "channel": "Channel: ", "paywall": "Subscription", "count": " ({})", "navlabel": "Main navigation", "langlabel": "Language",
+        "l_articles": "Press", "l_videos": "Video", "l_cdt": "China Digital Times", "l_more": "All {} articles →", "l_none": "None yet", "l_added": "added",
     },
 }
 
@@ -218,6 +224,48 @@ def article_section(sec, loc):
     return section_head(sec, loc, len(items)) + '<ul class="vlist">\n' + "\n".join(items) + "\n</ul>\n"
 
 
+def auto_item(x, loc, kind):
+    s = strings(loc)
+    url = html.escape(x["url"])
+    if kind == "videos":
+        meta = f'{s["channel"]}<a href="{html.escape(x["channel_url"])}" rel="noopener noreferrer" target="_blank">{html.escape(x["channel"])}</a>'
+    else:
+        meta = html.escape(x.get("outlet", ""))
+    if x.get("date"):
+        meta += f" · {x['date']}"
+    return (f'  <li><div class="t"><a href="{url}" rel="noopener noreferrer" target="_blank">{html.escape(x["title"])}</a></div>'
+            f'<div class="c">{meta} · {url}</div></li>')
+
+
+def latest_block(auto, loc, n_cdt):
+    s = strings(loc)
+    out = []
+    for kind, label, limit in (("articles", s["l_articles"], 100), ("videos", s["l_videos"], 100), ("cdt", s["l_cdt"], 20)):
+        items = sorted(auto.get(kind, []), key=lambda x: (x.get("added", ""), x.get("date", "")), reverse=True)
+        if kind == "cdt":
+            items = [x for x in items if x.get("added") != "archive"] or sorted(auto.get(kind, []), key=lambda x: x.get("date", ""), reverse=True)
+        out.append(f'<h2 id="{kind}">{label} <span class="muted small">{s["count"].format(len(items[:limit]))}</span></h2>')
+        out.append('<ul class="vlist">\n' + ("\n".join(auto_item(x, loc, kind) for x in items[:limit]) or f'  <li class="muted">{s["l_none"]}</li>') + "\n</ul>")
+        if kind == "cdt":
+            out.append(f'<p class="small"><a href="cdt.html">{s["l_more"].format(n_cdt)}</a></p>')
+    return "\n".join(out) + "\n"
+
+
+def cdt_block(auto, loc):
+    s = strings(loc)
+    by_year = {}
+    for x in sorted(auto.get("cdt", []), key=lambda x: x.get("date", ""), reverse=True):
+        by_year.setdefault((x.get("date") or "????")[:4], []).append(x)
+    toc_ = '<p class="toc">' + " · ".join(f'<a href="#y{y}">{y}</a>' for y in by_year) + "</p>\n"
+    parts = [toc_]
+    for y, items in by_year.items():
+        parts.append(f'<h2 id="y{y}">{y} <span class="muted small">{s["count"].format(len(items))}</span></h2>')
+        parts.append('<ul class="vlist">\n' + "\n".join(
+            f'  <li><div class="t"><a href="{html.escape(x["url"])}" rel="noopener noreferrer" target="_blank">{html.escape(x["title"])}</a></div>'
+            f'<div class="c">{x.get("date", "")} · {html.escape(x["url"])}</div></li>' for x in items) + "\n</ul>")
+    return "\n".join(parts) + "\n"
+
+
 def toc(sections, loc):
     return '<p class="toc">' + " · ".join(f'<a href="#{s["key"]}">{heading_of(s, loc)[0]}</a>' for s in sections) + "</p>\n"
 
@@ -226,7 +274,7 @@ def main():
     if DIST.exists():
         shutil.rmtree(DIST)
     DIST.mkdir()
-    shutil.copytree(ROOT / "assets", DIST / "assets", ignore=shutil.ignore_patterns("videos.json", "articles.json"))
+    shutil.copytree(ROOT / "assets", DIST / "assets", ignore=shutil.ignore_patterns("videos.json", "articles.json", "auto.json"))
     for f in ("_headers", "_redirects", "robots.txt"):
         shutil.copy(ROOT / f, DIST / f)
 
@@ -234,16 +282,23 @@ def main():
     articles = json.loads((ROOT / "assets/articles.json").read_text())
     n_videos = sum(len(sec["videos"]) for sec in videos)
     n_articles = sum(len(sec["items"]) for sec in articles)
+    auto_path = ROOT / "assets/auto.json"
+    auto = json.loads(auto_path.read_text()) if auto_path.exists() else {"videos": [], "articles": [], "cdt": []}
+    n_cdt = len(auto.get("cdt", []))
+    auto_updated = max([x.get("added", "") for k in auto for x in auto[k] if x.get("added") != "archive"] or [UPDATED])
 
     count = 0
     for loc, conf in LOCALES.items():
         lists = {
             "{{VIDEOS}}": toc(videos, loc) + "\n".join(video_section(sec, loc) for sec in videos),
             "{{ARTICLES}}": toc(articles, loc) + "\n".join(article_section(sec, loc) for sec in articles),
+            "{{LATEST}}": latest_block(auto, loc, n_cdt),
+            "{{CDT_ALL}}": cdt_block(auto, loc),
         }
         for file in FILES + ["404.html"]:
             body = (ROOT / "pages" / conf["src"] / file).read_text()
-            body = body.replace("{{VIDEO_COUNT}}", str(n_videos)).replace("{{ARTICLE_COUNT}}", str(n_articles))
+            body = (body.replace("{{VIDEO_COUNT}}", str(n_videos)).replace("{{ARTICLE_COUNT}}", str(n_articles))
+                    .replace("{{CDT_COUNT}}", str(n_cdt)).replace("{{AUTO_UPDATED}}", auto_updated))
             if loc == "zh-hant":
                 body = to_hant(body)
             if loc != "en":

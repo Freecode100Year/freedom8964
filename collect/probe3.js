@@ -1,0 +1,13 @@
+const { chromium } = require('playwright');
+(async () => { const b = await chromium.launch(); const c = await b.newContext({ locale:'zh-CN', userAgent:'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36' }); const p = await c.newPage();
+  const reqs=[]; p.on('request', r => { const u=r.url(); if (u.includes('chinadigitaltimes.net') && r.resourceType()!=='image' && r.resourceType()!=='stylesheet' && r.resourceType()!=='script' && r.resourceType()!=='font') reqs.push(r.method()+' '+u.slice(0,160)+' '+(r.postData()||'').slice(0,400)); });
+  await p.goto('https://chinadigitaltimes.net/chinese/tag/%E5%85%AD%E5%9B%9B', { waitUntil:'domcontentloaded', timeout:60000 });
+  await p.waitForSelector('article h2.entry-title a', { timeout:40000 });
+  await p.waitForLoadState('load').catch(()=>{}); await p.waitForTimeout(6000);
+  const pag = await p.$$eval('a', as => as.filter(a => a.textContent.trim()==='2').map(a => a.outerHTML.slice(0,300)));
+  console.log('页码2候选:', pag);
+  const el = await p.$('xpath=//a[normalize-space(text())="2"]');
+  reqs.length=0; if (el) await el.click(); await p.waitForTimeout(10000);
+  console.log('articles:', await p.$$eval('article h2.entry-title a', as=>as.length), await p.$$eval('article h2.entry-title a', as=>as.map(a=>a.textContent.slice(0,20)).join(' / ')));
+  console.log('点击后首条:', await p.$eval('article h2.entry-title a', a=>a.textContent));
+  console.log(reqs.join('\n')); await b.close(); })();
