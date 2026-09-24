@@ -11,7 +11,7 @@
   --blood-text: #c81d25;   /* 血色：黑底上的文字（对比度足够阅读） */
   --accent: var(--blood-text);
   --mourn: var(--blood);
-  --flame: #c81d25;
+  --flame: #f5b82e;        /* 烛火：黄色 */
 
   --max: min(1080px, 92vw);
   --fs: clamp(15px, 0.9rem + 0.25vw, 18px);
@@ -60,7 +60,7 @@ img { max-width: 100%; height: auto; }
 .hero .rule { width: 56px; height: 2px; background: var(--blood); margin: 0 auto 1.6em; }
 .hero p.lead { font-size: 1.05rem; color: var(--muted); max-width: 40em; margin: 0 auto; }
 .flame { width: 14px; height: 28px; margin: 0 auto 32px; border-radius: 50% 50% 45% 45% / 60% 60% 40% 40%;
-  background: radial-gradient(ellipse at 50% 70%, #ffffff 0%, #ff4a52 30%, var(--flame) 50%, rgba(200,29,37,0) 74%);
+  background: radial-gradient(ellipse at 50% 70%, #ffffff 0%, #fff1b0 28%, var(--flame) 50%, rgba(245,184,46,0) 74%);
   animation: flicker 4s ease-in-out infinite; opacity: .9; }
 @keyframes flicker { 0%,100% { transform: scale(1) rotate(-1deg) } 45% { transform: scale(1.05,.96) rotate(1deg) } 75% { transform: scale(.97,1.03) } }
 @media (prefers-reduced-motion: reduce) { .flame { animation: none; } }
