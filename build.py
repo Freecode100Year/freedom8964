@@ -238,17 +238,14 @@ def auto_item(x, loc, kind):
 
 
 def latest_block(auto, loc, n_cdt):
+    """报道和视频由 Cloudflare Worker 每日采集、在访问时填入（占位符）；中国数字时代部分在这里静态生成。"""
     s = strings(loc)
-    out = []
-    for kind, label, limit in (("articles", s["l_articles"], 100), ("videos", s["l_videos"], 100), ("cdt", s["l_cdt"], 20)):
-        items = sorted(auto.get(kind, []), key=lambda x: (x.get("added", ""), x.get("date", "")), reverse=True)
-        if kind == "cdt":
-            items = [x for x in items if x.get("added") != "archive"] or sorted(auto.get(kind, []), key=lambda x: x.get("date", ""), reverse=True)
-        out.append(f'<h2 id="{kind}">{label} <span class="muted small">{s["count"].format(len(items[:limit]))}</span></h2>')
-        out.append('<ul class="vlist">\n' + ("\n".join(auto_item(x, loc, kind) for x in items[:limit]) or f'  <li class="muted">{s["l_none"]}</li>') + "\n</ul>")
-        if kind == "cdt":
-            out.append(f'<p class="small"><a href="cdt.html">{s["l_more"].format(n_cdt)}</a></p>')
-    return "\n".join(out) + "\n"
+    items = sorted([x for x in auto.get("cdt", []) if x.get("added") != "archive"] or auto.get("cdt", []),
+                   key=lambda x: (x.get("added", ""), x.get("date", "")), reverse=True)[:20]
+    cdt = ('<h2 id="cdt">' + s["l_cdt"] + ' <span class="muted small">' + s["count"].format(len(items)) + '</span></h2>\n<ul class="vlist">\n'
+           + ("\n".join(auto_item(x, loc, "cdt") for x in items) or f'  <li class="muted">{s["l_none"]}</li>')
+           + f'\n</ul>\n<p class="small"><a href="cdt.html">{s["l_more"].format(n_cdt)}</a></p>')
+    return "<!--AUTO-ARTICLES-->\n<!--AUTO-VIDEOS-->\n" + cdt + "\n"
 
 
 def cdt_block(auto, loc):

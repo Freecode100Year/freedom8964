@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""每日自动采集六四相关的新标题和网址（不读正文），写入 assets/auto.json，然后构建、部署、提交，并用 Telegram 汇报。
+"""每日自动采集中国数字时代“六四”标签的新文章标题和网址（新闻、YouTube 已改由 Cloudflare Worker 采集）（不读正文），写入 assets/auto.json，然后构建、部署、提交，并用 Telegram 汇报。
 
 来源（全部是白名单）：
   - 中国数字时代“六四”标签第一页（用浏览器打开，cdt.js）
@@ -161,7 +161,8 @@ def main():
     auto = json.loads(AUTO.read_text()) if AUTO.exists() else {"videos": [], "articles": [], "cdt": []}
     seen = known_urls() | {x["url"] for k in auto for x in auto[k]}
     log = []
-    found = {"cdt": collect_cdt(log), "videos": collect_youtube(log), "articles": collect_feeds(log)}
+    # 新闻订阅源和 YouTube 已改由 Cloudflare Worker（worker.js）每天自动采集；这里只采集需要真浏览器打开的中国数字时代
+    found = {"cdt": collect_cdt(log)}
     added = {}
     ex = excluded()
     for k, items in found.items():
@@ -195,7 +196,7 @@ def main():
         if r.returncode != 0:
             subprocess.run([str(Path.home() / "bin/tg-send"), f"⚠️ freedom8964 自动采集：{' '.join(cmd[:3])} 失败\n{(r.stderr or r.stdout)[-500:]}"])
             return
-    names = {"cdt": "中国数字时代", "videos": "视频", "articles": "报道"}
+    names = {"cdt": "中国数字时代"}
     lines = [f"🕯️ freedom8964 今日自动收录 {total} 条："]
     for k, v in added.items():
         for x in v[:15]:

@@ -1,6 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "freedom8964",
+  "main": "worker.js",
   "compatibility_date": "2026-09-21",
   // 本站承诺不做任何访问统计，所以关闭请求日志
   "observability": { "enabled": false },
@@ -8,6 +9,14 @@
   "routes": [{ "pattern": "freedom8964.com/*", "zone_name": "freedom8964.com" }],
   "assets": {
     "directory": "dist",
-    "not_found_handling": "404-page"
-  }
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    // 只有“最新收录”页先经过 Worker（填入 KV 里的每日采集结果），其他页面直接走静态资源
+    "run_worker_first": ["/__collect", "/latest", "/latest.html", "/en/latest", "/en/latest.html", "/zh-hant/latest", "/zh-hant/latest.html"]
+  },
+  // 每日自动采集（结果存 KV）
+  "kv_namespaces": [{ "binding": "AUTO", "id": "740ce332e0b3484ba516b21b6cb00937" }],
+  // 定时采集用 Durable Object 闹钟（账户的 5 个 Cron 名额已被其他项目占满）
+  "durable_objects": { "bindings": [{ "name": "COLLECTOR", "class_name": "Collector" }] },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["Collector"] }]
 }

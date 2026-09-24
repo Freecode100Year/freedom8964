@@ -1,3 +1,4 @@
 node_modules/
 .wbcache/
 collect.log
+.collect_key
