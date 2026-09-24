@@ -124,3 +124,7 @@ button.btn[disabled] { opacity: .6; cursor: default; }
 }
 .msg { margin-top: 18px; min-height: 1.8em; }
 .epitaph { text-align: center; font-family: var(--serif); font-size: 20px; margin: 28px 0; }
+/* 蜡烛：未点亮时不播放火焰动画（动画里的 opacity 会盖过 opacity:0） */
+.candle .flame { animation: none; opacity: 0; }
+.candle.lit .flame { animation: flicker 3.2s ease-in-out infinite; opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .candle.lit .flame { animation: none; } }

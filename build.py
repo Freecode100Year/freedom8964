@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """生成 freedom8964.com 静态网站到 dist/。页面正文在 pages/*.html，这里统一套上头尾。"""
 import html
+import re
 import json
 import shutil
 from pathlib import Path
@@ -55,7 +56,7 @@ def layout(path, title, desc, body):
 <meta property="og:title" content="{html.escape(title)}">
 <meta property="og:description" content="{html.escape(desc)}">
 <meta property="og:type" content="website">
-<meta property="og:url" content="{SITE}/{'' if path == 'index.html' else path}">
+<meta property="og:url" content="{SITE}/{path.replace('index.html', '').removesuffix('.html')}">
 <meta name="theme-color" content="#0e0d0c">
 <link rel="icon" href="{up}assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="{up}assets/style.css">
@@ -79,6 +80,27 @@ def layout(path, title, desc, body):
 </body>
 </html>
 """
+
+
+def keep_dates_together(text):
+    """中文里“6 月 3 日”“17 岁”这类数字和单位之间换成不换行空格，手机上不会被拆到两行。只处理标签外的文字。"""
+    def fix(chunk):
+        chunk = re.sub(r"(\d) (?=[年月日时岁人位名部个份])", "\\1\u00a0", chunk)
+        return re.sub(r"(?<=[年月]) (?=\d)", "\u00a0", chunk)
+    parts = re.split(r"(<[^>]+>)", text)
+    return "".join(p if p.startswith("<") else fix(p) for p in parts)
+
+
+def pretty_links(page):
+    """站内相对链接去掉 .html（Workers 静态资源会把 /x.html 307 跳到 /x），index.html 变成目录。"""
+    def fix(m):
+        target, frag = m.group(1), m.group(2) or ""
+        if target.endswith("index.html"):
+            target = target[: -len("index.html")] or "./"
+        else:
+            target = target[: -len(".html")]
+        return f'href="{target}{frag}"'
+    return re.sub(r'href="(?!https?:|/)([^"#]*?\.html)(#[^"]*)?"', fix, page)
 
 
 def video_section(key, heading, intro, videos):
@@ -115,12 +137,17 @@ def main():
     for path, title, desc in PAGES:
         body = (ROOT / "pages" / path).read_text()
         body = body.replace("{{VIDEOS}}", extra.get(path, "")).replace("{{VIDEO_COUNT}}", str(total))
+        if not path.startswith("en/"):
+            body = keep_dates_together(body)
         out = DIST / path
         out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(layout(path, title, desc, body))
+        out.write_text(pretty_links(layout(path, title, desc, body)))
 
-    (DIST / "404.html").write_text(layout("404.html", "找不到页面", "页面不存在", (ROOT / "pages/404.html").read_text()))
-    urls = "\n".join(f"  <url><loc>{SITE}/{'' if p == 'index.html' else p}</loc><lastmod>{UPDATED}</lastmod></url>" for p, _, _ in PAGES)
+    # 404 页可能出现在任意深度的路径下，所以站内链接全部改成绝对路径
+    page404 = pretty_links(layout("404.html", "找不到页面", "页面不存在", (ROOT / "pages/404.html").read_text()))
+    page404 = re.sub(r'(href|src)="(?!https?:|/)(?:\./)?', r'\1="/', page404)
+    (DIST / "404.html").write_text(page404)
+    urls = "\n".join(f"  <url><loc>{SITE}/{p.replace('index.html', '').removesuffix('.html')}</loc><lastmod>{UPDATED}</lastmod></url>" for p, _, _ in PAGES)
     (DIST / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}\n</urlset>\n')
     print(f"built {len(PAGES) + 1} pages, {total} videos → {DIST}")
 

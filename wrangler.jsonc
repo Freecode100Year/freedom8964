@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "freedom8964",
+  "compatibility_date": "2026-09-21",
+  // 本站承诺不做任何访问统计，所以关闭请求日志
+  "observability": { "enabled": false },
+  // 根域名的 DNS 记录（CNAME 到旧 TheWire 的 pages.dev）是代理状态，用路由在边缘接管整个站点
+  "routes": [{ "pattern": "freedom8964.com/*", "zone_name": "freedom8964.com" }],
+  "assets": {
+    "directory": "dist",
+    "not_found_handling": "404-page"
+  }
+}
