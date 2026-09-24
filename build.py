@@ -126,10 +126,10 @@ def article_section(sec):
         meta = html.escape(a["outlet"]) + (f" · {a['date']}" if a["date"] else "")
         if a.get("paywall"):
             meta += ' · <span class="tag">需订阅</span>'
-        desc = f'<div class="d">{html.escape(a["desc"])}</div>' if a.get("desc") else ""
+        url = html.escape(a["url"])
         items.append(
-            f'  <li><div class="t"><a href="{html.escape(a["url"])}" rel="noopener noreferrer" target="_blank">{html.escape(a["title"])}</a></div>'
-            f'{desc}<div class="c">{meta}</div></li>'
+            f'  <li><div class="t"><a href="{url}" rel="noopener noreferrer" target="_blank">{html.escape(a["title"])}</a></div>'
+            f'<div class="c">{meta} · <span class="muted">{url}</span></div></li>'
         )
     return (f'<h2 id="{sec["key"]}">{sec["heading"]} <span class="muted small">（{len(sec["items"])}）</span></h2>\n'
             f'<p class="muted">{sec["intro"]}</p>\n<ul class="vlist">\n' + "\n".join(items) + "\n</ul>\n")

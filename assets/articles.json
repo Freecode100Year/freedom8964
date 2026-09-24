@@ -9,7 +9,6 @@
     "outlet": "The New York Times 纽约时报",
     "date": "1989-06-04",
     "url": "https://www.nytimes.com/1989/06/04/world/crackdown-beijing-troops-attack-crush-beijing-protest-thousands-fight-back.html",
-    "desc": "纪思道（Nicholas D. Kristof）当夜从北京发回的头版报道。",
     "paywall": true
    }
   ]
@@ -24,7 +23,6 @@
     "outlet": "BBC News",
     "date": "2019-06-03",
     "url": "https://www.bbc.com/news/world-asia-48445934",
-    "desc": "三十周年时的完整事件回顾。",
     "paywall": false
    },
    {
@@ -32,7 +30,6 @@
     "outlet": "The Washington Post 华盛顿邮报",
     "date": "2019-06-03",
     "url": "https://www.washingtonpost.com/world/2019/06/03/tiananmen-squares-haunted-silence-years-later/",
-    "desc": "三十年后天安门广场上的沉默（分析文章）。",
     "paywall": true
    },
    {
@@ -40,7 +37,6 @@
     "outlet": "The Washington Post 华盛顿邮报",
     "date": "2019-05-30",
     "url": "https://www.washingtonpost.com/graphics/2019/opinions/global-opinions/tiananmen-square-a-massacre-erased/",
-    "desc": "中国试图抹去记忆，但它的影响仍在（评论专题）。",
     "paywall": true
    },
    {
@@ -48,7 +44,6 @@
     "outlet": "Amnesty International 国际特赦组织",
     "date": "2026-06-03",
     "url": "https://www.amnesty.org/en/projects/the-1989-tiananmen-crackdown/",
-    "desc": "国际特赦组织的六四专题页。",
     "paywall": false
    },
    {
@@ -56,7 +51,6 @@
     "outlet": "Amnesty International UK 国际特赦组织英国分部",
     "date": "2026-06-04",
     "url": "https://www.amnesty.org.uk/knowledge-hub/all-resources/china-1989-tiananmen-square-protests-demonstration-massacre/",
-    "desc": "事件经过与此后的人权状况。",
     "paywall": false
    },
    {
@@ -64,7 +58,6 @@
     "outlet": "U.S. Department of State, Office of the Historian 美国国务院史学家办公室",
     "date": "",
     "url": "https://history.state.gov/milestones/1989-1992/tiananmen-square",
-    "desc": "美国外交史中的六四，以及对中美关系的影响。",
     "paywall": false
    },
    {
@@ -72,7 +65,6 @@
     "outlet": "HISTORY",
     "date": "2009-11-13",
     "url": "https://www.history.com/this-day-in-history/june-4/tiananmen-square-massacre-takes-place",
-    "desc": "“历史上的今天”：6 月 4 日。",
     "paywall": false
    },
    {
@@ -80,7 +72,6 @@
     "outlet": "CBC News 加拿大广播公司",
     "date": "2014-06-04",
     "url": "https://amp.cbc.ca/news/world/1989-tiananmen-square-protests-15-iconic-images-1.2664229",
-    "desc": "二十五周年：15 张标志性照片。",
     "paywall": false
    }
   ]
@@ -95,7 +86,6 @@
     "outlet": "TIME 时代周刊",
     "date": "2014-06-04",
     "url": "https://time.com/3809688/tank-man-iconic-tiananmen-photo/",
-    "desc": "美联社摄影师韦德纳（Jeff Widener）讲述拍摄经过。",
     "paywall": false
    },
    {
@@ -103,7 +93,6 @@
     "outlet": "CNN",
     "date": "2019-05",
     "url": "https://www.cnn.com/interactive/2019/05/world/tiananmen-square-tank-man-cnnphotos/",
-    "desc": "CNN 图片专题。",
     "paywall": false
    },
    {
@@ -111,7 +100,6 @@
     "outlet": "CNN",
     "date": "2024-06-04",
     "url": "https://edition.cnn.com/2024/06/03/china/tiananmen-square-tank-man-photo-intl-hnk",
-    "desc": "记者们如何把照片偷偷带出中国。",
     "paywall": false
    },
    {
@@ -119,7 +107,6 @@
     "outlet": "NPR · Throughline",
     "date": "2024-08-12",
     "url": "https://www.npr.org/2024/08/12/1256977996/the-story-behind-the-tank-man-photo-throughline",
-    "desc": "NPR 历史节目《Throughline》。",
     "paywall": false
    },
    {
@@ -127,7 +114,6 @@
     "outlet": "Encyclopaedia Britannica 大英百科全书",
     "date": "",
     "url": "https://www.britannica.com/biography/Tank-Man",
-    "desc": "百科条目：意义、照片与身份之谜。",
     "paywall": false
    }
   ]
@@ -142,7 +128,6 @@
     "outlet": "BBC News",
     "date": "2017-12-23",
     "url": "https://www.bbc.com/news/world-asia-china-42465516",
-    "desc": "英国解密电报称至少一万人死亡（单一信源，有争议）。",
     "paywall": false
    },
    {
@@ -150,7 +135,6 @@
     "outlet": "National Security Archive 美国国家安全档案馆",
     "date": "2019-06-04",
     "url": "https://nsarchive.gwu.edu/news/china/2019-06-04/tiananmen-massacre-30th-anniversary-china-declassified",
-    "desc": "三十周年解密文件汇编。",
     "paywall": false
    }
   ]
@@ -165,7 +149,6 @@
     "outlet": "自由亚洲电台 RFA",
     "date": "2026-06-01",
     "url": "https://www.rfa.org/mandarin/zhengzhi/2026/06/01/china-june-4th-tiananmen-mothers-crackdown/",
-    "desc": "",
     "paywall": false
    },
    {
@@ -173,7 +156,6 @@
     "outlet": "自由亚洲电台 RFA",
     "date": "2026-06-02",
     "url": "https://www.rfa.org/mandarin/zhengzhi/2026/06/02/china-june-4th-tiananmen-crackdown-mothers-ban-memorial/",
-    "desc": "",
     "paywall": false
    },
    {
@@ -181,7 +163,6 @@
     "outlet": "自由亚洲电台 RFA",
     "date": "2025-06-05",
     "url": "https://www.rfa.org/mandarin/zhengzhi/2025/06/04/china-june-4th-crackdown-tiananmen-mother-memorial-censorship-blockade/",
-    "desc": "",
     "paywall": false
    }
   ]
@@ -196,7 +177,6 @@
     "outlet": "CNN",
     "date": "2020-06-04",
     "url": "https://edition.cnn.com/2020/06/03/asia/hong-kong-tiananmen-june-4-china-intl-hnk/index.html",
-    "desc": "2020 年，许多人担心这是最后一次悼念。",
     "paywall": false
    },
    {
@@ -204,7 +184,6 @@
     "outlet": "The Washington Post 华盛顿邮报",
     "date": "2023",
     "url": "https://www.washingtonpost.com/opinions/interactive/2023/tiananmen-anniversary-photos-hong-kong-repression-protest/",
-    "desc": "从照片看香港的六四周年（评论图片专题）。",
     "paywall": true
    },
    {
@@ -212,7 +191,6 @@
     "outlet": "自由亚洲电台 RFA",
     "date": "2026-06-03",
     "url": "https://www.rfa.org/mandarin/zhengzhi/2026/06/03/june-4th-hong-kong-national-security-law-victoria-park-vigil/",
-    "desc": "",
     "paywall": false
    },
    {
@@ -220,7 +198,6 @@
     "outlet": "Radio Free Asia",
     "date": "2026-06-04",
     "url": "https://www.rfa.org/english/china/2026/06/03/hong-kong-victoria-park-tiananmen-square-china/",
-    "desc": "2026 年六四，维园一片寂静。",
     "paywall": false
    },
    {
@@ -228,7 +205,6 @@
     "outlet": "U.S. News & World Report",
     "date": "2026-09-10",
     "url": "https://www.usnews.com/news/world/articles/2026-09-10/hong-kong-court-jails-two-tiananmen-vigil-group-leaders-for-7-years",
-    "desc": "李卓人、邹幸彤分别被判入狱 7 年和 7 年 3 个月。",
     "paywall": false
    },
    {
@@ -236,7 +212,6 @@
     "outlet": "Hong Kong Free Press 香港自由新闻",
     "date": "2026-09-11",
     "url": "https://hongkongfp.com/2026/09/11/hong-kong-tiananmen-vigil-activists-sentenced-up-to-7-years-3-months-for-inciting-subversion/",
-    "desc": "支联会案判决详情：最高 7 年 3 个月，支联会被罚 150 万港元。",
     "paywall": false
    },
    {
@@ -244,7 +219,6 @@
     "outlet": "NPR",
     "date": "2026-09-11",
     "url": "https://www.npr.org/2026/09/11/g-s1-142832/hong-kong-court-sentences-vigil-organizers",
-    "desc": "三名悼念活动组织者入狱。",
     "paywall": false
    }
   ]
@@ -259,7 +233,6 @@
     "outlet": "NPR",
     "date": "2024-06-04",
     "url": "https://www.npr.org/2024/06/04/g-s1-2662/china-hong-kong-anniversary-tiananmen-crackdown",
-    "desc": "三十五周年：中国和香港严密戒备。",
     "paywall": false
    },
    {
@@ -267,7 +240,6 @@
     "outlet": "PBS NewsHour（美联社）",
     "date": "2025-06-04",
     "url": "https://www.pbs.org/newshour/world/tiananmen-square-anniversary-shows-chinas-ability-to-suppress-history",
-    "desc": "三十六周年：中国压制历史的能力。",
     "paywall": false
    },
    {
@@ -275,7 +247,6 @@
     "outlet": "自由亚洲电台 RFA 粤语",
     "date": "2025-05-23",
     "url": "https://www.rfa.org/cantonese/world/asia/2025/05/23/hong-kong-june-4-world-memorial/",
-    "desc": "",
     "paywall": false
    },
    {
@@ -283,7 +254,6 @@
     "outlet": "Human Rights in China 中国人权",
     "date": "2026-06-10",
     "url": "https://news.hrichina.org/p/the-37th-anniversary-of-the-june",
-    "desc": "三十七周年：打压加剧，记忆犹存。",
     "paywall": false
    },
    {
@@ -291,7 +261,6 @@
     "outlet": "美国之音 VOA",
     "date": "2026-06-04",
     "url": "https://www.voachinese.com/a/interview-rowena-he-june-fourth-37anniversary-20260603/8157034.html",
-    "desc": "",
     "paywall": false
    },
    {
@@ -299,7 +268,6 @@
     "outlet": "美国之音 VOA",
     "date": "2026-06-05",
     "url": "https://www.voachinese.com/a/tiananmen-square-massacre-candlelight-vigil-20260605/8157714.html",
-    "desc": "",
     "paywall": false
    },
    {
@@ -307,7 +275,6 @@
     "outlet": "美国之音 VOA",
     "date": "",
     "url": "https://www.voachinese.com/z/4089",
-    "desc": "美国之音历年六四报道汇总。",
     "paywall": false
    }
   ]
@@ -322,7 +289,6 @@
     "outlet": "美国之音 VOA",
     "date": "2026-06-03",
     "url": "https://www.voachinese.com/a/rubio-statement-on-the-37th-anniversary-of-the-tiananmen-square-massacre-20260603/8157028.html",
-    "desc": "美国国务卿声明全文中译。",
     "paywall": false
    },
    {
@@ -330,7 +296,6 @@
     "outlet": "美国之音 VOA",
     "date": "2026-06-04",
     "url": "https://www.voachinese.com/a/taiwan-s-president-commemorates-the-37th-anniversary-of-china-s-june-4th-massacre-20260604/8157267.html",
-    "desc": "",
     "paywall": false
    },
    {
@@ -338,7 +303,6 @@
     "outlet": "Government of Canada 加拿大外交部",
     "date": "2024-06-04",
     "url": "https://www.canada.ca/en/global-affairs/news/2024/06/statement-by-foreign-affairs-minister-on-35th-anniversary-of-tiananmen-square.html",
-    "desc": "加拿大外长乔利（Mélanie Joly）声明原文。",
     "paywall": false
    }
   ]
