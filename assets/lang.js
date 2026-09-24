@@ -15,7 +15,10 @@
     }
   }
   document.addEventListener("click", function (e) {
-    var a = e.target.closest && e.target.closest("a[data-setlang]");
-    if (a) { try { localStorage.setItem("lang", a.getAttribute("data-setlang")); } catch (err) {} }
+    var a = e.target.closest && e.target.closest("a[href]");
+    if (!a) return;
+    if (a.hasAttribute("data-setlang")) { try { localStorage.setItem("lang", a.getAttribute("data-setlang")); } catch (err) {} }
+    // 在当前标签页离开本站：首页蜡烛熄灭（新标签页打开的外链不影响）
+    if (a.host && a.host !== location.host && a.target !== "_blank") { try { sessionStorage.removeItem("candle-lit"); } catch (err) {} }
   });
 })();
