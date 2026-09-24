@@ -73,8 +73,8 @@ function parseFeed(xml) {
 }
 
 async function load(env) {
-  const [a, v, m] = await Promise.all(["articles", "videos", "meta"].map((k) => env.AUTO.get(k, "json")));
-  return { articles: a || [], videos: v || [], meta: m || {} };
+  const [a, v, m, k] = await Promise.all(["articles", "videos", "meta", "known"].map((x) => env.AUTO.get(x, "json")));
+  return { articles: a || [], videos: v || [], meta: m || {}, known: k || [] };
 }
 
 // 处理一批来源；返回本批新增条目
@@ -83,7 +83,8 @@ async function runBatch(env, today) {
   const meta = db.meta;
   if (meta.day !== today) { meta.day = today; meta.cursor = 0; meta.added = []; }
   if (meta.cursor >= SOURCES.length) return { done: true, added: [] };
-  const seen = new Set([...db.articles, ...db.videos].map((x) => x.url).concat(meta.known || []));
+  // known：影像、报道栏目人工整理过的链接（由 sync_known.py 同步），不重复收
+  const seen = new Set([...db.articles, ...db.videos].map((x) => x.url).concat(db.known));
   const batch = SOURCES.slice(meta.cursor, meta.cursor + BATCH);
   const added = [];
   for (const src of batch) {
