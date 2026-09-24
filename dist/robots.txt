@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://freedom8964.com/sitemap.xml
