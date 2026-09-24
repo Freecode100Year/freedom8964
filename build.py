@@ -19,6 +19,7 @@ NAV = [
     ("hongkong.html", "香港烛光"),
     ("museum.html", "纪念馆"),
     ("videos.html", "影像"),
+    ("reports.html", "报道"),
     ("candle.html", "点一支蜡烛"),
     ("about.html", "关于"),
     ("en/index.html", "English"),
@@ -33,6 +34,7 @@ PAGES = [
     ("hongkong.html", "香港维园烛光：1990–2019", "三十年的烛光，以及它如何被禁止。"),
     ("museum.html", "六四纪念馆（美国）", "从华盛顿特展、纽约开馆到洛杉矶重建，以及 2026 年遭破坏事件。附参观信息。"),
     ("videos.html", "影像：经核实的 YouTube 视频", "经核实的六四相关视频，按六四事件、亲历者、黄雀行动、天安门母亲、香港、各地纪念、柴静访谈、王剑每日观察分类。"),
+    ("reports.html", "报道：世界媒体的六四报道", "纽约时报、BBC、CNN、华盛顿邮报、时代周刊、NPR、自由亚洲电台、美国之音等的六四报道与各国政府声明，逐一核实。"),
     ("candle.html", "点一支蜡烛", "为 1989 年的遇难者点一支蜡烛。不收集任何数据。"),
     ("about.html", "关于本站", "编辑原则、来源标准、更正方式与隐私说明。"),
     ("en/index.html", "Freedom · June Fourth 1989", "Remembering Beijing, spring 1989: timeline, victims, sources and verified video."),
@@ -118,6 +120,21 @@ def video_section(sec):
             f'<p class="muted">{sec["intro"]}</p>\n<ul class="vlist">\n' + "\n".join(items) + "\n</ul>\n")
 
 
+def article_section(sec):
+    items = []
+    for a in sec["items"]:
+        meta = html.escape(a["outlet"]) + (f" · {a['date']}" if a["date"] else "")
+        if a.get("paywall"):
+            meta += ' · <span class="tag">需订阅</span>'
+        desc = f'<div class="d">{html.escape(a["desc"])}</div>' if a.get("desc") else ""
+        items.append(
+            f'  <li><div class="t"><a href="{html.escape(a["url"])}" rel="noopener noreferrer" target="_blank">{html.escape(a["title"])}</a></div>'
+            f'{desc}<div class="c">{meta}</div></li>'
+        )
+    return (f'<h2 id="{sec["key"]}">{sec["heading"]} <span class="muted small">（{len(sec["items"])}）</span></h2>\n'
+            f'<p class="muted">{sec["intro"]}</p>\n<ul class="vlist">\n' + "\n".join(items) + "\n</ul>\n")
+
+
 def video_toc(sections):
     links = " · ".join(f'<a href="#{s["key"]}">{s["heading"]}</a>' for s in sections)
     return f'<p class="toc">{links}</p>\n'
@@ -127,17 +144,22 @@ def main():
     if DIST.exists():
         shutil.rmtree(DIST)
     DIST.mkdir()
-    shutil.copytree(ROOT / "assets", DIST / "assets", ignore=shutil.ignore_patterns("videos.json"))
+    shutil.copytree(ROOT / "assets", DIST / "assets", ignore=shutil.ignore_patterns("videos.json", "articles.json"))
     for f in ("_headers", "robots.txt"):
         shutil.copy(ROOT / f, DIST / f)
 
     videos = json.loads((ROOT / "assets/videos.json").read_text())
     total = sum(len(sec["videos"]) for sec in videos)
-    extra = {"videos.html": video_toc(videos) + "\n".join(video_section(sec) for sec in videos)}
+    articles = json.loads((ROOT / "assets/articles.json").read_text())
+    article_total = sum(len(sec["items"]) for sec in articles)
+    extra = {
+        "videos.html": video_toc(videos) + "\n".join(video_section(sec) for sec in videos),
+        "reports.html": video_toc(articles) + "\n".join(article_section(sec) for sec in articles),
+    }
 
     for path, title, desc in PAGES:
         body = (ROOT / "pages" / path).read_text()
-        body = body.replace("{{VIDEOS}}", extra.get(path, "")).replace("{{VIDEO_COUNT}}", str(total))
+        body = body.replace("{{VIDEOS}}", extra.get(path, "")).replace("{{ARTICLES}}", extra.get(path, "")).replace("{{VIDEO_COUNT}}", str(total)).replace("{{ARTICLE_COUNT}}", str(article_total))
         if not path.startswith("en/"):
             body = keep_dates_together(body)
         out = DIST / path

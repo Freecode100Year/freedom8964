@@ -1,0 +1,346 @@
+[
+ {
+  "key": "1989",
+  "heading": "1989 年的现场报道",
+  "intro": "镇压发生当时，外国记者从北京发回的报道。",
+  "items": [
+   {
+    "title": "CRACKDOWN IN BEIJING; TROOPS ATTACK AND CRUSH BEIJING PROTEST; THOUSANDS FIGHT BACK, SCORES ARE KILLED",
+    "outlet": "The New York Times 纽约时报",
+    "date": "1989-06-04",
+    "url": "https://www.nytimes.com/1989/06/04/world/crackdown-beijing-troops-attack-crush-beijing-protest-thousands-fight-back.html",
+    "desc": "纪思道（Nicholas D. Kristof）当夜从北京发回的头版报道。",
+    "paywall": true
+   }
+  ]
+ },
+ {
+  "key": "explain",
+  "heading": "回顾与解读",
+  "intro": "主流媒体和机构对 1989 年事件的梳理、回顾与分析。",
+  "items": [
+   {
+    "title": "Tiananmen Square: What happened in the protests of 1989?",
+    "outlet": "BBC News",
+    "date": "2019-06-03",
+    "url": "https://www.bbc.com/news/world-asia-48445934",
+    "desc": "三十周年时的完整事件回顾。",
+    "paywall": false
+   },
+   {
+    "title": "Tiananmen Square’s haunted silence, 30 years later",
+    "outlet": "The Washington Post 华盛顿邮报",
+    "date": "2019-06-03",
+    "url": "https://www.washingtonpost.com/world/2019/06/03/tiananmen-squares-haunted-silence-years-later/",
+    "desc": "三十年后天安门广场上的沉默（分析文章）。",
+    "paywall": true
+   },
+   {
+    "title": "China tried to erase the memory of Tiananmen Square. But its legacy lives on.",
+    "outlet": "The Washington Post 华盛顿邮报",
+    "date": "2019-05-30",
+    "url": "https://www.washingtonpost.com/graphics/2019/opinions/global-opinions/tiananmen-square-a-massacre-erased/",
+    "desc": "中国试图抹去记忆，但它的影响仍在（评论专题）。",
+    "paywall": true
+   },
+   {
+    "title": "The 1989 Tiananmen Crackdown",
+    "outlet": "Amnesty International 国际特赦组织",
+    "date": "2026-06-03",
+    "url": "https://www.amnesty.org/en/projects/the-1989-tiananmen-crackdown/",
+    "desc": "国际特赦组织的六四专题页。",
+    "paywall": false
+   },
+   {
+    "title": "What really happened in the 1989 Tiananmen Square protests",
+    "outlet": "Amnesty International UK 国际特赦组织英国分部",
+    "date": "2026-06-04",
+    "url": "https://www.amnesty.org.uk/knowledge-hub/all-resources/china-1989-tiananmen-square-protests-demonstration-massacre/",
+    "desc": "事件经过与此后的人权状况。",
+    "paywall": false
+   },
+   {
+    "title": "Tiananmen Square, 1989",
+    "outlet": "U.S. Department of State, Office of the Historian 美国国务院史学家办公室",
+    "date": "",
+    "url": "https://history.state.gov/milestones/1989-1992/tiananmen-square",
+    "desc": "美国外交史中的六四，以及对中美关系的影响。",
+    "paywall": false
+   },
+   {
+    "title": "Chinese crackdown on protests leads to Tiananmen Square Massacre",
+    "outlet": "HISTORY",
+    "date": "2009-11-13",
+    "url": "https://www.history.com/this-day-in-history/june-4/tiananmen-square-massacre-takes-place",
+    "desc": "“历史上的今天”：6 月 4 日。",
+    "paywall": false
+   },
+   {
+    "title": "25th anniversary of the crackdown on pro-democracy supporters in China",
+    "outlet": "CBC News 加拿大广播公司",
+    "date": "2014-06-04",
+    "url": "https://amp.cbc.ca/news/world/1989-tiananmen-square-protests-15-iconic-images-1.2664229",
+    "desc": "二十五周年：15 张标志性照片。",
+    "paywall": false
+   }
+  ]
+ },
+ {
+  "key": "tankman",
+  "heading": "坦克人",
+  "intro": "那张照片是怎么拍下、又是怎么带出中国的。",
+  "items": [
+   {
+    "title": "Tank Man at 25: Behind the Iconic Tiananmen Square Photo",
+    "outlet": "TIME 时代周刊",
+    "date": "2014-06-04",
+    "url": "https://time.com/3809688/tank-man-iconic-tiananmen-photo/",
+    "desc": "美联社摄影师韦德纳（Jeff Widener）讲述拍摄经过。",
+    "paywall": false
+   },
+   {
+    "title": "The story behind the iconic ‘Tank Man’ photo",
+    "outlet": "CNN",
+    "date": "2019-05",
+    "url": "https://www.cnn.com/interactive/2019/05/world/tiananmen-square-tank-man-cnnphotos/",
+    "desc": "CNN 图片专题。",
+    "paywall": false
+   },
+   {
+    "title": "The man in front of the tank: How journalists smuggled out the iconic Tiananmen Square photo",
+    "outlet": "CNN",
+    "date": "2024-06-04",
+    "url": "https://edition.cnn.com/2024/06/03/china/tiananmen-square-tank-man-photo-intl-hnk",
+    "desc": "记者们如何把照片偷偷带出中国。",
+    "paywall": false
+   },
+   {
+    "title": "The Story Behind the 'Tank Man' Photo",
+    "outlet": "NPR · Throughline",
+    "date": "2024-08-12",
+    "url": "https://www.npr.org/2024/08/12/1256977996/the-story-behind-the-tank-man-photo-throughline",
+    "desc": "NPR 历史节目《Throughline》。",
+    "paywall": false
+   },
+   {
+    "title": "Tank Man | Significance, Photo, China, & Identity",
+    "outlet": "Encyclopaedia Britannica 大英百科全书",
+    "date": "",
+    "url": "https://www.britannica.com/biography/Tank-Man",
+    "desc": "百科条目：意义、照片与身份之谜。",
+    "paywall": false
+   }
+  ]
+ },
+ {
+  "key": "toll",
+  "heading": "死亡人数与解密档案",
+  "intro": "关于死亡人数的报道与解密文件。各方说法的对照见本站“史料”页。",
+  "items": [
+   {
+    "title": "Tiananmen Square protest death toll 'was 10,000'",
+    "outlet": "BBC News",
+    "date": "2017-12-23",
+    "url": "https://www.bbc.com/news/world-asia-china-42465516",
+    "desc": "英国解密电报称至少一万人死亡（单一信源，有争议）。",
+    "paywall": false
+   },
+   {
+    "title": "Tiananmen Massacre 30th Anniversary",
+    "outlet": "National Security Archive 美国国家安全档案馆",
+    "date": "2019-06-04",
+    "url": "https://nsarchive.gwu.edu/news/china/2019-06-04/tiananmen-massacre-30th-anniversary-china-declassified",
+    "desc": "三十周年解密文件汇编。",
+    "paywall": false
+   }
+  ]
+ },
+ {
+  "key": "mothers",
+  "heading": "天安门母亲与遇难者家属",
+  "intro": "家属们年复一年的诉求，以及她们受到的限制。",
+  "items": [
+   {
+    "title": "六四37周年前夕 天安门母亲再促公布真相",
+    "outlet": "自由亚洲电台 RFA",
+    "date": "2026-06-01",
+    "url": "https://www.rfa.org/mandarin/zhengzhi/2026/06/01/china-june-4th-tiananmen-mothers-crackdown/",
+    "desc": "",
+    "paywall": false
+   },
+   {
+    "title": "独家：六四难属被禁赴公墓祭亲 家属抗议",
+    "outlet": "自由亚洲电台 RFA",
+    "date": "2026-06-02",
+    "url": "https://www.rfa.org/mandarin/zhengzhi/2026/06/02/china-june-4th-tiananmen-crackdown-mothers-ban-memorial/",
+    "desc": "",
+    "paywall": false
+   },
+   {
+    "title": "六四36周年：天安门母亲首次遭全面通讯封锁 公安严控祭奠活动",
+    "outlet": "自由亚洲电台 RFA",
+    "date": "2025-06-05",
+    "url": "https://www.rfa.org/mandarin/zhengzhi/2025/06/04/china-june-4th-crackdown-tiananmen-mother-memorial-censorship-blockade/",
+    "desc": "",
+    "paywall": false
+   }
+  ]
+ },
+ {
+  "key": "hongkong",
+  "heading": "香港：悼念被禁与支联会案",
+  "intro": "从“最后一次”维园悼念到支联会领导人被判刑。",
+  "items": [
+   {
+    "title": "Hong Kong marks Tiananmen massacre for what many fear will be the last time",
+    "outlet": "CNN",
+    "date": "2020-06-04",
+    "url": "https://edition.cnn.com/2020/06/03/asia/hong-kong-tiananmen-june-4-china-intl-hnk/index.html",
+    "desc": "2020 年，许多人担心这是最后一次悼念。",
+    "paywall": false
+   },
+   {
+    "title": "What does Chinese repression look like? View these photos of Hong Kong.",
+    "outlet": "The Washington Post 华盛顿邮报",
+    "date": "2023",
+    "url": "https://www.washingtonpost.com/opinions/interactive/2023/tiananmen-anniversary-photos-hong-kong-repression-protest/",
+    "desc": "从照片看香港的六四周年（评论图片专题）。",
+    "paywall": true
+   },
+   {
+    "title": "香港媒体及民间噤声 六四记忆遭封",
+    "outlet": "自由亚洲电台 RFA",
+    "date": "2026-06-03",
+    "url": "https://www.rfa.org/mandarin/zhengzhi/2026/06/03/june-4th-hong-kong-national-security-law-victoria-park-vigil/",
+    "desc": "",
+    "paywall": false
+   },
+   {
+    "title": "No vigils: Hong Kong’s Victoria Park silent on Tiananmen crackdown anniversary",
+    "outlet": "Radio Free Asia",
+    "date": "2026-06-04",
+    "url": "https://www.rfa.org/english/china/2026/06/03/hong-kong-victoria-park-tiananmen-square-china/",
+    "desc": "2026 年六四，维园一片寂静。",
+    "paywall": false
+   },
+   {
+    "title": "Hong Kong Court Jails Two Tiananmen Vigil Group Leaders for 7 Years",
+    "outlet": "U.S. News & World Report",
+    "date": "2026-09-10",
+    "url": "https://www.usnews.com/news/world/articles/2026-09-10/hong-kong-court-jails-two-tiananmen-vigil-group-leaders-for-7-years",
+    "desc": "李卓人、邹幸彤分别被判入狱 7 年和 7 年 3 个月。",
+    "paywall": false
+   },
+   {
+    "title": "HK Tiananmen vigil activists sentenced up to 7 years 3 months for inciting subversion",
+    "outlet": "Hong Kong Free Press 香港自由新闻",
+    "date": "2026-09-11",
+    "url": "https://hongkongfp.com/2026/09/11/hong-kong-tiananmen-vigil-activists-sentenced-up-to-7-years-3-months-for-inciting-subversion/",
+    "desc": "支联会案判决详情：最高 7 年 3 个月，支联会被罚 150 万港元。",
+    "paywall": false
+   },
+   {
+    "title": "Hong Kong court sentences 3 Tiananmen vigil organizers to prison",
+    "outlet": "NPR",
+    "date": "2026-09-11",
+    "url": "https://www.npr.org/2026/09/11/g-s1-142832/hong-kong-court-sentences-vigil-organizers",
+    "desc": "三名悼念活动组织者入狱。",
+    "paywall": false
+   }
+  ]
+ },
+ {
+  "key": "anniv",
+  "heading": "周年纪念与各地悼念",
+  "intro": "近年六四周年前后的报道：北京和香港的戒备，以及台北、华盛顿等地的悼念。",
+  "items": [
+   {
+    "title": "Heavy security in China and Hong Kong on 35th anniversary of Tiananmen crackdown",
+    "outlet": "NPR",
+    "date": "2024-06-04",
+    "url": "https://www.npr.org/2024/06/04/g-s1-2662/china-hong-kong-anniversary-tiananmen-crackdown",
+    "desc": "三十五周年：中国和香港严密戒备。",
+    "paywall": false
+   },
+   {
+    "title": "Tiananmen Square anniversary shows China's ability to suppress history",
+    "outlet": "PBS NewsHour（美联社）",
+    "date": "2025-06-04",
+    "url": "https://www.pbs.org/newshour/world/tiananmen-square-anniversary-shows-chinas-ability-to-suppress-history",
+    "desc": "三十六周年：中国压制历史的能力。",
+    "paywall": false
+   },
+   {
+    "title": "【六四36】全球六四活動整合　用燭光延續希望與良知",
+    "outlet": "自由亚洲电台 RFA 粤语",
+    "date": "2025-05-23",
+    "url": "https://www.rfa.org/cantonese/world/asia/2025/05/23/hong-kong-june-4-world-memorial/",
+    "desc": "",
+    "paywall": false
+   },
+   {
+    "title": "The 37th Anniversary of the June Fourth Tiananmen Massacre: Memory Endures Amid Intensifying Repression",
+    "outlet": "Human Rights in China 中国人权",
+    "date": "2026-06-10",
+    "url": "https://news.hrichina.org/p/the-37th-anniversary-of-the-june",
+    "desc": "三十七周年：打压加剧，记忆犹存。",
+    "paywall": false
+   },
+   {
+    "title": "VOA专访何晓清：六四沉冤未雪悲剧一代代重演 是因为中共权力缺乏制衡",
+    "outlet": "美国之音 VOA",
+    "date": "2026-06-04",
+    "url": "https://www.voachinese.com/a/interview-rowena-he-june-fourth-37anniversary-20260603/8157034.html",
+    "desc": "",
+    "paywall": false
+   },
+   {
+    "title": "共产主义受难者纪念基金会烛光悼念六四死难者",
+    "outlet": "美国之音 VOA",
+    "date": "2026-06-05",
+    "url": "https://www.voachinese.com/a/tiananmen-square-massacre-candlelight-vigil-20260605/8157714.html",
+    "desc": "",
+    "paywall": false
+   },
+   {
+    "title": "纪念六四（专题页）",
+    "outlet": "美国之音 VOA",
+    "date": "",
+    "url": "https://www.voachinese.com/z/4089",
+    "desc": "美国之音历年六四报道汇总。",
+    "paywall": false
+   }
+  ]
+ },
+ {
+  "key": "gov",
+  "heading": "各国政府声明",
+  "intro": "周年之际各国政府的公开声明（附报道或原文）。",
+  "items": [
+   {
+    "title": "六四死难者终将得到昭雪：卢比奥国务卿就天安门广场屠杀事件37周年发表声明",
+    "outlet": "美国之音 VOA",
+    "date": "2026-06-03",
+    "url": "https://www.voachinese.com/a/rubio-statement-on-the-37th-anniversary-of-the-tiananmen-square-massacre-20260603/8157028.html",
+    "desc": "美国国务卿声明全文中译。",
+    "paywall": false
+   },
+   {
+    "title": "台湾总统赖清德六四周年撰文呼吁北京正视历史并承认真相",
+    "outlet": "美国之音 VOA",
+    "date": "2026-06-04",
+    "url": "https://www.voachinese.com/a/taiwan-s-president-commemorates-the-37th-anniversary-of-china-s-june-4th-massacre-20260604/8157267.html",
+    "desc": "",
+    "paywall": false
+   },
+   {
+    "title": "Statement by Foreign Affairs Minister on 35th anniversary of Tiananmen Square",
+    "outlet": "Government of Canada 加拿大外交部",
+    "date": "2024-06-04",
+    "url": "https://www.canada.ca/en/global-affairs/news/2024/06/statement-by-foreign-affairs-minister-on-35th-anniversary-of-tiananmen-square.html",
+    "desc": "加拿大外长乔利（Mélanie Joly）声明原文。",
+    "paywall": false
+   }
+  ]
+ }
+]
