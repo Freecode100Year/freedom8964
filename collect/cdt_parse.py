@@ -2,7 +2,7 @@
 """解析已缓存的中国数字时代“六四”相关标签页存档（.wbcache），输出文章标题、网址、日期。只取列表，不读正文。"""
 import json, re, html, glob, os
 from email.utils import parsedate_to_datetime
-ART = r'https?://chinadigitaltimes\.net/chinese/(?:\d{4}/\d{2}/[^"\'<>#?\s]+\.html|\d+\.html)'
+ART = r'https?://chinadigitaltimes\.net/chinese/(?:\d{4}/\d{2}/[^"\'<>#?\s/]+(?:\.html|/)|\d+\.html)'
 def zh_date(t):
     m = re.search(r'(\d{4})\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日', t)
     if m: return f'{m.group(1)}-{int(m.group(2)):02d}-{int(m.group(3)):02d}'
