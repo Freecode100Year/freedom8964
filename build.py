@@ -30,7 +30,7 @@ PAGES = [
     ("victims.html", "遇难者与天安门母亲", "他们有名字。天安门母亲群体三十多年的寻访与记录。"),
     ("documents.html", "史料与解密档案", "死亡人数的各方说法、解密外交电报与可查阅的原始资料。"),
     ("hongkong.html", "香港维园烛光：1990–2019", "三十年的烛光，以及它如何被禁止。"),
-    ("videos.html", "影像：经核实的 YouTube 视频", "34 个来自新闻机构与人权组织官方频道的视频，逐一核实标题、频道与链接。"),
+    ("videos.html", "影像：经核实的 YouTube 视频", "来自新闻机构、公共媒体与人权组织官方频道的视频，按六四事件、亲历者、黄雀行动、天安门母亲、香港、各地纪念分类，逐一核实标题、频道与链接。"),
     ("candle.html", "点一支蜡烛", "为 1989 年的遇难者点一支蜡烛。不收集任何数据。"),
     ("about.html", "关于本站", "编辑原则、来源标准、更正方式与隐私说明。"),
     ("en/index.html", "Freedom · June Fourth 1989", "Remembering Beijing, spring 1989: timeline, victims, sources and verified video."),
@@ -103,16 +103,22 @@ def pretty_links(page):
     return re.sub(r'href="(?!https?:|/)([^"#]*?\.html)(#[^"]*)?"', fix, page)
 
 
-def video_section(key, heading, intro, videos):
+def video_section(sec):
     items = []
-    for v in videos[key]:
+    for v in sec["videos"]:
         url = f"https://www.youtube.com/watch?v={v['id']}"
         items.append(
             f'  <li><div class="t"><a href="{url}" rel="noopener noreferrer" target="_blank">{html.escape(v["title"])}</a></div>'
             f'<div class="c">频道：<a href="{html.escape(v["channel_url"])}" rel="noopener noreferrer" target="_blank">{html.escape(v["channel"])}</a>'
             f' · <span class="muted">{url}</span></div></li>'
         )
-    return f'<h2 id="{key}">{heading}</h2>\n<p class="muted">{intro}</p>\n<ul class="vlist">\n' + "\n".join(items) + "\n</ul>\n"
+    return (f'<h2 id="{sec["key"]}">{sec["heading"]} <span class="muted small">（{len(sec["videos"])}）</span></h2>\n'
+            f'<p class="muted">{sec["intro"]}</p>\n<ul class="vlist">\n' + "\n".join(items) + "\n</ul>\n")
+
+
+def video_toc(sections):
+    links = " · ".join(f'<a href="#{s["key"]}">{s["heading"]}</a>' for s in sections)
+    return f'<p class="toc">{links}</p>\n'
 
 
 def main():
@@ -124,15 +130,8 @@ def main():
         shutil.copy(ROOT / f, DIST / f)
 
     videos = json.loads((ROOT / "assets/videos.json").read_text())
-    total = sum(len(v) for v in videos.values())
-    extra = {
-        "videos.html": "\n".join([
-            video_section("history", "历史影像与纪录片", "1989 年的现场报道、纪录片与亲历者回忆。", videos),
-            video_section("mothers", "天安门母亲", "遇难者家属三十多年的寻访、悼念与诉求。", videos),
-            video_section("hongkong", "香港：从烛光到禁令", "维园悼念被禁、支联会解散与相关审判。", videos),
-            video_section("today", "今天：纪念与回响", "各地周年纪念、美国国会与人权机构的回顾。", videos),
-        ]),
-    }
+    total = sum(len(sec["videos"]) for sec in videos)
+    extra = {"videos.html": video_toc(videos) + "\n".join(video_section(sec) for sec in videos)}
 
     for path, title, desc in PAGES:
         body = (ROOT / "pages" / path).read_text()

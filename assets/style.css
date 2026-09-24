@@ -128,3 +128,4 @@ button.btn[disabled] { opacity: .6; cursor: default; }
 .candle .flame { animation: none; opacity: 0; }
 .candle.lit .flame { animation: flicker 3.2s ease-in-out infinite; opacity: 1; }
 @media (prefers-reduced-motion: reduce) { .candle.lit .flame { animation: none; } }
+.toc { font-size: 15px; line-height: 2; margin: 8px 0 0; }
