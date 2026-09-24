@@ -1,17 +1,23 @@
 <!doctype html>
-<html lang="zh-Hans">
+<html lang="zh-Hans" data-locale="zh">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>自由 · 八九六四</title>
 <meta name="description" content="六四事件相关信息的采集、整理与归档导航。本站不生产内容，每条记录指向原始出处。">
 <meta property="og:title" content="自由 · 八九六四">
 <meta property="og:description" content="六四事件相关信息的采集、整理与归档导航。本站不生产内容，每条记录指向原始出处。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://freedom8964.com/">
-<meta name="theme-color" content="#0e0d0c">
+<meta name="theme-color" content="#0a0a0a">
+<meta name="color-scheme" content="dark">
+<link rel="alternate" hreflang="zh-Hans" href="https://freedom8964.com/" data-locale="zh">
+<link rel="alternate" hreflang="zh-Hant" href="https://freedom8964.com/zh-hant/" data-locale="zh-hant">
+<link rel="alternate" hreflang="en" href="https://freedom8964.com/en/" data-locale="en">
+<link rel="alternate" hreflang="x-default" href="https://freedom8964.com/">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/style.css">
+<script src="assets/lang.js"></script>
 </head>
 <body>
 <header class="site-head">
@@ -28,7 +34,11 @@
       <a href="reports">报道</a>
       <a href="candle">点一支蜡烛</a>
       <a href="about">关于</a>
-      <a href="en/">English</a>
+    </nav>
+    <nav class="langs" aria-label="语言">
+      <a href="./" data-setlang="zh" hreflang="zh-Hans" lang="zh-Hans" aria-current="true">简体</a>
+      <a href="zh-hant/" data-setlang="zh-hant" hreflang="zh-Hant" lang="zh-Hant">繁體</a>
+      <a href="en/" data-setlang="en" hreflang="en" lang="en">English</a>
     </nav>
   </div>
 </header>
@@ -36,6 +46,7 @@
   <div class="wrap">
     <div class="flame" aria-hidden="true"></div>
     <h1>自由 · <span class="num">八九六四</span></h1>
+    <div class="rule"></div>
     <p class="lead">六四事件相关信息的采集、整理与归档导航。<br>本站不生产内容，每条记录都指向原始出处。</p>
   </div>
 </section>
@@ -76,7 +87,7 @@
 <footer class="site-foot">
   <div class="wrap">
     <p>本站不生产内容，只采集、收集、整理、记录、归档六四事件相关信息的链接与出处；文章与视频版权归原作者和原发布方。</p>
-    <p>不使用 Cookie，不做任何访问统计。最后更新：2026-09-24 · <a href="about">编辑原则与更正</a></p>
+    <p>不使用 Cookie，不做任何访问统计。最后更新：2026-09-24 · <a href="about">收录原则与更正</a></p>
   </div>
 </footer>
 </body>

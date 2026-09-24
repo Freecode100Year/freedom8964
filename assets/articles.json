@@ -11,7 +11,9 @@
     "url": "https://www.nytimes.com/1989/06/04/world/crackdown-beijing-troops-attack-crush-beijing-protest-thousands-fight-back.html",
     "paywall": true
    }
-  ]
+  ],
+  "heading_en": "Reports from 1989",
+  "intro_en": "Reporting at the time."
  },
  {
   "key": "explain",
@@ -74,7 +76,9 @@
     "url": "https://amp.cbc.ca/news/world/1989-tiananmen-square-protests-15-iconic-images-1.2664229",
     "paywall": false
    }
-  ]
+  ],
+  "heading_en": "Retrospectives and explainers",
+  "intro_en": "Retrospectives, explainers and topic pages."
  },
  {
   "key": "tankman",
@@ -116,7 +120,9 @@
     "url": "https://www.britannica.com/biography/Tank-Man",
     "paywall": false
    }
-  ]
+  ],
+  "heading_en": "Tank Man",
+  "intro_en": "About the Tank Man photograph."
  },
  {
   "key": "toll",
@@ -137,7 +143,9 @@
     "url": "https://nsarchive.gwu.edu/news/china/2019-06-04/tiananmen-massacre-30th-anniversary-china-declassified",
     "paywall": false
    }
-  ]
+  ],
+  "heading_en": "Death toll and declassified records",
+  "intro_en": "On the death toll and declassified documents."
  },
  {
   "key": "mothers",
@@ -165,7 +173,9 @@
     "url": "https://www.rfa.org/mandarin/zhengzhi/2025/06/04/china-june-4th-crackdown-tiananmen-mother-memorial-censorship-blockade/",
     "paywall": false
    }
-  ]
+  ],
+  "heading_en": "Tiananmen Mothers and families",
+  "intro_en": "The Tiananmen Mothers and victims' families."
  },
  {
   "key": "hongkong",
@@ -221,7 +231,9 @@
     "url": "https://www.npr.org/2026/09/11/g-s1-142832/hong-kong-court-sentences-vigil-organizers",
     "paywall": false
    }
-  ]
+  ],
+  "heading_en": "Hong Kong: the vigil ban and the Alliance case",
+  "intro_en": "The Victoria Park vigil, the ban, and the Alliance case."
  },
  {
   "key": "anniv",
@@ -277,7 +289,9 @@
     "url": "https://www.voachinese.com/z/4089",
     "paywall": false
    }
-  ]
+  ],
+  "heading_en": "Anniversaries and commemorations",
+  "intro_en": "Anniversaries and memorial events."
  },
  {
   "key": "gov",
@@ -305,6 +319,8 @@
     "url": "https://www.canada.ca/en/global-affairs/news/2024/06/statement-by-foreign-affairs-minister-on-35th-anniversary-of-tiananmen-square.html",
     "paywall": false
    }
-  ]
+  ],
+  "heading_en": "Government statements",
+  "intro_en": "Government statements (original or as reported)."
  }
 ]

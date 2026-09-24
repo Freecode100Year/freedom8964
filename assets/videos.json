@@ -64,7 +64,9 @@
     "channel": "百格 Pocketimes",
     "channel_url": "https://www.youtube.com/@PocketimesMy"
    }
-  ]
+  ],
+  "heading_en": "June Fourth: footage and documentaries",
+  "intro_en": "Contemporary reports, documentaries and archive footage."
  },
  {
   "key": "witness",
@@ -137,7 +139,9 @@
     "channel": "EPLChina Cornell",
     "channel_url": "https://www.youtube.com/@eplchinacornell3296"
    }
-  ]
+  ],
+  "heading_en": "Witnesses and student leaders",
+  "intro_en": "Interviews with student leaders, journalists and witnesses."
  },
  {
   "key": "yellowbird",
@@ -174,7 +178,9 @@
     "channel": "RMC+",
     "channel_url": "https://www.youtube.com/@rmcplustv"
    }
-  ]
+  ],
+  "heading_en": "Operation Yellowbird",
+  "intro_en": "Interviews with participants and a related documentary."
  },
  {
   "key": "mothers",
@@ -241,7 +247,9 @@
     "channel": "美国之音中文网",
     "channel_url": "https://www.youtube.com/@voachinese"
    }
-  ]
+  ],
+  "heading_en": "Tiananmen Mothers",
+  "intro_en": "The Tiananmen Mothers and victims' families."
  },
  {
   "key": "hongkong",
@@ -344,7 +352,9 @@
     "channel": "ANC 24/7",
     "channel_url": "https://www.youtube.com/@ANCAlerts"
    }
-  ]
+  ],
+  "heading_en": "Hong Kong: from the vigil to the ban",
+  "intro_en": "The Victoria Park vigil, the ban, and the Alliance case."
  },
  {
   "key": "memorial",
@@ -429,7 +439,9 @@
     "channel": "AP Archive",
     "channel_url": "https://www.youtube.com/@APArchive"
    }
-  ]
+  ],
+  "heading_en": "Commemorations around the world",
+  "intro_en": "Anniversary vigils and memorial events."
  },
  {
   "key": "chaijing",
@@ -460,7 +472,9 @@
     "channel": "柴静 Chai Jing",
     "channel_url": "https://www.youtube.com/@chaijing2023"
    }
-  ]
+  ],
+  "heading_en": "Chai Jing interviews",
+  "intro_en": "Original programmes from Chai Jing's own channel (personal views)."
  },
  {
   "key": "wangjian",
@@ -539,7 +553,9 @@
     "channel": "王剑每日观察Kim's Observation",
     "channel_url": "https://www.youtube.com/@wongkim728"
    }
-  ]
+  ],
+  "heading_en": "Wang Jian: Kim's Observation",
+  "intro_en": "Original programmes from Wang Jian's own channel (personal commentary)."
  },
  {
   "key": "voa",
@@ -564,6 +580,8 @@
     "channel": "自由亚洲电台",
     "channel_url": "https://www.youtube.com/@RFACHINESE"
    }
-  ]
+  ],
+  "heading_en": "Anniversary programmes",
+  "intro_en": "Anniversary programmes from VOA and Radio Free Asia."
  }
 ]
