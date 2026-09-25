@@ -46,6 +46,7 @@ T = {
         "foot1": "本站不生产内容，只采集、收集、整理、记录、归档六四事件相关信息的链接与出处；文章与视频版权归原作者和原发布方。",
         "foot2": "不使用 Cookie，不做任何访问统计。最后更新：",
         "foot_link": "收录原则与更正",
+        "source": "源代码（GitHub）",
         "channel": "频道：", "paywall": "需订阅", "count": "（{}）", "navlabel": "主导航", "langlabel": "语言",
         "l_articles": "报道", "l_videos": "视频", "l_cdt": "中国数字时代", "l_more": "全部 {} 篇 →", "l_none": "暂无", "l_added": "收录于",
     },
@@ -68,6 +69,7 @@ T = {
         "foot1": "This site does not produce content. It collects, organises, records and archives links and sources about June Fourth; copyright remains with the original authors and publishers.",
         "foot2": "No cookies, no analytics. Last updated: ",
         "foot_link": "Principles and corrections",
+        "source": "Source code (GitHub)",
         "channel": "Channel: ", "paywall": "Subscription", "count": " ({})", "navlabel": "Main navigation", "langlabel": "Language",
         "l_articles": "Press", "l_videos": "Video", "l_cdt": "China Digital Times", "l_more": "All {} articles →", "l_none": "None yet", "l_added": "added",
     },
@@ -153,7 +155,7 @@ def layout(loc, file, body):
 <footer class="site-foot">
   <div class="wrap">
     <p>{s["foot1"]}</p>
-    <p>{s["foot2"]}{UPDATED} · <a href="{up}{LOCALES[loc]["prefix"]}about.html">{s["foot_link"]}</a></p>
+    <p>{s["foot2"]}{UPDATED} · <a href="{up}{LOCALES[loc]["prefix"]}about.html">{s["foot_link"]}</a> · <a href="https://github.com/Freecode100Year/freedom8964" rel="noopener">{s["source"]}</a></p>
   </div>
 </footer>
 </body>
