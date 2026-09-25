@@ -190,7 +190,7 @@ def main():
     if "--no-deploy" in sys.argv:
         return
     steps = [["python3", "build.py"], ["npx", "-y", "wrangler", "deploy"],
-             ["git", "add", "-A"], ["git", "-c", "user.name=freedom8964", "-c", "user.email=noreply@freedom8964.com", "commit", "-qm", f"自动采集 {today}：新增 {total} 条"]]
+             ["git", "add", "-A"], ["git", "-c", "user.name=freedom8964", "-c", "user.email=noreply@freedom8964.com", "commit", "-qm", f"自动采集 {today}：新增 {total} 条"], ["git", "push", "-q"]]
     for cmd in steps:
         r = subprocess.run(cmd, cwd=SITE, capture_output=True, text=True, timeout=600)
         if r.returncode != 0:
