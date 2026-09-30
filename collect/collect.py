@@ -31,23 +31,14 @@ UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.3
 
 KEYWORDS = re.compile(
     r"六四|6\.?4|天安门|天安門|8964|八九|坦克人|天安门母亲|天安門母親|支联会|支聯會|维园|維園|黄雀行动|黃雀行動|"
-    r"tiananmen|june 4(th)?\b|june fourth|tank man|hong kong alliance|victoria park vigil",
+    r"邹幸彤|鄒幸彤|李卓人|何俊仁|丁子霖|国殇之柱|國殤之柱|"
+    r"tiananmen|june 4(th)?\b|june fourth|tank man|hong kong alliance|victoria park vigil|"
+    r"chow hang[- ]tung|lee cheuk[- ]yan|ding zilin|pillar of shame",
     re.I)
-# “6.4”这类容易误伤（比如 6.4 级地震），对它再要求同时出现其他关键词
-WEAK = re.compile(r"^(6\.?4|八九)$")
+# “6.4”（6.4 级地震）、“维园”（维园网球场）这类容易误伤，只有它们时还要求同时出现其他关键词
+WEAK = re.compile(r"^(6\.?4|八九|维园|維園|june 4)$")
 
-FEEDS = [
-    ("BBC News 中文", "https://feeds.bbci.co.uk/zhongwen/simp/rss.xml"),
-    ("自由亚洲电台 RFA", "https://www.rfa.org/mandarin/rss2.xml"),
-    ("Radio Free Asia", "https://www.rfa.org/english/rss2.xml"),
-    ("自由亚洲电台 RFA 粤语", "https://www.rfa.org/cantonese/rss2.xml"),
-    ("美国之音 VOA", "https://www.voachinese.com/api/zm_yql-vomx-tpeybti"),
-    ("德国之声 DW 中文", "https://rss.dw.com/xml/rss-chi-all"),
-    ("Hong Kong Free Press 香港自由新闻", "https://hongkongfp.com/feed/"),
-    ("NPR", "https://feeds.npr.org/1004/rss.xml"),
-    ("The Guardian 卫报", "https://www.theguardian.com/world/china/rss"),
-    ("Human Rights in China 中国人权", "https://news.hrichina.org/feed"),
-]
+FEEDS = json.loads((HERE / "feeds.json").read_text())  # 与 worker.js 共用
 
 
 def get(url, timeout=30):

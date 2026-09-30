@@ -7,18 +7,7 @@
 import { DurableObject } from "cloudflare:workers";
 import channels from "./collect/channels.json";
 
-const FEEDS = [
-  ["BBC News 中文", "https://feeds.bbci.co.uk/zhongwen/simp/rss.xml"],
-  ["自由亚洲电台 RFA", "https://www.rfa.org/mandarin/rss2.xml"],
-  ["Radio Free Asia", "https://www.rfa.org/english/rss2.xml"],
-  ["自由亚洲电台 RFA 粤语", "https://www.rfa.org/cantonese/rss2.xml"],
-  ["美国之音 VOA", "https://www.voachinese.com/api/zm_yql-vomx-tpeybti"],
-  ["德国之声 DW 中文", "https://rss.dw.com/xml/rss-chi-all"],
-  ["Hong Kong Free Press 香港自由新闻", "https://hongkongfp.com/feed/"],
-  ["NPR", "https://feeds.npr.org/1004/rss.xml"],
-  ["The Guardian 卫报", "https://www.theguardian.com/world/china/rss"],
-  ["Human Rights in China 中国人权", "https://news.hrichina.org/feed"],
-];
+import FEEDS from "./collect/feeds.json"; // 新闻订阅源白名单：[名称, 网址]
 const SOURCES = [
   ...FEEDS.map(([name, url]) => ({ kind: "articles", name, url })),
   ...Object.entries(channels).map(([id, c]) => ({
@@ -27,8 +16,8 @@ const SOURCES = [
 ];
 const BATCH = 5;
 
-const KEYWORDS = /六四|6\.?4|天安门|天安門|8964|八九|坦克人|支联会|支聯會|维园|維園|黄雀行动|黃雀行動|tiananmen|june 4(th)?\b|june fourth|tank man|hong kong alliance|victoria park vigil/gi;
-const WEAK = /^(6\.?4|八九)$/;
+const KEYWORDS = /六四|6\.?4|天安门|天安門|8964|八九|坦克人|支联会|支聯會|维园|維園|黄雀行动|黃雀行動|邹幸彤|鄒幸彤|李卓人|何俊仁|丁子霖|国殇之柱|國殤之柱|tiananmen|june 4(th)?\b|june fourth|tank man|hong kong alliance|victoria park vigil|chow hang[- ]tung|lee cheuk[- ]yan|ding zilin|pillar of shame/gi;
+const WEAK = /^(6\.?4|八九|维园|維園|june 4)$/;
 // 不自动收录（误收）：网址或标题包含这些字符串
 const EXCLUDE = [
   "https://www.youtube.com/watch?v=MnYREEJgqtE", // 柴静《王洪文》下集：1976 年天安门事件
