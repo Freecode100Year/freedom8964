@@ -111,6 +111,11 @@ def collect_cdt(log):
     except Exception as e:
         log.append(f"中国数字时代 采集失败：{e}")
         return []
+    if not items:
+        # 0 条通常是遇到了真人验证或网页改版；只记录，不重试、不绕过
+        log.append(f"中国数字时代 0 条（可能遇到验证页）：{(r.stderr or '').strip()[-150:]}")
+        subprocess.run([str(Path.home() / "bin/tg-send"), "⚠️ freedom8964：中国数字时代今天没取到文章（可能遇到真人验证），明天会再试一次"])
+        return []
     out = []
     for it in items:
         m = re.match(r"(\d{4})年\s*(\d{1,2})\s*月\s*(\d{1,2})日", it.get("date", ""))
