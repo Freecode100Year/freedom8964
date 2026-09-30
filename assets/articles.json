@@ -493,6 +493,12 @@
   "intro": "死亡人数与解密档案相关。",
   "items": [
    {
+    "title": "Tiananmen Massacre 31 Years Ago in China",
+    "outlet": "National Security Archive 美国国家安全档案馆",
+    "date": "2020-06-04",
+    "url": "https://nsarchive.gwu.edu/briefing-book/human-rights-china/2020-06-04/tiananmen-massacre-31-years-ago-in-china"
+   },
+   {
     "title": "Tiananmen Massacre 30th Anniversary",
     "outlet": "National Security Archive 美国国家安全档案馆",
     "date": "2019-06-04",
@@ -535,6 +541,12 @@
     "outlet": "Wilson Center Digital Archive 威尔逊中心数字档案馆",
     "date": "",
     "url": "https://digitalarchive.wilsoncenter.org/topics/china-1989"
+   },
+   {
+    "title": "China Documentation Project",
+    "outlet": "National Security Archive 美国国家安全档案馆",
+    "date": "",
+    "url": "https://nsarchive.gwu.edu/project/china-documentation-project"
    }
   ],
   "heading_en": "Death toll and declassified records",
@@ -615,6 +627,24 @@
     "url": "https://hrichina.substack.com/p/gathering-of-the-tiananmen-mothers"
    },
    {
+    "title": "“妈妈你说今天晚上会开枪吗？”——天安门母亲寻觅三十年",
+    "outlet": "端传媒 Initium Media",
+    "date": "2019-06-03",
+    "url": "https://theinitium.com/zh-hans/article/20190603-hongkong-6430-interview-tiananmenmother"
+   },
+   {
+    "title": "China: Tiananmen Injustice Fuels Repression 30 Years On",
+    "outlet": "Human Rights Watch 人权观察",
+    "date": "2019-05-30",
+    "url": "https://www.hrw.org/news/2019/05/30/china-tiananmen-injustice-fuels-repression-30-years"
+   },
+   {
+    "title": "China: Tell the Truth About Tiananmen on Anniversary",
+    "outlet": "Human Rights Watch 人权观察",
+    "date": "2016-06-01",
+    "url": "https://www.hrw.org/news/2016/06/01/china-tell-truth-about-tiananmen-anniversary"
+   },
+   {
     "title": "VOA专访: 丁子霖：中共不能回避六四屠杀",
     "outlet": "美国之音 VOA",
     "date": "2015-06-02",
@@ -631,6 +661,18 @@
     "outlet": "Human Rights in China 中国人权",
     "date": "",
     "url": "https://www.hrichina.org/en/content/123"
+   },
+   {
+    "title": "六四镇压受害者状况民间报告",
+    "outlet": "天安门母亲",
+    "date": "",
+    "url": "http://www.tiananmenmother.org/64%20forum/64forum20230604003.htm"
+   },
+   {
+    "title": "天安門母親群體「六四」難屬《探訪紀實》",
+    "outlet": "天安门母亲群体",
+    "date": "",
+    "url": "http://tmc6425.blogspot.com/"
    }
   ],
   "heading_en": "Tiananmen Mothers and families",
