@@ -96,16 +96,34 @@
     "url": "https://www.upi.com/Archives/1989/06/04/Student-protest-ends-in-gunfire-flames/5310681611432/"
    },
    {
+    "title": "TROOPS ROLL THROUGH BEIJING TO CRUSH PROTESTERS",
+    "outlet": "The Washington Post 华盛顿邮报",
+    "date": "1989-06-04",
+    "url": "https://www.washingtonpost.com/archive/politics/1989/06/04/troops-roll-through-beijing-to-crush-protesters/50867410-0750-4246-beaf-3da60f727c78/"
+   },
+   {
     "title": "One man's defiant gesture",
     "outlet": "UPI 合众国际社",
     "date": "1989-06-05",
     "url": "https://www.upi.com/Archives/1989/06/05/One-mans-defiant-gesture/2121045138166/"
    },
    {
+    "title": "Death in Tiananmen",
+    "outlet": "The Washington Post 华盛顿邮报",
+    "date": "1989-06-05",
+    "url": "https://www.washingtonpost.com/archive/politics/1989/06/05/death-in-tiananmen/285e23c9-6e6e-496f-be0a-5ef2563e07ec/"
+   },
+   {
     "title": "Bush gets bipartisan support for moves against China",
     "outlet": "UPI 合众国际社",
     "date": "1989-06-06",
     "url": "https://www.upi.com/Archives/1989/06/06/Bush-gets-bipartisan-support-for-moves-against-China/8188115634200/"
+   },
+   {
+    "title": "CHINESE ARMY UNITS SEEN NEAR CONFLICT",
+    "outlet": "The Washington Post 华盛顿邮报",
+    "date": "1989-06-06",
+    "url": "https://www.washingtonpost.com/archive/politics/1989/06/06/chinese-army-units-seen-near-conflict/d6c31719-c4ef-49b5-b6db-0f87d48b5dfa/"
    },
    {
     "title": "Bush wonders who is running China",
@@ -166,6 +184,18 @@
     "outlet": "UPI 合众国际社",
     "date": "1989-06-14",
     "url": "https://www.upi.com/Archives/1989/06/14/US-reopens-visa-office-in-Beijing/8385481120116/"
+   },
+   {
+    "title": "CHINA CALLS FOR ARREST OF 21 STUDENTS",
+    "outlet": "The Washington Post 华盛顿邮报",
+    "date": "1989-06-14",
+    "url": "https://www.washingtonpost.com/archive/politics/1989/06/14/china-calls-for-arrest-of-21-students/ce6e365e-2001-48f9-bc71-389fbd0a1298/"
+   },
+   {
+    "title": "CHINA SEEKS NEW PURGES OF OFFICIALS",
+    "outlet": "The Washington Post 华盛顿邮报",
+    "date": "1989-06-26",
+    "url": "https://www.washingtonpost.com/archive/politics/1989/06/26/china-seeks-new-purges-of-officials/8ac2d95b-c444-46c0-b86e-9729de83d137/"
    }
   ],
   "heading_en": "Reports from 1989",
@@ -459,6 +489,12 @@
     "paywall": false
    },
    {
+    "title": "10,000 killed in 1989 Tiananmen crackdown: British cable",
+    "outlet": "Arab News（法新社）",
+    "date": "2017-12-23",
+    "url": "https://www.arabnews.com/node/1213591"
+   },
+   {
     "title": "The U.S. Tiananmen Papers",
     "outlet": "National Security Archive 美国国家安全档案馆",
     "date": "",
@@ -469,6 +505,12 @@
     "outlet": "National Security Archive 美国国家安全档案馆",
     "date": "",
     "url": "https://nsarchive2.gwu.edu/NSAEBB/NSAEBB473/"
+   },
+   {
+    "title": "China, 1989",
+    "outlet": "Wilson Center Digital Archive 威尔逊中心数字档案馆",
+    "date": "",
+    "url": "https://digitalarchive.wilsoncenter.org/topics/china-1989"
    }
   ],
   "heading_en": "Death toll and declassified records",
@@ -553,6 +595,18 @@
     "outlet": "美国之音 VOA",
     "date": "2015-06-02",
     "url": "https://www.voachinese.com/a/voa-special-interveiw-ding-zilin-june-4th-26-years/2804535.html"
+   },
+   {
+    "title": "June 3-4, 2009: 20th Anniversary of Tiananmen Square Massacre – Map & List of Victims",
+    "outlet": "Chinese Human Rights Defenders 维权网",
+    "date": "2009-06-03",
+    "url": "https://www.nchrd.org/2009/06/june-3-4-2009-20th-anniversary-of-tiananmen-square-massacre-maps-victims-name-lists/"
+   },
+   {
+    "title": "“Tiananmen Mothers” Publish Maps Including Locations of June Fourth Victims' Deaths",
+    "outlet": "Human Rights in China 中国人权",
+    "date": "",
+    "url": "https://www.hrichina.org/en/content/123"
    }
   ],
   "heading_en": "Tiananmen Mothers and families",
@@ -664,6 +718,12 @@
     "outlet": "NPR",
     "date": "2021-12-23",
     "url": "https://www.npr.org/2021/12/23/1067163101/hong-kong-university-removes-tiananmen-massacre-statue"
+   },
+   {
+    "title": "HKU to Remove Pillar of Shame, Erasing Memory of June Fourth Massacre",
+    "outlet": "China Digital Times",
+    "date": "2021-10",
+    "url": "https://chinadigitaltimes.net/2021/10/hku-to-remove-pillar-of-shame-erasing-memory-of-june-fourth-massacre/"
    },
    {
     "title": "Hong Kong’s Tiananmen Square museum moves online",
