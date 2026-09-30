@@ -6,12 +6,16 @@
 //  其他所有请求直接交给静态资源。
 import { DurableObject } from "cloudflare:workers";
 import channels from "./collect/channels.json";
+import playlists from "./collect/playlists.json"; // 官方频道的六四专题播放列表（本身就是六四内容，不做关键词过滤）
 
 import FEEDS from "./collect/feeds.json"; // 新闻订阅源白名单：[名称, 网址]
 const SOURCES = [
   ...FEEDS.map(([name, url]) => ({ kind: "articles", name, url })),
   ...Object.entries(channels).map(([id, c]) => ({
     kind: "videos", name: c.name, channel_url: c.url, url: `https://www.youtube.com/feeds/videos.xml?channel_id=${id}`,
+  })),
+  ...Object.entries(playlists).map(([id, p]) => ({
+    kind: "videos", name: p.name, channel_url: p.url, url: `https://www.youtube.com/feeds/videos.xml?playlist_id=${id}`, trusted: true,
   })),
 ];
 const BATCH = 5;
@@ -84,7 +88,7 @@ async function runBatch(env, today) {
       if (!items.length) errors.push(`${src.name}: 0 条`);
       for (const it of items) {
         if (!/^https?:\/\//.test(it.url)) continue; // 只收 http(s) 链接
-        if (!relevant(it.title) || seen.has(it.url) || EXCLUDE.some((e) => it.url.includes(e) || it.title.includes(e))) continue;
+        if ((!src.trusted && !relevant(it.title)) || seen.has(it.url) || EXCLUDE.some((e) => it.url.includes(e) || it.title.includes(e))) continue;
         if (src.kind === "videos") {
           const o = await fetch("https://www.youtube.com/oembed?format=json&url=" + encodeURIComponent(it.url));
           if (!o.ok) continue; // 视频不存在或不公开
@@ -117,6 +121,10 @@ async function report(env, added, today, errors = []) {
   const lines = added.length
     ? [`🕯️ freedom8964 ${today} 自动收录 ${added.length} 条（Cloudflare）：`, ...added.slice(0, 20).map((x) => `· [${x.kind === "videos" ? "视频" : "报道"}] ${x.title}`), "https://freedom8964.com/latest"]
     : [`freedom8964 ${today} 自动采集完成：没有新条目（Cloudflare）`];
+  // 互相监控：VPS 每天采集后会在 KV 里写 vps_heartbeat；两天没写就提醒
+  const hb = await env.AUTO.get("vps_heartbeat", "json");
+  const days = hb ? Math.round((Date.parse(today) - Date.parse(hb.date)) / 86400000) : 99;
+  if (days >= 2) lines.push(`⚠️ VPS 自动采集已经 ${days >= 99 ? "很久" : days + " 天"}没有运行（中国数字时代、X、媒体专题存档、维基资料、GitHub 备份都靠它），请检查 VPS`);
   if (errors.length) lines.push(`⚠️ ${errors.length}/${SOURCES.length} 个来源读取失败：`, ...errors.slice(0, 10).map((e) => `· ${e}`));
   await fetch(`https://api.telegram.org/bot${env.TG_BOT_TOKEN}/sendMessage`, {
     method: "POST", headers: { "Content-Type": "application/json" },

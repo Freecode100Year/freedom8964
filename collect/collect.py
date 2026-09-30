@@ -21,6 +21,7 @@ from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 
+import wiki_sync
 import x_series
 
 HERE = Path(__file__).parent
@@ -158,6 +159,30 @@ def collect_feeds(log):
 TOPICS = SITE / "assets/topics.json"
 
 
+# 公视标签页夹带侧栏的无关新闻，标题必须含这些词之一
+PTS_KEYWORDS = re.compile(r"六四|天安門|天安门|八九|89|支聯會|民運|維園|悼念|坦克|丁子霖|母親|紀念|周年|週年|屠殺|鄒幸彤|李卓人|王丹|吾爾開希|趙紫陽|胡耀邦|何俊仁|國殤")
+
+
+def parse_pts(page, today):
+    out = []
+    for m in re.finditer(r'href="(https://news\.pts\.org\.tw/article/\d+)">([^<]{4,})<', page):
+        title = html.unescape(m.group(2)).strip()
+        if not title or not PTS_KEYWORDS.search(title):
+            continue
+        dm = re.search(r"(\d{4})/(\d{1,2})/(\d{1,2})", page[m.end():m.end() + 1500])
+        date = f"{dm.group(1)}-{int(dm.group(2)):02d}-{int(dm.group(3)):02d}" if dm else today
+        out.append({"title": title, "date": date, "url": m.group(1)})
+    return out
+
+
+def parse_diplomat(page, today):
+    return [{"title": clean(m.group(4)), "date": f"{m.group(2)}-{m.group(3)}", "url": "https://thediplomat.com" + m.group(1)}
+            for m in re.finditer(r'<a href="(/(\d{4})/(\d\d)/[^"]+/)" class="td-post".*?<h4>(.*?)</h4>', page, re.S)]
+
+
+HTML_TOPICS = {"pts": parse_pts, "diplomat": parse_diplomat}
+
+
 def collect_topics(log, today):
     """媒体专题存档（assets/topics.json）：读取各新闻机构六四专题栏目第一页，把新文章（标题、日期、网址）加进去。"""
     if not TOPICS.exists():
@@ -180,6 +205,20 @@ def collect_topics(log, today):
                     t["items"].insert(0, x)
                     have.add(p["link"])
                     added.append(x)
+            continue
+        if t.get("html") in HTML_TOPICS:  # 普通网页的标签页：用对应的解析规则
+            try:
+                page = get(t["source"])
+            except Exception as e:
+                log.append(f"{t['name']} 读取失败：{e}")
+                continue
+            have = {x["url"] for x in t["items"]}
+            for x in HTML_TOPICS[t["html"]](page, today):
+                if x["url"] in have:
+                    continue
+                t["items"].insert(0, x)
+                have.add(x["url"])
+                added.append(x)
             continue
         base = t.get("pangea")  # 美国之音系网站（Pangea 平台）的专题栏目
         if not base:
@@ -205,6 +244,21 @@ def collect_topics(log, today):
         TOPICS.write_text(json.dumps(topics, ensure_ascii=False, indent=1))
     log.append(f"媒体专题存档：新增 {len(added)} 篇")
     return added
+
+
+def heartbeat(log, today):
+    """互相监控：在 KV 里记下 VPS 今天跑过（Cloudflare 采集完会检查）；同时检查 Cloudflare 采集是否停了。"""
+    subprocess.run(["npx", "-y", "wrangler", "kv", "key", "put", "--remote", "--namespace-id=740ce332e0b3484ba516b21b6cb00937",
+                    "vps_heartbeat", json.dumps({"date": today, "log": log[-6:]}, ensure_ascii=False)],
+                   cwd=SITE, capture_output=True, text=True, timeout=120)
+    meta = {}
+    try:
+        meta = json.loads((HERE / "kv-backup/meta.json").read_text())
+        stale = (datetime.fromisoformat(today) - datetime.fromisoformat(meta.get("updated", "2000-01-01"))).days
+    except Exception:
+        stale = 99
+    if stale >= 2:
+        subprocess.run([str(Path.home() / "bin/tg-send"), f"⚠️ freedom8964：Cloudflare 自动采集已经 {stale} 天没有运行（最后一次 {meta.get('updated') if stale < 99 else '未知'}），请检查"])
 
 
 def backup_kv(log):
@@ -247,6 +301,10 @@ def main():
         added[k] = new
     added["topics"] = [] if dry else collect_topics(log, today)
     try:
+        added["wiki"] = [] if dry else wiki_sync.sync(log)
+    except Exception as e:
+        log.append(f"维基资料失败：{e}")
+    try:
         added["x"] = [] if dry else x_series.collect(log)
     except Exception as e:
         log.append(f"X 系列图片展失败：{e}")
@@ -266,6 +324,7 @@ def main():
         return
     AUTO.write_text(json.dumps(auto, ensure_ascii=False, indent=1))
     backup_kv(log)
+    heartbeat(log, today)
     if "--no-deploy" in sys.argv:
         return
     changed = [l[3:] for l in subprocess.run(["git", "status", "--porcelain"], cwd=SITE, capture_output=True, text=True).stdout.splitlines()]
@@ -283,13 +342,15 @@ def main():
             return
     if total == 0:
         return
-    names = {"cdt": "中国数字时代", "x": "X #你没看过的六四", "topics": "媒体专题存档"}
+    names = {"cdt": "中国数字时代", "x": "X #你没看过的六四", "topics": "媒体专题存档", "wiki": "维基资料"}
     lines = [f"🕯️ freedom8964 今日自动收录 {total} 条："]
     for k, v in added.items():
         for x in v[:15]:
             lines.append(f"· [{names[k]}] {x['title']}")
     if added.get("cdt"):
         lines.append("https://freedom8964.com/latest")
+    if added.get("wiki"):
+        lines.append("https://freedom8964.com/wiki")
     if added.get("topics"):
         lines.append("https://freedom8964.com/topics")
     if added.get("x"):

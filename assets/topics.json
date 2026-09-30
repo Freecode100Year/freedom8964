@@ -10386,7 +10386,7 @@
   "key": "pts",
   "name": "公视新闻网 PNN：六四事件",
   "name_en": "PTS News (Taiwan): June Fourth",
-  "source": "https://news.pts.org.tw/tag/3810/",
+  "source": "https://news.pts.org.tw/tag/3810/?type=new",
   "items": [
    {
     "title": "香港禁悼念六四事件 藝術家街頭綁紅絲線遭警制止",
@@ -11163,7 +11163,8 @@
     "date": "2011-08-02",
     "url": "https://news.pts.org.tw/article/5211"
    }
-  ]
+  ],
+  "html": "pts"
  },
  {
   "key": "chinachange",
@@ -11752,6 +11753,7 @@
     "date": "2013-06",
     "url": "https://thediplomat.com/2013/06/tiananmen-square-after-24-years-a-vigil-and-big-yellow-ducks/"
    }
-  ]
+  ],
+  "html": "diplomat"
  }
 ]
