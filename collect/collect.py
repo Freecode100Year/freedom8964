@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """每日自动采集中国数字时代“六四”标签的新文章标题和网址（新闻、YouTube 已改由 Cloudflare Worker 采集）（不读正文），写入 assets/auto.json；
-X #你没看过的六四 系列新帖（x_series.py）写入 assets/articles.json；Cloudflare 采集结果（KV）备份到 collect/kv-backup/。
+X #你没看过的六四 系列新帖（x_series.py）写入 assets/articles.json；
+把网站（Cloudflare）自动采集、已打开核实的媒体专题与维基新条目并入 assets/topics.json、articles.json；Cloudflare 采集结果（KV）备份到 collect/kv-backup/。
 然后构建、部署、提交（提交后 .git/hooks/post-commit 自动推送 GitHub），并用 Telegram 汇报。
 
 来源（全部是白名单）：
@@ -21,7 +22,6 @@ from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 
-import wiki_sync
 import x_series
 
 HERE = Path(__file__).parent
@@ -159,91 +159,63 @@ def collect_feeds(log):
 TOPICS = SITE / "assets/topics.json"
 
 
-# 公视标签页夹带侧栏的无关新闻，标题必须含这些词之一
-PTS_KEYWORDS = re.compile(r"六四|天安門|天安门|八九|89|支聯會|民運|維園|悼念|坦克|丁子霖|母親|紀念|周年|週年|屠殺|鄒幸彤|李卓人|王丹|吾爾開希|趙紫陽|胡耀邦|何俊仁|國殤")
-
-
-def parse_pts(page, today):
-    out = []
-    for m in re.finditer(r'href="(https://news\.pts\.org\.tw/article/\d+)">([^<]{4,})<', page):
-        title = html.unescape(m.group(2)).strip()
-        if not title or not PTS_KEYWORDS.search(title):
-            continue
-        dm = re.search(r"(\d{4})/(\d{1,2})/(\d{1,2})", page[m.end():m.end() + 1500])
-        date = f"{dm.group(1)}-{int(dm.group(2)):02d}-{int(dm.group(3)):02d}" if dm else today
-        out.append({"title": title, "date": date, "url": m.group(1)})
-    return out
-
-
-def parse_diplomat(page, today):
-    return [{"title": clean(m.group(4)), "date": f"{m.group(2)}-{m.group(3)}", "url": "https://thediplomat.com" + m.group(1)}
-            for m in re.finditer(r'<a href="(/(\d{4})/(\d\d)/[^"]+/)" class="td-post".*?<h4>(.*?)</h4>', page, re.S)]
-
-
-HTML_TOPICS = {"pts": parse_pts, "diplomat": parse_diplomat}
-
-
-def collect_topics(log, today):
-    """媒体专题存档（assets/topics.json）：读取各新闻机构六四专题栏目第一页，把新文章（标题、日期、网址）加进去。"""
-    if not TOPICS.exists():
-        return []
-    topics = json.loads(TOPICS.read_text())
-    added = []
-    for t in topics:
-        if t.get("wp"):  # WordPress 网站：按标签读取最新文章
-            have = {x["url"] for x in t["items"]}
-            for tag in t["wp"]["tags"]:
-                try:
-                    posts = json.loads(get(f'{t["wp"]["base"]}/wp-json/wp/v2/posts?tags={tag}&per_page=20&_fields=link,title,date'))
-                except Exception as e:
-                    log.append(f"{t['name']} 读取失败：{e}")
-                    break
-                for p in posts:
-                    if p["link"] in have:
-                        continue
-                    x = {"title": clean(p["title"]["rendered"]), "date": p["date"][:10], "url": p["link"]}
-                    t["items"].insert(0, x)
-                    have.add(p["link"])
-                    added.append(x)
-            continue
-        if t.get("html") in HTML_TOPICS:  # 普通网页的标签页：用对应的解析规则
-            try:
-                page = get(t["source"])
-            except Exception as e:
-                log.append(f"{t['name']} 读取失败：{e}")
-                continue
-            have = {x["url"] for x in t["items"]}
-            for x in HTML_TOPICS[t["html"]](page, today):
-                if x["url"] in have:
-                    continue
-                t["items"].insert(0, x)
-                have.add(x["url"])
-                added.append(x)
-            continue
-        base = t.get("pangea")  # 美国之音系网站（Pangea 平台）的专题栏目
-        if not base:
-            continue
+def kv_get(key):
+    for _ in range(3):  # wrangler 偶尔第一次读取失败，重试
+        r = subprocess.run(["npx", "-y", "wrangler", "kv", "key", "get", "--remote", "--namespace-id=740ce332e0b3484ba516b21b6cb00937", key],
+                           cwd=SITE, capture_output=True, text=True, timeout=120)
         try:
-            s = get(t["source"])
-        except Exception as e:
-            log.append(f"{t['name']} 读取失败：{e}")
-            continue
-        have = {x["url"] for x in t["items"]}
-        for m in re.finditer(r'<a href="(/a/[^"]+\.html)"[^>]*title="([^"]+)"', s):
-            url = base + m.group(1)
-            if url in have:
+            return json.loads(r.stdout)
+        except ValueError:
+            pass
+    return None
+
+
+def kv_put(key, data):
+    r = subprocess.run(["npx", "-y", "wrangler", "kv", "key", "put", "--remote", "--namespace-id=740ce332e0b3484ba516b21b6cb00937", key,
+                        json.dumps(data, ensure_ascii=False)], cwd=SITE, capture_output=True, text=True, timeout=120)
+    return r.returncode == 0
+
+
+def merge_from_kv(log):
+    """把网站（Cloudflare）自动采集、已打开核实的媒体专题和维基新条目并入静态资料，然后清空 KV 里的暂存。"""
+    tn, wn = kv_get("topics_new"), kv_get("wiki_new")
+    added_t, added_w = [], []
+    if tn:
+        topics = json.loads(TOPICS.read_text())
+        by = {t["key"]: t for t in topics}
+        for key, items in tn.items():
+            t = by.get(key)
+            if not t:
                 continue
-            dm = re.search(r'class="date[^"]*"[^>]*>([^<]+)<', s[m.end():m.end() + 4000])
-            dd = re.search(r"(\d{4})年(\d{1,2})月(\d{1,2})日", html.unescape(dm.group(1))) if dm else None
-            date = f"{dd.group(1)}-{int(dd.group(2)):02d}-{int(dd.group(3)):02d}" if dd else today
-            x = {"title": html.unescape(m.group(2)).strip(), "date": date, "url": url}
-            t["items"].insert(0, x)
-            have.add(url)
-            added.append(x)
-    if added:
+            have = {x["url"] for x in t["items"]}
+            for x in items:
+                if x["url"] not in have:
+                    t["items"].append({"title": x["title"], "date": x.get("date") or x.get("added", ""), "url": x["url"]})
+                    added_t.append(x)
+            t["items"].sort(key=lambda x: x.get("date", ""), reverse=True)
         TOPICS.write_text(json.dumps(topics, ensure_ascii=False, indent=1))
-    log.append(f"媒体专题存档：新增 {len(added)} 篇")
-    return added
+    if wn:
+        data = json.loads((SITE / "assets/articles.json").read_text())
+        by = {s["key"]: s for s in data}
+        for key, items in wn.items():
+            sec = by.get(key)
+            if not sec:
+                continue
+            have = {x["url"] for x in sec["items"]}
+            for x in items:
+                if x["url"] not in have:
+                    sec["items"].append({"title": x["title"], "outlet": x.get("outlet", ""), "date": "", "url": x["url"]})
+                    added_w.append(x)
+        (SITE / "assets/articles.json").write_text(json.dumps(data, ensure_ascii=False, indent=1))
+    if tn or wn:
+        # 先同步已收录名单，再清空暂存，避免网站把同样的条目再收一次
+        subprocess.run(["python3", str(HERE / "sync_known.py")], cwd=SITE, capture_output=True, text=True, timeout=600)
+        if tn:
+            kv_put("topics_new", {})
+        if wn:
+            kv_put("wiki_new", {})
+    log.append(f"并入网站自动采集的新条目：媒体专题 {len(added_t)}、维基 {len(added_w)}")
+    return added_t, added_w
 
 
 def heartbeat(log, today):
@@ -299,11 +271,11 @@ def main():
             seen.add(x["url"])
         auto[k] = new + auto[k]
         added[k] = new
-    added["topics"] = [] if dry else collect_topics(log, today)
     try:
-        added["wiki"] = [] if dry else wiki_sync.sync(log)
+        added["topics"], added["wiki"] = ([], []) if dry else merge_from_kv(log)
     except Exception as e:
-        log.append(f"维基资料失败：{e}")
+        added["topics"], added["wiki"] = [], []
+        log.append(f"合并 Cloudflare 新条目失败：{e}")
     try:
         added["x"] = [] if dry else x_series.collect(log)
     except Exception as e:

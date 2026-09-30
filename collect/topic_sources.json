@@ -1,0 +1,237 @@
+[
+ {
+  "key": "voa",
+  "label": "美国之音 VOA：纪念六四",
+  "label_en": "Voice of America (Chinese): June Fourth",
+  "name": "美国之音 VOA：纪念六四",
+  "type": "pangea",
+  "base": "https://www.voachinese.com",
+  "url": "https://www.voachinese.com/z/4089"
+ },
+ {
+  "key": "voa-cantonese",
+  "label": "美国之音粤语 VOA Cantonese：纪念六四",
+  "label_en": "Voice of America (Cantonese): June Fourth",
+  "name": "美国之音粤语 VOA Cantonese：纪念六四",
+  "type": "pangea",
+  "base": "https://www.voacantonese.com",
+  "url": "https://www.voacantonese.com/z/5844"
+ },
+ {
+  "key": "hkfp",
+  "label": "香港自由新闻 HKFP：六四与支联会",
+  "label_en": "Hong Kong Free Press: Tiananmen and the Hong Kong Alliance",
+  "name": "香港自由新闻 HKFP：六四与支联会（标签 4745）",
+  "type": "wp",
+  "url": "https://hongkongfp.com/wp-json/wp/v2/posts?tags=4745&per_page=20&_fields=link,title,date"
+ },
+ {
+  "key": "hkfp",
+  "label": "香港自由新闻 HKFP：六四与支联会",
+  "label_en": "Hong Kong Free Press: Tiananmen and the Hong Kong Alliance",
+  "name": "香港自由新闻 HKFP：六四与支联会（标签 3222）",
+  "type": "wp",
+  "url": "https://hongkongfp.com/wp-json/wp/v2/posts?tags=3222&per_page=20&_fields=link,title,date"
+ },
+ {
+  "key": "hkfp",
+  "label": "香港自由新闻 HKFP：六四与支联会",
+  "label_en": "Hong Kong Free Press: Tiananmen and the Hong Kong Alliance",
+  "name": "香港自由新闻 HKFP：六四与支联会（标签 5109）",
+  "type": "wp",
+  "url": "https://hongkongfp.com/wp-json/wp/v2/posts?tags=5109&per_page=20&_fields=link,title,date"
+ },
+ {
+  "key": "hkfp",
+  "label": "香港自由新闻 HKFP：六四与支联会",
+  "label_en": "Hong Kong Free Press: Tiananmen and the Hong Kong Alliance",
+  "name": "香港自由新闻 HKFP：六四与支联会（标签 403）",
+  "type": "wp",
+  "url": "https://hongkongfp.com/wp-json/wp/v2/posts?tags=403&per_page=20&_fields=link,title,date"
+ },
+ {
+  "key": "hkfp",
+  "label": "香港自由新闻 HKFP：六四与支联会",
+  "label_en": "Hong Kong Free Press: Tiananmen and the Hong Kong Alliance",
+  "name": "香港自由新闻 HKFP：六四与支联会（标签 30257）",
+  "type": "wp",
+  "url": "https://hongkongfp.com/wp-json/wp/v2/posts?tags=30257&per_page=20&_fields=link,title,date"
+ },
+ {
+  "key": "hkfp",
+  "label": "香港自由新闻 HKFP：六四与支联会",
+  "label_en": "Hong Kong Free Press: Tiananmen and the Hong Kong Alliance",
+  "name": "香港自由新闻 HKFP：六四与支联会（标签 7187）",
+  "type": "wp",
+  "url": "https://hongkongfp.com/wp-json/wp/v2/posts?tags=7187&per_page=20&_fields=link,title,date"
+ },
+ {
+  "key": "hkfp",
+  "label": "香港自由新闻 HKFP：六四与支联会",
+  "label_en": "Hong Kong Free Press: Tiananmen and the Hong Kong Alliance",
+  "name": "香港自由新闻 HKFP：六四与支联会（标签 20278）",
+  "type": "wp",
+  "url": "https://hongkongfp.com/wp-json/wp/v2/posts?tags=20278&per_page=20&_fields=link,title,date"
+ },
+ {
+  "key": "pts",
+  "label": "公视新闻网 PNN：六四事件",
+  "label_en": "PTS News (Taiwan): June Fourth",
+  "name": "公视新闻网 PNN：六四事件",
+  "type": "pts",
+  "url": "https://news.pts.org.tw/tag/3810/?type=new",
+  "keywords": "六四|天安門|天安门|八九|89|支聯會|民運|維園|悼念|坦克|丁子霖|母親|紀念|周年|週年|屠殺|鄒幸彤|李卓人|王丹|吾爾開希|趙紫陽|胡耀邦|何俊仁|國殤"
+ },
+ {
+  "key": "chinachange",
+  "label": "中国变革 China Change：六四",
+  "label_en": "China Change: June Fourth",
+  "name": "中国变革 China Change：六四（标签 646346823）",
+  "type": "wp",
+  "url": "https://chinachange.org/wp-json/wp/v2/posts?tags=646346823&per_page=20&_fields=link,title,date"
+ },
+ {
+  "key": "chinachange",
+  "label": "中国变革 China Change：六四",
+  "label_en": "China Change: June Fourth",
+  "name": "中国变革 China Change：六四（标签 21137225）",
+  "type": "wp",
+  "url": "https://chinachange.org/wp-json/wp/v2/posts?tags=21137225&per_page=20&_fields=link,title,date"
+ },
+ {
+  "key": "chinachange",
+  "label": "中国变革 China Change：六四",
+  "label_en": "China Change: June Fourth",
+  "name": "中国变革 China Change：六四（标签 7483138）",
+  "type": "wp",
+  "url": "https://chinachange.org/wp-json/wp/v2/posts?tags=7483138&per_page=20&_fields=link,title,date"
+ },
+ {
+  "key": "chinachange",
+  "label": "中国变革 China Change：六四",
+  "label_en": "China Change: June Fourth",
+  "name": "中国变革 China Change：六四（标签 32447677）",
+  "type": "wp",
+  "url": "https://chinachange.org/wp-json/wp/v2/posts?tags=32447677&per_page=20&_fields=link,title,date"
+ },
+ {
+  "key": "chinachange",
+  "label": "中国变革 China Change：六四",
+  "label_en": "China Change: June Fourth",
+  "name": "中国变革 China Change：六四（标签 384784）",
+  "type": "wp",
+  "url": "https://chinachange.org/wp-json/wp/v2/posts?tags=384784&per_page=20&_fields=link,title,date"
+ },
+ {
+  "key": "chinachange",
+  "label": "中国变革 China Change：六四",
+  "label_en": "China Change: June Fourth",
+  "name": "中国变革 China Change：六四（标签 646346761）",
+  "type": "wp",
+  "url": "https://chinachange.org/wp-json/wp/v2/posts?tags=646346761&per_page=20&_fields=link,title,date"
+ },
+ {
+  "key": "chinachange",
+  "label": "中国变革 China Change：六四",
+  "label_en": "China Change: June Fourth",
+  "name": "中国变革 China Change：六四（标签 239563281）",
+  "type": "wp",
+  "url": "https://chinachange.org/wp-json/wp/v2/posts?tags=239563281&per_page=20&_fields=link,title,date"
+ },
+ {
+  "key": "chinachange",
+  "label": "中国变革 China Change：六四",
+  "label_en": "China Change: June Fourth",
+  "name": "中国变革 China Change：六四（标签 646346391）",
+  "type": "wp",
+  "url": "https://chinachange.org/wp-json/wp/v2/posts?tags=646346391&per_page=20&_fields=link,title,date"
+ },
+ {
+  "key": "chinachange",
+  "label": "中国变革 China Change：六四",
+  "label_en": "China Change: June Fourth",
+  "name": "中国变革 China Change：六四（标签 546291823）",
+  "type": "wp",
+  "url": "https://chinachange.org/wp-json/wp/v2/posts?tags=546291823&per_page=20&_fields=link,title,date"
+ },
+ {
+  "key": "chinachange",
+  "label": "中国变革 China Change：六四",
+  "label_en": "China Change: June Fourth",
+  "name": "中国变革 China Change：六四（标签 16390269）",
+  "type": "wp",
+  "url": "https://chinachange.org/wp-json/wp/v2/posts?tags=16390269&per_page=20&_fields=link,title,date"
+ },
+ {
+  "key": "chinachange",
+  "label": "中国变革 China Change：六四",
+  "label_en": "China Change: June Fourth",
+  "name": "中国变革 China Change：六四（标签 594297161）",
+  "type": "wp",
+  "url": "https://chinachange.org/wp-json/wp/v2/posts?tags=594297161&per_page=20&_fields=link,title,date"
+ },
+ {
+  "key": "chinachange",
+  "label": "中国变革 China Change：六四",
+  "label_en": "China Change: June Fourth",
+  "name": "中国变革 China Change：六四（标签 544591）",
+  "type": "wp",
+  "url": "https://chinachange.org/wp-json/wp/v2/posts?tags=544591&per_page=20&_fields=link,title,date"
+ },
+ {
+  "key": "chinachange",
+  "label": "中国变革 China Change：六四",
+  "label_en": "China Change: June Fourth",
+  "name": "中国变革 China Change：六四（标签 21092913）",
+  "type": "wp",
+  "url": "https://chinachange.org/wp-json/wp/v2/posts?tags=21092913&per_page=20&_fields=link,title,date"
+ },
+ {
+  "key": "chinachange",
+  "label": "中国变革 China Change：六四",
+  "label_en": "China Change: June Fourth",
+  "name": "中国变革 China Change：六四（标签 214820）",
+  "type": "wp",
+  "url": "https://chinachange.org/wp-json/wp/v2/posts?tags=214820&per_page=20&_fields=link,title,date"
+ },
+ {
+  "key": "chinachange",
+  "label": "中国变革 China Change：六四",
+  "label_en": "China Change: June Fourth",
+  "name": "中国变革 China Change：六四（标签 7487388）",
+  "type": "wp",
+  "url": "https://chinachange.org/wp-json/wp/v2/posts?tags=7487388&per_page=20&_fields=link,title,date"
+ },
+ {
+  "key": "chinachange",
+  "label": "中国变革 China Change：六四",
+  "label_en": "China Change: June Fourth",
+  "name": "中国变革 China Change：六四（标签 646346626）",
+  "type": "wp",
+  "url": "https://chinachange.org/wp-json/wp/v2/posts?tags=646346626&per_page=20&_fields=link,title,date"
+ },
+ {
+  "key": "chinachange",
+  "label": "中国变革 China Change：六四",
+  "label_en": "China Change: June Fourth",
+  "name": "中国变革 China Change：六四（标签 646346402）",
+  "type": "wp",
+  "url": "https://chinachange.org/wp-json/wp/v2/posts?tags=646346402&per_page=20&_fields=link,title,date"
+ },
+ {
+  "key": "chinachange",
+  "label": "中国变革 China Change：六四",
+  "label_en": "China Change: June Fourth",
+  "name": "中国变革 China Change：六四（标签 646346592）",
+  "type": "wp",
+  "url": "https://chinachange.org/wp-json/wp/v2/posts?tags=646346592&per_page=20&_fields=link,title,date"
+ },
+ {
+  "key": "diplomat",
+  "label": "The Diplomat：天安门",
+  "label_en": "The Diplomat: Tiananmen",
+  "name": "The Diplomat：天安门",
+  "type": "diplomat",
+  "url": "https://thediplomat.com/tag/tiananmen-square/"
+ }
+]

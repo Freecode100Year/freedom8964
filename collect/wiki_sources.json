@@ -1,0 +1,133 @@
+[
+ {
+  "section": "wiki-event",
+  "host": "zh.wikipedia.org",
+  "cat": "Category:六四事件",
+  "exclude": [],
+  "outlet": "维基百科 Wikipedia",
+  "label": "维基百科：事件与文献条目",
+  "label_en": "Wikipedia (Chinese): events and documents"
+ },
+ {
+  "section": "wiki-event",
+  "host": "zh.wikipedia.org",
+  "cat": "Category:六四文献",
+  "exclude": [],
+  "outlet": "维基百科 Wikipedia",
+  "label": "维基百科：事件与文献条目",
+  "label_en": "Wikipedia (Chinese): events and documents"
+ },
+ {
+  "section": "wiki-region",
+  "host": "zh.wikipedia.org",
+  "cat": "Category:各地六四事件",
+  "exclude": [],
+  "outlet": "维基百科 Wikipedia",
+  "label": "维基百科：各地六四",
+  "label_en": "Wikipedia (Chinese): June Fourth across China"
+ },
+ {
+  "section": "wiki-org",
+  "host": "zh.wikipedia.org",
+  "cat": "Category:六四事件相关组织",
+  "exclude": [
+   "They Don't Care About Us",
+   "咕咕鸡饭",
+   "我们的青春，在台湾",
+   "末日+5",
+   "中美国 (迷你剧)"
+  ],
+  "outlet": "维基百科 Wikipedia",
+  "label": "维基百科：组织、纪念与作品",
+  "label_en": "Wikipedia (Chinese): organisations, memorials and works"
+ },
+ {
+  "section": "wiki-org",
+  "host": "zh.wikipedia.org",
+  "cat": "Category:六四事件纪念",
+  "exclude": [
+   "They Don't Care About Us",
+   "咕咕鸡饭",
+   "我们的青春，在台湾",
+   "末日+5",
+   "中美国 (迷你剧)"
+  ],
+  "outlet": "维基百科 Wikipedia",
+  "label": "维基百科：组织、纪念与作品",
+  "label_en": "Wikipedia (Chinese): organisations, memorials and works"
+ },
+ {
+  "section": "wiki-org",
+  "host": "zh.wikipedia.org",
+  "cat": "Category:六四事件背景作品",
+  "exclude": [
+   "They Don't Care About Us",
+   "咕咕鸡饭",
+   "我们的青春，在台湾",
+   "末日+5",
+   "中美国 (迷你剧)"
+  ],
+  "outlet": "维基百科 Wikipedia",
+  "label": "维基百科：组织、纪念与作品",
+  "label_en": "Wikipedia (Chinese): organisations, memorials and works"
+ },
+ {
+  "section": "wikien-event",
+  "host": "en.wikipedia.org",
+  "cat": "Category:1989 Tiananmen Square protests and massacre",
+  "exclude": [
+   "Lan Yu (film)",
+   "Chimerica (TV series)",
+   "Chimerica (play)",
+   "Beijing Coma"
+  ],
+  "outlet": "Wikipedia",
+  "label": "英文维基百科：事件条目",
+  "label_en": "Wikipedia (English): the events"
+ },
+ {
+  "section": "wikien-people",
+  "host": "en.wikipedia.org",
+  "cat": "Category:1989 Tiananmen Square protesters",
+  "exclude": [],
+  "outlet": "Wikipedia",
+  "label": "英文维基百科：参与者与书籍",
+  "label_en": "Wikipedia (English): participants and books"
+ },
+ {
+  "section": "wikien-people",
+  "host": "en.wikipedia.org",
+  "cat": "Category:Books about the 1989 Tiananmen Square protests and massacre",
+  "exclude": [],
+  "outlet": "Wikipedia",
+  "label": "英文维基百科：参与者与书籍",
+  "label_en": "Wikipedia (English): participants and books"
+ },
+ {
+  "section": "wikisource",
+  "host": "zh.wikisource.org",
+  "cat": "Category:六四事件",
+  "exclude": [
+   "一九八九年调整国家机关、事业单位工作人员工资实施方案",
+   "社会团体登记管理条例 (1989年)",
+   "晋城市人民政府办公厅转发市民政局《关于清理整顿全市社会团体的安排意见》的通知",
+   "江苏省人民政府办公厅转发省民政厅关于清理整顿社会团体工作的意见的通知",
+   "中共中央办公厅、国务院办公厅关于在国内公务活动中严禁用公款宴请和有关工作餐的规定",
+   "1990年中华人民共和国国务院政府工作报告"
+  ],
+  "outlet": "维基文库 Wikisource",
+  "label": "维基文库：1989 年前后的原始文件",
+  "label_en": "Wikisource (Chinese): original documents"
+ },
+ {
+  "section": "wiki-people",
+  "host": "zh.wikipedia.org",
+  "cat": "Category:六四人物",
+  "exclude": [
+   "六四事件人物"
+  ],
+  "outlet": "维基百科 Wikipedia",
+  "label": "维基百科：六四人物",
+  "label_en": "Wikipedia (Chinese): people"
+ }
+]
