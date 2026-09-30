@@ -166,3 +166,6 @@ button.btn[disabled] { color: var(--muted); border-color: var(--line); cursor: d
 .hero-candle:focus-visible { box-shadow: 0 0 0 1px var(--blood-text); }
 .hero-candle:not(.lit):hover .body { filter: brightness(1.08); }
 .candle.no-fade .flame { transition: none; }
+details.year { border-top: 1px solid var(--line); }
+details.year > summary { cursor: pointer; padding: .7em 0; font-weight: 600; }
+details.year > summary .muted { font-weight: 400; }

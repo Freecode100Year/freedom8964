@@ -155,6 +155,41 @@ def collect_feeds(log):
     return out
 
 
+TOPICS = SITE / "assets/topics.json"
+
+
+def collect_topics(log, today):
+    """媒体专题存档（assets/topics.json）：读取各新闻机构六四专题栏目第一页，把新文章（标题、日期、网址）加进去。"""
+    if not TOPICS.exists():
+        return []
+    topics = json.loads(TOPICS.read_text())
+    added = []
+    for t in topics:
+        if t["key"] != "voa":
+            continue
+        try:
+            s = get(t["source"])
+        except Exception as e:
+            log.append(f"{t['name']} 读取失败：{e}")
+            continue
+        have = {x["url"] for x in t["items"]}
+        for m in re.finditer(r'<a href="(/a/[^"]+\.html)"[^>]*title="([^"]+)"', s):
+            url = "https://www.voachinese.com" + m.group(1)
+            if url in have:
+                continue
+            dm = re.search(r'class="date[^"]*"[^>]*>([^<]+)<', s[m.end():m.end() + 4000])
+            dd = re.search(r"(\d{4})年(\d{1,2})月(\d{1,2})日", html.unescape(dm.group(1))) if dm else None
+            date = f"{dd.group(1)}-{int(dd.group(2)):02d}-{int(dd.group(3)):02d}" if dd else today
+            x = {"title": html.unescape(m.group(2)).strip(), "date": date, "url": url}
+            t["items"].insert(0, x)
+            have.add(url)
+            added.append(x)
+    if added:
+        TOPICS.write_text(json.dumps(topics, ensure_ascii=False, indent=1))
+    log.append(f"媒体专题存档：新增 {len(added)} 篇")
+    return added
+
+
 def backup_kv(log):
     """把 Cloudflare Worker 采集的数据（KV）存一份到 collect/kv-backup/，随仓库推到 GitHub。"""
     out = HERE / "kv-backup"
@@ -193,6 +228,7 @@ def main():
             seen.add(x["url"])
         auto[k] = new + auto[k]
         added[k] = new
+    added["topics"] = [] if dry else collect_topics(log, today)
     try:
         added["x"] = [] if dry else x_series.collect(log)
     except Exception as e:
@@ -230,13 +266,15 @@ def main():
             return
     if total == 0:
         return
-    names = {"cdt": "中国数字时代", "x": "X #你没看过的六四"}
+    names = {"cdt": "中国数字时代", "x": "X #你没看过的六四", "topics": "美国之音六四专题"}
     lines = [f"🕯️ freedom8964 今日自动收录 {total} 条："]
     for k, v in added.items():
         for x in v[:15]:
             lines.append(f"· [{names[k]}] {x['title']}")
     if added.get("cdt"):
         lines.append("https://freedom8964.com/latest")
+    if added.get("topics"):
+        lines.append("https://freedom8964.com/topics")
     if added.get("x"):
         lines.append("https://freedom8964.com/reports#x-unseen64")
     subprocess.run([str(Path.home() / "bin/tg-send"), "\n".join(lines)])
