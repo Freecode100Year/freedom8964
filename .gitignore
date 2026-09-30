@@ -1,3 +1,4 @@
 dist/
 .wrangler/
 node_modules/
+.xseen.json

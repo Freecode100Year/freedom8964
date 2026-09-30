@@ -19,6 +19,8 @@ from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 
+import x_series
+
 HERE = Path(__file__).parent
 SITE = HERE.parent
 AUTO = SITE / "assets/auto.json"
@@ -155,6 +157,22 @@ def collect_feeds(log):
     return out
 
 
+def backup_kv(log):
+    """把 Cloudflare Worker 采集的数据（KV）存一份到 collect/kv-backup/，随仓库推到 GitHub。"""
+    out = HERE / "kv-backup"
+    out.mkdir(exist_ok=True)
+    for k in ("articles", "videos", "meta"):
+        r = subprocess.run(["npx", "-y", "wrangler", "kv", "key", "get", "--remote",
+                            "--namespace-id=740ce332e0b3484ba516b21b6cb00937", k],
+                           cwd=SITE, capture_output=True, text=True, timeout=120)
+        try:
+            data = json.loads(r.stdout)
+        except ValueError:
+            log.append(f"KV {k} 备份失败")
+            continue
+        (out / f"{k}.json").write_text(json.dumps(data, ensure_ascii=False, indent=1))
+
+
 def main():
     dry = "--dry-run" in sys.argv
     today = datetime.now(timezone.utc).astimezone().strftime("%Y-%m-%d")
@@ -172,6 +190,10 @@ def main():
             seen.add(x["url"])
         auto[k] = new + auto[k]
         added[k] = new
+    try:
+        added["x"] = [] if dry else x_series.collect(log)
+    except Exception as e:
+        log.append(f"X 系列图片展失败：{e}")
     total = sum(len(v) for v in added.values())
     stamp = datetime.now().strftime("%F %T")
     with LOG.open("a") as f:
@@ -183,20 +205,26 @@ def main():
     for k, v in added.items():
         for x in v:
             print(f"+ [{k}] {x['title']} | {x['url']}")
-    if dry or total == 0:
-        print("没有新条目" if total == 0 else "dry-run，不写入")
+    if dry:
+        print("dry-run，不写入")
         return
     AUTO.write_text(json.dumps(auto, ensure_ascii=False, indent=1))
+    backup_kv(log)
     if "--no-deploy" in sys.argv:
         return
+    if not subprocess.run(["git", "status", "--porcelain"], cwd=SITE, capture_output=True, text=True).stdout.strip():
+        print("没有新条目")
+        return
     steps = [["python3", "build.py"], ["npx", "-y", "wrangler", "deploy"],
-             ["git", "add", "-A"], ["git", "-c", "user.name=freedom8964", "-c", "user.email=noreply@freedom8964.com", "commit", "-qm", f"自动采集 {today}：新增 {total} 条"], ["git", "push", "-q"]]
+             ["git", "add", "-A"], ["git", "-c", "user.name=freedom8964", "-c", "user.email=noreply@freedom8964.com", "commit", "-qm", f"自动采集 {today}：新增 {total} 条" if total else f"备份 Cloudflare 采集数据 {today}"]]  # 提交后由 .git/hooks/post-commit 自动推送 GitHub
     for cmd in steps:
         r = subprocess.run(cmd, cwd=SITE, capture_output=True, text=True, timeout=600)
         if r.returncode != 0:
             subprocess.run([str(Path.home() / "bin/tg-send"), f"⚠️ freedom8964 自动采集：{' '.join(cmd[:3])} 失败\n{(r.stderr or r.stdout)[-500:]}"])
             return
-    names = {"cdt": "中国数字时代"}
+    if total == 0:
+        return
+    names = {"cdt": "中国数字时代", "x": "X #你没看过的六四"}
     lines = [f"🕯️ freedom8964 今日自动收录 {total} 条："]
     for k, v in added.items():
         for x in v[:15]:

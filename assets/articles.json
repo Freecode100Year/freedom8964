@@ -324,21 +324,17 @@
   "intro_en": "Government statements (original or as reported)."
  },
  {
-  "key": "x-whyyoutouzhele",
-  "heading": "X（推特）：李老师不是你老师 @whyyoutouzhele",
-  "intro": "X 账号 @whyyoutouzhele 发布的六四相关帖文。",
+  "key": "x-unseen64",
+  "heading": "X（推特）：#你没看过的六四 系列图片展",
+  "intro": "李老师不是你老师 @whyyoutouzhele 与中国人权 @hrichina、人道中国 @HChina89 在 X 上发布的系列帖文（2026 年）。",
+  "heading_en": "X (Twitter): #你没看过的六四 (“The June 4th You Haven't Seen”) photo series",
+  "intro_en": "Posts in the series published on X by @whyyoutouzhele with @hrichina and @HChina89 (2026).",
   "items": [
    {
-    "title": "多名博主及网友表示，今年“六四”，微信开启了“预防式封锁”，很多人近期并未发布任何朋友圈内容，仅因此前存在“违规发言”情况，导致账号被预防式…",
+    "title": "#你没看过的六四 系列图片展31 \"屠杀前后的天与地\"",
     "outlet": "X · 李老师不是你老师 @whyyoutouzhele",
     "date": "2026-06-04",
-    "url": "https://x.com/whyyoutouzhele/status/2062380068706410497"
-   },
-   {
-    "title": "“6月4日，疯狂星期四” 6月4日，一网友自述，在抖音私信和朋友发送了 “肯德基疯狂四”宣传图 一秒挂图，被官方判定为“违反社区规范”",
-    "outlet": "X · 李老师不是你老师 @whyyoutouzhele",
-    "date": "2026-06-04",
-    "url": "https://x.com/whyyoutouzhele/status/2062464868322627807"
+    "url": "https://x.com/whyyoutouzhele/status/2062353645472190886"
    },
    {
     "title": "#你没看过的六四 系列图片展29 \"遇难者墓碑\" 他们的名字没有出现在中共官方任何名单上，却被亲人一笔一笔刻进了石头里，这四块墓碑下长眠着四…",
@@ -347,10 +343,40 @@
     "url": "https://x.com/whyyoutouzhele/status/2061734573935927772"
    },
    {
+    "title": "#你没看过的六四 系列图片展28 \"学生遇难证明\" 三张泛黄的纸，三个被学校官方文件确认的死者。它们由死者所在的院校开具，盖着鲜红的公章，白…",
+    "outlet": "X · 李老师不是你老师 @whyyoutouzhele",
+    "date": "2026-06-01",
+    "url": "https://x.com/whyyoutouzhele/status/2061334428996026780"
+   },
+   {
+    "title": "#你没看过的六四 系列图片展27 \"被碾碎的自行车\" 六四屠杀过后，北京街头遍地都是被碾碎的自行车。 车轮拧成麻花，车架压成一片片扭曲的金属…",
+    "outlet": "X · 李老师不是你老师 @whyyoutouzhele",
+    "date": "2026-05-31",
+    "url": "https://x.com/whyyoutouzhele/status/2060911643798737366"
+   },
+   {
+    "title": "#你没看过的六四 系列图片展26 “比耶✌的警察” 照片里背对镜头、戴大盖帽穿警服的，是当年走上北京街头声援学生运动的公安干警。其中一只手高…",
+    "outlet": "X · 李老师不是你老师 @whyyoutouzhele",
+    "date": "2026-05-30",
+    "url": "https://x.com/whyyoutouzhele/status/2060526606121099772"
+   },
+   {
     "title": "#你没看过的六四 系列图片展25 “北大民主墙” 1989年的春夏，北京大学三角地一带的墙上层层叠叠贴满了纸。有学生自治会筹委会的通告，有罢…",
     "outlet": "X · 李老师不是你老师 @whyyoutouzhele",
     "date": "2026-05-29",
     "url": "https://x.com/whyyoutouzhele/status/2060171768418185702"
+   },
+   {
+    "title": "#你没看过的六四 系列图片展24 \"广场上的大扫除\" 1989年5月，一场大雨过后，天安门广场上的学生们自发组织了一场大扫除。",
+    "outlet": "X · 李老师不是你老师 @whyyoutouzhele",
+    "date": "2026-05-28",
+    "url": "https://x.com/whyyoutouzhele/status/2059809380946854083"
+   },
+   {
+    "title": "你没看过的六四 系列图片展23 \"一滩血迹与一只鞋子\" 6月4日解放军镇压屠杀后，长安街上。 照片中央下方，是一滩已经发黑的血，沿着双黄线慢…",
+    "outlet": "X · 李老师不是你老师 @whyyoutouzhele",
+    "date": "2026-05-27",
+    "url": "https://x.com/whyyoutouzhele/status/2059492293271253379"
    },
    {
     "title": "#你没看过的六四 系列图片展22 \"广场上的秩序\" 1989年的天安门广场，几十万人聚在一起，没有警察指挥，没有官方组织，但一切运转得井井有…",
@@ -359,10 +385,70 @@
     "url": "https://x.com/whyyoutouzhele/status/2058827913336955065"
    },
    {
+    "title": "#你没看过的六四 系列图片展21 “广场上的笑容” 1989年，北京天安门广场。 镜头里的人群仰着头，朝着拍照的人挥手、欢呼、鼓掌。 有人举…",
+    "outlet": "X · 李老师不是你老师 @whyyoutouzhele",
+    "date": "2026-05-24",
+    "url": "https://x.com/whyyoutouzhele/status/2058382491422179387"
+   },
+   {
+    "title": "#你没看过的六四 系列图片展20 \"广场上的音乐\" 1989年5月的天安门广场，不只有标语和绝食宣言。也有吉他，也有摇滚乐。 那年广场上的年…",
+    "outlet": "X · 李老师不是你老师 @whyyoutouzhele",
+    "date": "2026-05-23",
+    "url": "https://x.com/whyyoutouzhele/status/2058148437355266370"
+   },
+   {
+    "title": "#你没看过的六四 系列图片展19 \"暴风雨前的宁静\" 1989年，中南海新华门前，一个穿浅蓝色衬衫的学生，站在一名年轻士兵面前，用手触碰着他…",
+    "outlet": "X · 李老师不是你老师 @whyyoutouzhele",
+    "date": "2026-05-21",
+    "url": "https://x.com/whyyoutouzhele/status/2057272665808007583"
+   },
+   {
     "title": "#你没看过的六四 系列图片展18 “教授保护学生” 天安门广场上，一排排中年人手挽着手，组成一道道人墙。 他们身上斜挎着白色绶带，写着四个字…",
     "outlet": "X · 李老师不是你老师 @whyyoutouzhele",
     "date": "2026-05-20",
     "url": "https://x.com/whyyoutouzhele/status/2056970674875375998"
+   },
+   {
+    "title": "#你没看过的六四 系列图片展17 北京一地贴着一张画。 慈禧太后坐在龙椅上，戴着凤冠，穿着朝服，但脸被换成了邓小平。旁边几行字：邓太后，狗头…",
+    "outlet": "X · 李老师不是你老师 @whyyoutouzhele",
+    "date": "2026-05-19",
+    "url": "https://x.com/whyyoutouzhele/status/2056547890579775515"
+   },
+   {
+    "title": "#你没看过的六四 系列图片展16 “天下为公” 这张珍贵的照片摄于1989年5月4日前后，天安门广场上的人民英雄纪念碑旁矗立着巨幅孙中山画像…",
+    "outlet": "X · 李老师不是你老师 @whyyoutouzhele",
+    "date": "2026-05-18",
+    "url": "https://x.com/whyyoutouzhele/status/2056200852491456731"
+   },
+   {
+    "title": "#你没看过的六四 系列图片展15 1989年在中国发生的民主运动，有钱出钱，有力出力，自下而上，全民参与。 在那个没有互联网的年代，民众仅凭…",
+    "outlet": "X · 李老师不是你老师 @whyyoutouzhele",
+    "date": "2026-05-16",
+    "url": "https://x.com/whyyoutouzhele/status/2055521123421315329"
+   },
+   {
+    "title": "#你没看过的六四 系列图片展14 今天的中国教育，常常试图将孩子们塑造成整齐划一、绝不妄议国事的听话工具。然而在1989年，即使是稚气未脱的…",
+    "outlet": "X · 李老师不是你老师 @whyyoutouzhele",
+    "date": "2026-05-13",
+    "url": "https://x.com/whyyoutouzhele/status/2054446542774514151"
+   },
+   {
+    "title": "#你没看过的六四 系列图片展13 八九年发生的那一切导火索是一个人的死亡。 1989年4月15日，胡耀邦心脏病发作离世。他曾是中共总书记，因…",
+    "outlet": "X · 李老师不是你老师 @whyyoutouzhele",
+    "date": "2026-05-11",
+    "url": "https://x.com/whyyoutouzhele/status/2053832496802857274"
+   },
+   {
+    "title": "#你没看过的六四 系列图片展12 这张照片记录着刘晓波在天安门广场上向学生发表演讲的一刻。 1989年，他正在美国哥伦比亚大学做访问学者，本…",
+    "outlet": "X · 李老师不是你老师 @whyyoutouzhele",
+    "date": "2026-05-09",
+    "url": "https://x.com/whyyoutouzhele/status/2052939109904024059"
+   },
+   {
+    "title": "#你没看过的六四 系列图片展11 今天的中南海新华门，\"为人民服务\"的影壁前，戒备森严，“人民”不宜久留。然而在1989年，此地确实曾短暂属…",
+    "outlet": "X · 李老师不是你老师 @whyyoutouzhele",
+    "date": "2026-05-07",
+    "url": "https://x.com/whyyoutouzhele/status/2052184136274809211"
    },
    {
     "title": "#你没看过的六四 系列图片展10 “只活了5天的民主女神” 1989年5月29日深夜，中央美术学院等八所北京艺术院校的学生，将民主女神石膏塑…",
@@ -383,16 +469,65 @@
     "url": "https://x.com/whyyoutouzhele/status/2050040007474430067"
    },
    {
+    "title": "#你没看过的六四 系列图片展7 近日，中共国安部炒作所谓“境外势力煽动中国年轻人躺平”。然而我们没有忘记，当中国青年不再“躺平”，而是为了国…",
+    "outlet": "X · 李老师不是你老师 @whyyoutouzhele",
+    "date": "2026-04-30",
+    "url": "https://x.com/whyyoutouzhele/status/2049749379284664344"
+   },
+   {
+    "title": "#你没看过的六四 系列图片展6 1989年，民主的火种跨越重洋。这组来自全球各地的照片，记录了那个夏天全世界中国留学生与正义力量同呼吸共命运…",
+    "outlet": "X · 李老师不是你老师 @whyyoutouzhele",
+    "date": "2026-04-28",
+    "url": "https://x.com/whyyoutouzhele/status/2048937743783465250"
+   },
+   {
+    "title": "#你没看过的六四 系列图片展5 在六四37周年即将到来之际，我们与 中国人权 @hrichina 和人道中国 @HChina89 共同推出的…",
+    "outlet": "X · 李老师不是你老师 @whyyoutouzhele",
+    "date": "2026-04-26",
+    "url": "https://x.com/whyyoutouzhele/status/2048228068603596948"
+   },
+   {
     "title": "#你没看过的六四 系列图片展4 1989年的天安门广场，曾是一场关于自由与博爱的伟大实验。在那个被血色中断的夏日里，成千上万的年轻人曾在这里…",
     "outlet": "X · 李老师不是你老师 @whyyoutouzhele",
     "date": "2026-04-25",
     "url": "https://x.com/whyyoutouzhele/status/2047858135046492563"
    },
    {
+    "title": "#你没看过的六四 系列图片展3 六四大屠杀过后，无数家庭被解放军射出的子弹强行撕裂。这组由我们与中国人权 @hrichina 、人道中国 @…",
+    "outlet": "X · 李老师不是你老师 @whyyoutouzhele",
+    "date": "2026-04-24",
+    "url": "https://x.com/whyyoutouzhele/status/2047488192421744859"
+   },
+   {
+    "title": "#你没看过的六四 系列图片展2 今天的中国万马齐喑，媒体只能做党的喉舌。 但在八九学潮民运期间，新华社、央视、法制日报、央广、人民日报等等官…",
+    "outlet": "X · 李老师不是你老师 @whyyoutouzhele",
+    "date": "2026-04-23",
+    "url": "https://x.com/whyyoutouzhele/status/2047174878135009786"
+   },
+   {
     "title": "在六四37周年即将到来之际，我们与 中国人权 @hrichina 和人道中国 @HChina89 共同推出 #你没看过的六四 珍贵历史图片展…",
     "outlet": "X · 李老师不是你老师 @whyyoutouzhele",
     "date": "2026-04-22",
     "url": "https://x.com/whyyoutouzhele/status/2046748319196881376"
+   }
+  ]
+ },
+ {
+  "key": "x-whyyoutouzhele",
+  "heading": "X（推特）：李老师不是你老师 @whyyoutouzhele",
+  "intro": "X 账号 @whyyoutouzhele 发布的六四相关帖文。",
+  "items": [
+   {
+    "title": "多名博主及网友表示，今年“六四”，微信开启了“预防式封锁”，很多人近期并未发布任何朋友圈内容，仅因此前存在“违规发言”情况，导致账号被预防式…",
+    "outlet": "X · 李老师不是你老师 @whyyoutouzhele",
+    "date": "2026-06-04",
+    "url": "https://x.com/whyyoutouzhele/status/2062380068706410497"
+   },
+   {
+    "title": "“6月4日，疯狂星期四” 6月4日，一网友自述，在抖音私信和朋友发送了 “肯德基疯狂四”宣传图 一秒挂图，被官方判定为“违反社区规范”",
+    "outlet": "X · 李老师不是你老师 @whyyoutouzhele",
+    "date": "2026-06-04",
+    "url": "https://x.com/whyyoutouzhele/status/2062464868322627807"
    },
    {
     "title": "网友投稿 在微信公众号上，有人用 “六四”纪念“五四”",
