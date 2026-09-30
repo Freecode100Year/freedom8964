@@ -165,6 +165,22 @@ def collect_topics(log, today):
     topics = json.loads(TOPICS.read_text())
     added = []
     for t in topics:
+        if t.get("wp"):  # WordPress 网站：按标签读取最新文章
+            have = {x["url"] for x in t["items"]}
+            for tag in t["wp"]["tags"]:
+                try:
+                    posts = json.loads(get(f'{t["wp"]["base"]}/wp-json/wp/v2/posts?tags={tag}&per_page=20&_fields=link,title,date'))
+                except Exception as e:
+                    log.append(f"{t['name']} 读取失败：{e}")
+                    break
+                for p in posts:
+                    if p["link"] in have:
+                        continue
+                    x = {"title": clean(p["title"]["rendered"]), "date": p["date"][:10], "url": p["link"]}
+                    t["items"].insert(0, x)
+                    have.add(p["link"])
+                    added.append(x)
+            continue
         base = t.get("pangea")  # 美国之音系网站（Pangea 平台）的专题栏目
         if not base:
             continue
