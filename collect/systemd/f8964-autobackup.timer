@@ -1,0 +1,8 @@
+[Unit]
+Description=每小时备份 freedom8964 到 GitHub
+[Timer]
+OnCalendar=hourly
+RandomizedDelaySec=300
+Persistent=true
+[Install]
+WantedBy=timers.target

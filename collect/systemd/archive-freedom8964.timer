@@ -1,0 +1,7 @@
+[Unit]
+Description=每周日 04:00 存档 freedom8964.com
+[Timer]
+OnCalendar=Sun *-*-* 04:00:00 America/New_York
+Persistent=true
+[Install]
+WantedBy=timers.target

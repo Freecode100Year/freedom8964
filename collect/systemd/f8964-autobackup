@@ -1,0 +1,11 @@
+#!/bin/sh
+# freedom8964 兜底备份：每小时检查一次，有没提交的改动就提交，没推送的提交就推送到 GitHub
+cd "$HOME/sites/freedom8964" || exit 1
+if [ -n "$(git status --porcelain)" ]; then
+  git add -A && git -c user.name=freedom8964 -c user.email=noreply@freedom8964.com commit -qm "自动备份未提交的改动 $(date +%F\ %H:%M)"
+  sleep 20
+fi
+git fetch -q origin 2>/dev/null
+if [ -n "$(git log origin/master..master --oneline 2>/dev/null)" ]; then
+  git push -q origin master 2>/tmp/f8964-push.err || "$HOME/bin/tg-send" "⚠️ freedom8964 备份到 GitHub 失败：$(tail -c 300 /tmp/f8964-push.err)"
+fi

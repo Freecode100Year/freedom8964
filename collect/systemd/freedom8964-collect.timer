@@ -1,0 +1,10 @@
+[Unit]
+Description=每天美东时间 01:00 自动采集 freedom8964
+
+[Timer]
+OnCalendar=*-*-* 01:00:00 America/New_York
+Persistent=true
+RandomizedDelaySec=300
+
+[Install]
+WantedBy=timers.target

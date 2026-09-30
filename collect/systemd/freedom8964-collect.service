@@ -1,0 +1,11 @@
+[Unit]
+Description=freedom8964 每日自动采集六四相关标题和网址
+After=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/sites/freedom8964/collect
+Environment=PATH=/usr/local/bin:/usr/bin:/bin
+ExecStart=/usr/bin/python3 %h/sites/freedom8964/collect/collect.py
+ExecStopPost=/bin/sh -c 'if [ "$$SERVICE_RESULT" != success ]; then %h/bin/tg-send "⚠️ freedom8964-collect 运行失败（$$SERVICE_RESULT / $$EXIT_STATUS），查看：journalctl --user -u freedom8964-collect"; fi'
+TimeoutStartSec=1800

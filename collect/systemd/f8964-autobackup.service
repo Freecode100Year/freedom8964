@@ -1,0 +1,6 @@
+[Unit]
+Description=freedom8964 代码兜底备份到 GitHub
+[Service]
+Type=oneshot
+ExecStart=%h/bin/f8964-autobackup
+ExecStopPost=/bin/sh -c 'if [ "$$SERVICE_RESULT" != success ]; then %h/bin/tg-send "⚠️ f8964-autobackup 运行失败（$$SERVICE_RESULT / $$EXIT_STATUS），查看：journalctl --user -u f8964-autobackup"; fi'

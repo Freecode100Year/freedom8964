@@ -1,0 +1,6 @@
+[Unit]
+Description=提交 freedom8964.com 到 Wayback Machine 存档
+[Service]
+Type=oneshot
+ExecStart=%h/bin/archive-freedom8964.sh
+ExecStopPost=/bin/sh -c 'if [ "$$SERVICE_RESULT" != success ]; then %h/bin/tg-send "⚠️ archive-freedom8964 运行失败（$$SERVICE_RESULT / $$EXIT_STATUS），查看：journalctl --user -u archive-freedom8964"; fi'

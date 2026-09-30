@@ -1,0 +1,7 @@
+[Unit]
+Description=每周六 05:00 检查 freedom8964 死链
+[Timer]
+OnCalendar=Sat *-*-* 05:00
+Persistent=true
+[Install]
+WantedBy=timers.target
