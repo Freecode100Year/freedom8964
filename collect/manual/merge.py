@@ -1,7 +1,7 @@
 """merge.py rN.json [新分类定义.json] —— 把核实通过的条目并入 articles.json（去重、排序）"""
 import json,re,sys
 SITE=str(__import__("pathlib").Path(__file__).resolve().parents[2]/"assets/articles.json")
-SUF=[r"\s*[-|]\s*UPI Archives$",r"\s*\|\s*FRONTLINE.*$",r"\s*\|\s*CNN$",r"\s*\|\s*CBC News$",r"\s*\|\s*兩岸\s*\|\s*中央社 CNA$",r"\s*-\s*BBC News 中文$",r"\s*\|\s*聯合新聞網$",r"\s*-\s*United States Department of State$",r"\s*\|\s*PBS News.*$",r"\s*\|\s*轉角國際 udn Global$",r"\s*\|\s*端傳媒.*$",r"\s*[-|]\s*BBC News$",r"\s*\|\s*Reuters$",r"\s*\|\s*AP News$",r"\s*\|\s*The Guardian$",r"\s*-\s*The New York Times$",r"\s*\|\s*Hong Kong Free Press HKFP$"]
+SUF=[r"\s*[-|]\s*UPI Archives$",r"\s*\|\s*FRONTLINE.*$",r"\s*\|\s*CNN$",r"\s*\|\s*CBC News$",r"\s*\|\s*兩岸\s*\|\s*中央社 CNA$",r"\s*-\s*BBC News 中文$",r"\s*\|\s*聯合新聞網$",r"\s*-\s*United States Department of State$",r"\s*\|\s*PBS News.*$",r"\s*\|\s*轉角國際 udn Global$",r"\s*\|\s*端傳媒.*$",r"\s*[-|]\s*BBC News$",r"\s*\|\s*Reuters$",r"\s*\|\s*AP News$",r"\s*\|\s*The Guardian$",r"\s*-\s*The New York Times$",r"\s*\|\s*Hong Kong Free Press HKFP$",r"\s*[｜|]\s*公視新聞網 PNN$",r"\s*\|\s*聯合新聞網$"]
 d=json.load(open(SITE)); r=json.load(open(sys.argv[1]))
 newcats=json.load(open(sys.argv[2])) if len(sys.argv)>2 else []
 by={s['key']:s for s in d}

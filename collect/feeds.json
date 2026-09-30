@@ -1,32 +1,126 @@
 [
- ["BBC News 中文", "https://feeds.bbci.co.uk/zhongwen/simp/rss.xml"],
- ["自由亚洲电台 RFA", "https://www.rfa.org/mandarin/rss2.xml"],
- ["Radio Free Asia", "https://www.rfa.org/english/rss2.xml"],
- ["自由亚洲电台 RFA 粤语", "https://www.rfa.org/arc/outboundfeeds/cantonese/rss/"],
- ["美国之音 VOA", "https://www.voachinese.com/api/zm_yql-vomx-tpeybti"],
- ["德国之声 DW 中文", "https://rss.dw.com/xml/rss-chi-all"],
- ["Hong Kong Free Press 香港自由新闻", "https://hongkongfp.com/feed/"],
- ["NPR", "https://feeds.npr.org/1004/rss.xml"],
- ["The Guardian 卫报", "https://www.theguardian.com/world/china/rss"],
- ["Human Rights in China 中国人权", "https://news.hrichina.org/feed"],
- ["法国国际广播电台 RFI 中文", "https://www.rfi.fr/cn/rss"],
- ["纽约时报中文网", "https://cn.nytimes.com/rss/"],
- ["中央社 CNA", "https://feeds.feedburner.com/rsscna/politics"],
- ["公视新闻", "https://news.pts.org.tw/xml/newsfeed.xml"],
- ["报导者 The Reporter", "https://public.twreporter.org/rss/twreporter-rss.xml"],
- ["香港独立媒体", "https://www.inmediahk.net/rss.xml"],
- ["香港电台 RTHK", "https://rthk9.rthk.hk/rthk/news/rss/c_expressnews_clocal.xml"],
- ["RTHK English", "https://rthk9.rthk.hk/rthk/news/rss/e_expressnews_elocal.xml"],
- ["BBC News Asia", "https://feeds.bbci.co.uk/news/world/asia/rss.xml"],
- ["BBC News China", "https://feeds.bbci.co.uk/news/world/asia/china/rss.xml"],
- ["The New York Times", "https://rss.nytimes.com/services/xml/rss/nyt/AsiaPacific.xml"],
- ["The Washington Post", "https://feeds.washingtonpost.com/rss/world"],
- ["South China Morning Post (China)", "https://www.scmp.com/rss/4/feed"],
- ["South China Morning Post (Hong Kong)", "https://www.scmp.com/rss/2/feed"],
- ["The Guardian (Hong Kong)", "https://www.theguardian.com/world/hong-kong/rss"],
- ["DW (Asia)", "https://rss.dw.com/rdf/rss-en-asia"],
- ["The Diplomat", "https://thediplomat.com/feed/"],
- ["Al Jazeera", "https://www.aljazeera.com/xml/rss/all.xml"],
- ["China Digital Times (English)", "https://chinadigitaltimes.net/feed/"],
- ["Amnesty International 国际特赦组织", "https://www.amnesty.org/en/feed/"]
+ [
+  "BBC News 中文",
+  "https://feeds.bbci.co.uk/zhongwen/simp/rss.xml"
+ ],
+ [
+  "自由亚洲电台 RFA",
+  "https://www.rfa.org/mandarin/rss2.xml"
+ ],
+ [
+  "Radio Free Asia",
+  "https://www.rfa.org/english/rss2.xml"
+ ],
+ [
+  "自由亚洲电台 RFA 粤语",
+  "https://www.rfa.org/arc/outboundfeeds/cantonese/rss/"
+ ],
+ [
+  "美国之音 VOA",
+  "https://www.voachinese.com/api/zm_yql-vomx-tpeybti"
+ ],
+ [
+  "德国之声 DW 中文",
+  "https://rss.dw.com/xml/rss-chi-all"
+ ],
+ [
+  "Hong Kong Free Press 香港自由新闻",
+  "https://hongkongfp.com/feed/"
+ ],
+ [
+  "NPR",
+  "https://feeds.npr.org/1004/rss.xml"
+ ],
+ [
+  "The Guardian 卫报",
+  "https://www.theguardian.com/world/china/rss"
+ ],
+ [
+  "Human Rights in China 中国人权",
+  "https://news.hrichina.org/feed"
+ ],
+ [
+  "法国国际广播电台 RFI 中文",
+  "https://www.rfi.fr/cn/rss"
+ ],
+ [
+  "纽约时报中文网",
+  "https://cn.nytimes.com/rss/"
+ ],
+ [
+  "中央社 CNA",
+  "https://feeds.feedburner.com/rsscna/politics"
+ ],
+ [
+  "公视新闻",
+  "https://news.pts.org.tw/xml/newsfeed.xml"
+ ],
+ [
+  "报导者 The Reporter",
+  "https://public.twreporter.org/rss/twreporter-rss.xml"
+ ],
+ [
+  "香港独立媒体",
+  "https://www.inmediahk.net/rss.xml"
+ ],
+ [
+  "香港电台 RTHK",
+  "https://rthk9.rthk.hk/rthk/news/rss/c_expressnews_clocal.xml"
+ ],
+ [
+  "RTHK English",
+  "https://rthk9.rthk.hk/rthk/news/rss/e_expressnews_elocal.xml"
+ ],
+ [
+  "BBC News Asia",
+  "https://feeds.bbci.co.uk/news/world/asia/rss.xml"
+ ],
+ [
+  "BBC News China",
+  "https://feeds.bbci.co.uk/news/world/asia/china/rss.xml"
+ ],
+ [
+  "The New York Times",
+  "https://rss.nytimes.com/services/xml/rss/nyt/AsiaPacific.xml"
+ ],
+ [
+  "The Washington Post",
+  "https://feeds.washingtonpost.com/rss/world"
+ ],
+ [
+  "South China Morning Post (China)",
+  "https://www.scmp.com/rss/4/feed"
+ ],
+ [
+  "South China Morning Post (Hong Kong)",
+  "https://www.scmp.com/rss/2/feed"
+ ],
+ [
+  "The Guardian (Hong Kong)",
+  "https://www.theguardian.com/world/hong-kong/rss"
+ ],
+ [
+  "DW (Asia)",
+  "https://rss.dw.com/rdf/rss-en-asia"
+ ],
+ [
+  "The Diplomat",
+  "https://thediplomat.com/feed/"
+ ],
+ [
+  "Al Jazeera",
+  "https://www.aljazeera.com/xml/rss/all.xml"
+ ],
+ [
+  "China Digital Times (English)",
+  "https://chinadigitaltimes.net/feed/"
+ ],
+ [
+  "Amnesty International 国际特赦组织",
+  "https://www.amnesty.org/en/feed/"
+ ],
+ [
+  "民间历史档案库 China Unofficial Archives",
+  "https://chinaunofficialarchives.substack.com/feed"
+ ]
 ]
