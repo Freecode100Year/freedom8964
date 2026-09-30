@@ -2,24 +2,212 @@
  {
   "key": "1989",
   "heading": "1989 年的现场报道",
-  "intro": "1989 年当时的报道。",
+  "intro": "1989 年当时的报道（合众国际社、华盛顿邮报、纽约时报等）。",
   "items": [
+   {
+    "title": "Chinese students mock pro-government rallies",
+    "outlet": "UPI 合众国际社",
+    "date": "1989-06-02",
+    "url": "https://www.upi.com/Archives/1989/06/02/Chinese-students-mock-pro-government-rallies/2312168214101/"
+   },
+   {
+    "title": "China takes steps to control news media, protesters",
+    "outlet": "UPI 合众国际社",
+    "date": "1989-06-02",
+    "url": "https://www.upi.com/Archives/1989/06/02/China-takes-steps-to-control-news-media-protesters/7813240018616/"
+   },
+   {
+    "title": "Chinese troops take square, more than 200 dead",
+    "outlet": "UPI 合众国际社",
+    "date": "1989-06-03",
+    "url": "https://www.upi.com/Archives/1989/06/03/Chinese-troops-take-square-more-than-200-dead/7893918241501/"
+   },
+   {
+    "title": "Violence erupts between troops, protesters",
+    "outlet": "UPI 合众国际社",
+    "date": "1989-06-03",
+    "url": "https://www.upi.com/Archives/1989/06/03/Violence-erupts-between-troops-protesters/3831118025046/"
+   },
+   {
+    "title": "Chinese government statement blames counter-revolutionaries",
+    "outlet": "UPI 合众国际社",
+    "date": "1989-06-03",
+    "url": "https://www.upi.com/Archives/1989/06/03/Chinese-government-statement-blames-counter-revolutionaries/6081312621084/"
+   },
+   {
+    "title": "Chinese troops take Tiananmen Square",
+    "outlet": "UPI 合众国际社",
+    "date": "1989-06-03",
+    "url": "https://www.upi.com/Archives/1989/06/03/Chinese-troops-take-Tiananmen-Square/1862140182131/"
+   },
+   {
+    "title": "Bush deplores China's use of force against student demonstrators",
+    "outlet": "UPI 合众国际社",
+    "date": "1989-06-03",
+    "url": "https://www.upi.com/Archives/1989/06/03/Bush-deplores-Chinas-use-of-force-against-student-demonstrators/3304164218001/"
+   },
+   {
+    "title": "Protesters block troop advance on Tiananmen Square",
+    "outlet": "UPI 合众国际社",
+    "date": "1989-06-03",
+    "url": "https://www.upi.com/Archives/1989/06/03/Protesters-block-troop-advance-on-Tiananmen-Square/4013011142861/"
+   },
+   {
+    "title": "Protesters block Chinese troops advancing on Tiananmen Square",
+    "outlet": "UPI 合众国际社",
+    "date": "1989-06-03",
+    "url": "https://www.upi.com/Archives/1989/06/03/Protesters-block-Chinese-troops-advancing-on-Tiananmen-Square/3870130427161/"
+   },
+   {
+    "title": "Chronology of Chinese protests",
+    "outlet": "UPI 合众国际社",
+    "date": "1989-06-03",
+    "url": "https://www.upi.com/Archives/1989/06/03/Chronology-of-Chinese-protests/5081631141842/"
+   },
+   {
+    "title": "Chinese troops turned back in advance on Tiananmen Square",
+    "outlet": "UPI 合众国际社",
+    "date": "1989-06-03",
+    "url": "https://www.upi.com/Archives/1989/06/03/Chinese-troops-turned-back-in-advance-on-Tiananmen-Square/6234102196181/"
+   },
+   {
+    "title": "Thousands of Chinese troops converge on Tiananmen Square",
+    "outlet": "UPI 合众国际社",
+    "date": "1989-06-03",
+    "url": "https://www.upi.com/Archives/1989/06/03/Thousands-of-Chinese-troops-converge-on-Tiananmen-Square/3804236431101/"
+   },
    {
     "title": "CRACKDOWN IN BEIJING; TROOPS ATTACK AND CRUSH BEIJING PROTEST; THOUSANDS FIGHT BACK, SCORES ARE KILLED",
     "outlet": "The New York Times 纽约时报",
     "date": "1989-06-04",
     "url": "https://www.nytimes.com/1989/06/04/world/crackdown-beijing-troops-attack-crush-beijing-protest-thousands-fight-back.html",
     "paywall": true
+   },
+   {
+    "title": "Clashes continue in Beijing",
+    "outlet": "UPI 合众国际社",
+    "date": "1989-06-04",
+    "url": "https://www.upi.com/Archives/1989/06/04/Clashes-continue-in-Beijing/2100162381174/"
+   },
+   {
+    "title": "Student protest ends in gunfire, flames",
+    "outlet": "UPI 合众国际社",
+    "date": "1989-06-04",
+    "url": "https://www.upi.com/Archives/1989/06/04/Student-protest-ends-in-gunfire-flames/5310681611432/"
+   },
+   {
+    "title": "One man's defiant gesture",
+    "outlet": "UPI 合众国际社",
+    "date": "1989-06-05",
+    "url": "https://www.upi.com/Archives/1989/06/05/One-mans-defiant-gesture/2121045138166/"
+   },
+   {
+    "title": "Bush gets bipartisan support for moves against China",
+    "outlet": "UPI 合众国际社",
+    "date": "1989-06-06",
+    "url": "https://www.upi.com/Archives/1989/06/06/Bush-gets-bipartisan-support-for-moves-against-China/8188115634200/"
+   },
+   {
+    "title": "Bush wonders who is running China",
+    "outlet": "UPI 合众国际社",
+    "date": "1989-06-08",
+    "url": "https://www.upi.com/Archives/1989/06/08/Bush-wonders-who-is-running-China/3581260114130/"
+   },
+   {
+    "title": "Deng emerges, hardliners appear in control",
+    "outlet": "UPI 合众国际社",
+    "date": "1989-06-09",
+    "url": "https://www.upi.com/Archives/1989/06/09/Deng-emerges-hardliners-appear-in-control/8701216310488/"
+   },
+   {
+    "title": "Hard-line premier surfaces, crackdown signaled",
+    "outlet": "UPI 合众国际社",
+    "date": "1989-06-09",
+    "url": "https://www.upi.com/Archives/1989/06/09/Hard-line-premier-surfaces-crackdown-signaled/7543160112831/"
+   },
+   {
+    "title": "Washington students, leaders protest \"Beijing massacre\"",
+    "outlet": "UPI 合众国际社",
+    "date": "1989-06-10",
+    "url": "https://www.upi.com/Archives/1989/06/10/Washington-students-leaders-protest-Beijing-massacre/8416009082131/"
+   },
+   {
+    "title": "China rounds up hundreds of democracy protesters",
+    "outlet": "UPI 合众国际社",
+    "date": "1989-06-10",
+    "url": "https://www.upi.com/Archives/1989/06/10/China-rounds-up-hundreds-of-democracy-protesters/2341110182650/"
+   },
+   {
+    "title": "Parts of Forbidden City reopened",
+    "outlet": "UPI 合众国际社",
+    "date": "1989-06-13",
+    "url": "https://www.upi.com/Archives/1989/06/13/Parts-of-Forbidden-City-reopened/3081308164215/"
+   },
+   {
+    "title": "Japan says 2,600 killed in China",
+    "outlet": "UPI 合众国际社",
+    "date": "1989-06-13",
+    "url": "https://www.upi.com/Archives/1989/06/13/Japan-says-2600-killed-in-China/6611324841011/"
+   },
+   {
+    "title": "China expels two American journalists",
+    "outlet": "UPI 合众国际社",
+    "date": "1989-06-14",
+    "url": "https://www.upi.com/Archives/1989/06/14/China-expels-two-American-journalists/6046143021168/"
+   },
+   {
+    "title": "China reduces official Tiananmen death toll to about 200",
+    "outlet": "UPI 合众国际社",
+    "date": "1989-06-14",
+    "url": "https://www.upi.com/Archives/1989/06/14/China-reduces-official-Tiananmen-death-toll-to-about-200/8112703861401/"
+   },
+   {
+    "title": "U.S. reopens visa office in Beijing",
+    "outlet": "UPI 合众国际社",
+    "date": "1989-06-14",
+    "url": "https://www.upi.com/Archives/1989/06/14/US-reopens-visa-office-in-Beijing/8385481120116/"
    }
   ],
   "heading_en": "Reports from 1989",
-  "intro_en": "Reporting at the time."
+  "intro_en": "Reporting at the time (UPI, The Washington Post, The New York Times and others)."
  },
  {
   "key": "explain",
   "heading": "回顾与解读",
   "intro": "回顾、解读与专题页。",
   "items": [
+   {
+    "title": "What really happened in the 1989 Tiananmen Square protests",
+    "outlet": "Amnesty International UK 国际特赦组织英国分部",
+    "date": "2026-06-04",
+    "url": "https://www.amnesty.org.uk/knowledge-hub/all-resources/china-1989-tiananmen-square-protests-demonstration-massacre/",
+    "paywall": false
+   },
+   {
+    "title": "The 1989 Tiananmen Crackdown",
+    "outlet": "Amnesty International 国际特赦组织",
+    "date": "2026-06-03",
+    "url": "https://www.amnesty.org/en/projects/the-1989-tiananmen-crackdown/",
+    "paywall": false
+   },
+   {
+    "title": "Remembering the Tiananmen Square Crackdown, and the “Tank Man”",
+    "outlet": "PBS FRONTLINE",
+    "date": "2020-06-04",
+    "url": "https://www.pbs.org/wgbh/frontline/article/remembering-the-tiananmen-square-crackdown-and-the-tank-man"
+   },
+   {
+    "title": "Timeline: What Led to the Tiananmen Square Massacre",
+    "outlet": "PBS FRONTLINE",
+    "date": "2019-06-05",
+    "url": "https://www.pbs.org/wgbh/frontline/article/timeline-tiananmen-square"
+   },
+   {
+    "title": "Reporting from Tiananmen: ‘I’ll never forget all I saw’",
+    "outlet": "Al Jazeera 半岛电视台",
+    "date": "2019-06-04",
+    "url": "https://www.aljazeera.com/blogs/asia/2019/06/reporting-tiananmen-square-1989-lot-forget-190604025128201.html"
+   },
    {
     "title": "Tiananmen Square: What happened in the protests of 1989?",
     "outlet": "BBC News",
@@ -42,25 +230,23 @@
     "paywall": true
    },
    {
-    "title": "The 1989 Tiananmen Crackdown",
-    "outlet": "Amnesty International 国际特赦组织",
-    "date": "2026-06-03",
-    "url": "https://www.amnesty.org/en/projects/the-1989-tiananmen-crackdown/",
+    "title": "25th anniversary of the crackdown on pro-democracy supporters in China",
+    "outlet": "CBC News 加拿大广播公司",
+    "date": "2014-06-04",
+    "url": "https://amp.cbc.ca/news/world/1989-tiananmen-square-protests-15-iconic-images-1.2664229",
     "paywall": false
    },
    {
-    "title": "What really happened in the 1989 Tiananmen Square protests",
-    "outlet": "Amnesty International UK 国际特赦组织英国分部",
-    "date": "2026-06-04",
-    "url": "https://www.amnesty.org.uk/knowledge-hub/all-resources/china-1989-tiananmen-square-protests-demonstration-massacre/",
-    "paywall": false
+    "title": "After 25 Years Of Amnesia, Remembering A Forgotten Tiananmen",
+    "outlet": "NPR",
+    "date": "2014-06-04",
+    "url": "https://www.npr.org/transcripts/301433547"
    },
    {
-    "title": "Tiananmen Square, 1989",
-    "outlet": "U.S. Department of State, Office of the Historian 美国国务院史学家办公室",
-    "date": "",
-    "url": "https://history.state.gov/milestones/1989-1992/tiananmen-square",
-    "paywall": false
+    "title": "Resources on the Tiananmen Square Protests: 25 Years Later",
+    "outlet": "ChinaFile",
+    "date": "2014-05-31",
+    "url": "https://www.chinafile.com/reporting-opinion/features/resources-tiananmen-square-protests-25-years-later"
    },
    {
     "title": "Chinese crackdown on protests leads to Tiananmen Square Massacre",
@@ -70,10 +256,22 @@
     "paywall": false
    },
    {
-    "title": "25th anniversary of the crackdown on pro-democracy supporters in China",
-    "outlet": "CBC News 加拿大广播公司",
-    "date": "2014-06-04",
-    "url": "https://amp.cbc.ca/news/world/1989-tiananmen-square-protests-15-iconic-images-1.2664229",
+    "title": "Tiananmen Square through the eyes of a soldier",
+    "outlet": "NBC News",
+    "date": "2009-06-04",
+    "url": "https://www.nbcnews.com/id/wbna31097101"
+   },
+   {
+    "title": "The Tank Man",
+    "outlet": "PBS FRONTLINE",
+    "date": "2006-04-11",
+    "url": "https://www.pbs.org/wgbh/frontline/documentary/tankman/"
+   },
+   {
+    "title": "Tiananmen Square, 1989",
+    "outlet": "U.S. Department of State, Office of the Historian 美国国务院史学家办公室",
+    "date": "",
+    "url": "https://history.state.gov/milestones/1989-1992/tiananmen-square",
     "paywall": false
    }
   ],
@@ -86,17 +284,10 @@
   "intro": "坦克人照片相关。",
   "items": [
    {
-    "title": "Tank Man at 25: Behind the Iconic Tiananmen Square Photo",
-    "outlet": "TIME 时代周刊",
-    "date": "2014-06-04",
-    "url": "https://time.com/3809688/tank-man-iconic-tiananmen-photo/",
-    "paywall": false
-   },
-   {
-    "title": "The story behind the iconic ‘Tank Man’ photo",
-    "outlet": "CNN",
-    "date": "2019-05",
-    "url": "https://www.cnn.com/interactive/2019/05/world/tiananmen-square-tank-man-cnnphotos/",
+    "title": "The Story Behind the 'Tank Man' Photo",
+    "outlet": "NPR · Throughline",
+    "date": "2024-08-12",
+    "url": "https://www.npr.org/2024/08/12/1256977996/the-story-behind-the-tank-man-photo-throughline",
     "paywall": false
    },
    {
@@ -107,10 +298,17 @@
     "paywall": false
    },
    {
-    "title": "The Story Behind the 'Tank Man' Photo",
-    "outlet": "NPR · Throughline",
-    "date": "2024-08-12",
-    "url": "https://www.npr.org/2024/08/12/1256977996/the-story-behind-the-tank-man-photo-throughline",
+    "title": "The story behind the iconic ‘Tank Man’ photo",
+    "outlet": "CNN",
+    "date": "2019-05",
+    "url": "https://www.cnn.com/interactive/2019/05/world/tiananmen-square-tank-man-cnnphotos/",
+    "paywall": false
+   },
+   {
+    "title": "Tank Man at 25: Behind the Iconic Tiananmen Square Photo",
+    "outlet": "TIME 时代周刊",
+    "date": "2014-06-04",
+    "url": "https://time.com/3809688/tank-man-iconic-tiananmen-photo/",
     "paywall": false
    },
    {
@@ -130,6 +328,19 @@
   "intro": "死亡人数与解密档案相关。",
   "items": [
    {
+    "title": "Tiananmen Massacre 30th Anniversary",
+    "outlet": "National Security Archive 美国国家安全档案馆",
+    "date": "2019-06-04",
+    "url": "https://nsarchive.gwu.edu/news/china/2019-06-04/tiananmen-massacre-30th-anniversary-china-declassified",
+    "paywall": false
+   },
+   {
+    "title": "Chinese official said 10,000 died in 1989",
+    "outlet": "MCLC Resource Center（俄亥俄州立大学）",
+    "date": "2017-12-27",
+    "url": "https://u.osu.edu/mclc/2017/12/27/chinese-official-said-10000-died-in-1989/"
+   },
+   {
     "title": "Tiananmen Square protest death toll 'was 10,000'",
     "outlet": "BBC News",
     "date": "2017-12-23",
@@ -137,11 +348,16 @@
     "paywall": false
    },
    {
-    "title": "Tiananmen Massacre 30th Anniversary",
+    "title": "The U.S. Tiananmen Papers",
     "outlet": "National Security Archive 美国国家安全档案馆",
-    "date": "2019-06-04",
-    "url": "https://nsarchive.gwu.edu/news/china/2019-06-04/tiananmen-massacre-30th-anniversary-china-declassified",
-    "paywall": false
+    "date": "",
+    "url": "https://nsarchive2.gwu.edu/NSAEBB/NSAEBB47/index2.html"
+   },
+   {
+    "title": "Tiananmen at 25 Years",
+    "outlet": "National Security Archive 美国国家安全档案馆",
+    "date": "",
+    "url": "https://nsarchive2.gwu.edu/NSAEBB/NSAEBB473/"
    }
   ],
   "heading_en": "Death toll and declassified records",
@@ -153,13 +369,6 @@
   "intro": "天安门母亲与遇难者家属。",
   "items": [
    {
-    "title": "六四37周年前夕 天安门母亲再促公布真相",
-    "outlet": "自由亚洲电台 RFA",
-    "date": "2026-06-01",
-    "url": "https://www.rfa.org/mandarin/zhengzhi/2026/06/01/china-june-4th-tiananmen-mothers-crackdown/",
-    "paywall": false
-   },
-   {
     "title": "独家：六四难属被禁赴公墓祭亲 家属抗议",
     "outlet": "自由亚洲电台 RFA",
     "date": "2026-06-02",
@@ -167,11 +376,48 @@
     "paywall": false
    },
    {
+    "title": "六四37周年前夕 天安门母亲再促公布真相",
+    "outlet": "自由亚洲电台 RFA",
+    "date": "2026-06-01",
+    "url": "https://www.rfa.org/mandarin/zhengzhi/2026/06/01/china-june-4th-tiananmen-mothers-crackdown/",
+    "paywall": false
+   },
+   {
+    "title": "China: No Justice for Tiananmen Massacre 37 Years On",
+    "outlet": "Human Rights Watch 人权观察",
+    "date": "2026-06-01",
+    "url": "https://www.hrw.org/news/2026/06/01/china-no-justice-for-tiananmen-massacre-37-years-on"
+   },
+   {
+    "title": "Police warn families of Tiananmen crackdown dead not to visit graves on 37th anniversary",
+    "outlet": "PBS NewsHour（美联社）",
+    "date": "2026-06",
+    "url": "https://www.pbs.org/newshour/world/police-warn-families-of-tiananmen-crackdown-dead-not-to-visit-graves-on-37th-anniversary"
+   },
+   {
     "title": "六四36周年：天安门母亲首次遭全面通讯封锁 公安严控祭奠活动",
     "outlet": "自由亚洲电台 RFA",
     "date": "2025-06-05",
     "url": "https://www.rfa.org/mandarin/zhengzhi/2025/06/04/china-june-4th-crackdown-tiananmen-mother-memorial-censorship-blockade/",
     "paywall": false
+   },
+   {
+    "title": "China: Address Tiananmen Massacre 36 Years On",
+    "outlet": "Human Rights Watch 人权观察",
+    "date": "2025-06-03",
+    "url": "https://www.hrw.org/news/2025/06/03/china-address-tiananmen-massacre-36-years-on"
+   },
+   {
+    "title": "An Interview with a Tiananmen Mother: You Weijie’s Lifelong Fight for Truth and Justice in China",
+    "outlet": "Human Rights in China 中国人权",
+    "date": "2025-06-02",
+    "url": "https://hrichina.substack.com/p/an-interview-with-a-tiananmen-mother"
+   },
+   {
+    "title": "Gathering of the “Tiananmen Mothers” for New Year 2025",
+    "outlet": "Human Rights in China 中国人权",
+    "date": "2025-01-06",
+    "url": "https://hrichina.substack.com/p/gathering-of-the-tiananmen-mothers"
    }
   ],
   "heading_en": "Tiananmen Mothers and families",
@@ -182,41 +428,6 @@
   "heading": "香港：悼念被禁与支联会案",
   "intro": "维园悼念、禁令、支联会案。",
   "items": [
-   {
-    "title": "Hong Kong marks Tiananmen massacre for what many fear will be the last time",
-    "outlet": "CNN",
-    "date": "2020-06-04",
-    "url": "https://edition.cnn.com/2020/06/03/asia/hong-kong-tiananmen-june-4-china-intl-hnk/index.html",
-    "paywall": false
-   },
-   {
-    "title": "What does Chinese repression look like? View these photos of Hong Kong.",
-    "outlet": "The Washington Post 华盛顿邮报",
-    "date": "2023",
-    "url": "https://www.washingtonpost.com/opinions/interactive/2023/tiananmen-anniversary-photos-hong-kong-repression-protest/",
-    "paywall": true
-   },
-   {
-    "title": "香港媒体及民间噤声 六四记忆遭封",
-    "outlet": "自由亚洲电台 RFA",
-    "date": "2026-06-03",
-    "url": "https://www.rfa.org/mandarin/zhengzhi/2026/06/03/june-4th-hong-kong-national-security-law-victoria-park-vigil/",
-    "paywall": false
-   },
-   {
-    "title": "No vigils: Hong Kong’s Victoria Park silent on Tiananmen crackdown anniversary",
-    "outlet": "Radio Free Asia",
-    "date": "2026-06-04",
-    "url": "https://www.rfa.org/english/china/2026/06/03/hong-kong-victoria-park-tiananmen-square-china/",
-    "paywall": false
-   },
-   {
-    "title": "Hong Kong Court Jails Two Tiananmen Vigil Group Leaders for 7 Years",
-    "outlet": "U.S. News & World Report",
-    "date": "2026-09-10",
-    "url": "https://www.usnews.com/news/world/articles/2026-09-10/hong-kong-court-jails-two-tiananmen-vigil-group-leaders-for-7-years",
-    "paywall": false
-   },
    {
     "title": "HK Tiananmen vigil activists sentenced up to 7 years 3 months for inciting subversion",
     "outlet": "Hong Kong Free Press 香港自由新闻",
@@ -230,6 +441,119 @@
     "date": "2026-09-11",
     "url": "https://www.npr.org/2026/09/11/g-s1-142832/hong-kong-court-sentences-vigil-organizers",
     "paywall": false
+   },
+   {
+    "title": "Tiananmen Square vigil organisers jailed for seven years in Hong Kong",
+    "outlet": "The Guardian 卫报",
+    "date": "2026-09-11",
+    "url": "https://www.theguardian.com/world/2026/sep/11/chow-hang-tung-lee-cheuk-yan-tiananmen-square-activists-jailed-hong-kong"
+   },
+   {
+    "title": "Hong Kong Court Jails Two Tiananmen Vigil Group Leaders for 7 Years",
+    "outlet": "U.S. News & World Report",
+    "date": "2026-09-10",
+    "url": "https://www.usnews.com/news/world/articles/2026-09-10/hong-kong-court-jails-two-tiananmen-vigil-group-leaders-for-7-years",
+    "paywall": false
+   },
+   {
+    "title": "香港支聯會「煽動顛覆」案：被告們的伴侶與戰友",
+    "outlet": "BBC News 中文",
+    "date": "2026-09",
+    "url": "https://www.bbc.com/zhongwen/articles/cq63868gq5qo/trad"
+   },
+   {
+    "title": "Tiananmen vigil activists convicted under nat. security law, face up to 10 years prison",
+    "outlet": "Hong Kong Free Press 香港自由新闻",
+    "date": "2026-08-21",
+    "url": "https://hongkongfp.com/2026/08/21/breaking-hong-kong-tiananmen-vigil-activists-convicted-under-nat-security-law-face-up-to-10-years-prison/"
+   },
+   {
+    "title": "Tiananmen Square vigil organisers in Hong Kong found guilty of ‘inciting subversion’",
+    "outlet": "The Guardian 卫报",
+    "date": "2026-08-21",
+    "url": "https://www.theguardian.com/world/2026/aug/21/tiananmen-square-vigil-hong-kong-alliance-activists-guilty-verdict-lee-cheuk-yan-chow-hang-tung"
+   },
+   {
+    "title": "No vigils: Hong Kong’s Victoria Park silent on Tiananmen crackdown anniversary",
+    "outlet": "Radio Free Asia",
+    "date": "2026-06-04",
+    "url": "https://www.rfa.org/english/china/2026/06/03/hong-kong-victoria-park-tiananmen-square-china/",
+    "paywall": false
+   },
+   {
+    "title": "香港媒体及民间噤声 六四记忆遭封",
+    "outlet": "自由亚洲电台 RFA",
+    "date": "2026-06-03",
+    "url": "https://www.rfa.org/mandarin/zhengzhi/2026/06/03/june-4th-hong-kong-national-security-law-victoria-park-vigil/",
+    "paywall": false
+   },
+   {
+    "title": "Chow Hang-tung’s Mitigation Statement Interrupted by Judge, Publishes Full Text Online",
+    "outlet": "Human Rights in China 中国人权",
+    "date": "2026",
+    "url": "https://news.hrichina.org/p/chow-hang-tungs-mitigation-statement"
+   },
+   {
+    "title": "Pillar of Shame sculpture seized by police in Hong Kong",
+    "outlet": "The Art Newspaper",
+    "date": "2023-05-08",
+    "url": "https://www.theartnewspaper.com/2023/05/08/pillar-shame-sculpture-hong-kong-tiananmen-square-seized"
+   },
+   {
+    "title": "Artist considers legal action to retrieve Tiananmen crackdown monument removed from University of Hong Kong | Hong Kong Free Press HKFP",
+    "outlet": "Hong Kong Free Press 香港自由新闻",
+    "date": "2023-02-16",
+    "url": "https://hongkongfp.com/2023/02/16/artist-considers-legal-action-to-retrieve-tiananmen-crackdown-monument-removed-from-university-of-hong-kong/"
+   },
+   {
+    "title": "What does Chinese repression look like? View these photos of Hong Kong.",
+    "outlet": "The Washington Post 华盛顿邮报",
+    "date": "2023",
+    "url": "https://www.washingtonpost.com/opinions/interactive/2023/tiananmen-anniversary-photos-hong-kong-repression-protest/",
+    "paywall": true
+   },
+   {
+    "title": "Hong Kong university removes 'Pillar of Shame' Tiananmen statue",
+    "outlet": "CNBC",
+    "date": "2021-12-23",
+    "url": "https://www.cnbc.com/2021/12/23/hong-kong-university-removes-pillar-of-shame-tiananmen-statue.html"
+   },
+   {
+    "title": "'Pillar of Shame' statue removed from the University of Hong Kong",
+    "outlet": "ABC News (Australia)",
+    "date": "2021-12-23",
+    "url": "https://www.abc.net.au/news/2021-12-23/pillar-of-shame-statue-removed-from-the-university-hk/13687598"
+   },
+   {
+    "title": "Hong Kong university removes Tiananmen massacre statue",
+    "outlet": "NPR",
+    "date": "2021-12-23",
+    "url": "https://www.npr.org/2021/12/23/1067163101/hong-kong-university-removes-tiananmen-massacre-statue"
+   },
+   {
+    "title": "Hong Kong’s Tiananmen Square museum moves online",
+    "outlet": "CNN",
+    "date": "2021",
+    "url": "https://edition.cnn.com/travel/article/june-fourth-museum-tiananmen-square-hong-kong-cmd/index.html"
+   },
+   {
+    "title": "In Hong Kong, access to online Tiananmen museum appears to be blocked",
+    "outlet": "NBC News",
+    "date": "2021",
+    "url": "https://www.nbcnews.com/news/world/hong-kong-access-online-museum-about-tiananmen-square-appears-blocked-n1280411"
+   },
+   {
+    "title": "Hong Kong police raid museum commemorating 1989 Tiananmen victims",
+    "outlet": "CBC News",
+    "date": "2021",
+    "url": "https://www.cbc.ca/news/world/tiananmen-museum-raid-hong-kong-1.6169211"
+   },
+   {
+    "title": "Hong Kong marks Tiananmen massacre for what many fear will be the last time",
+    "outlet": "CNN",
+    "date": "2020-06-04",
+    "url": "https://edition.cnn.com/2020/06/03/asia/hong-kong-tiananmen-june-4-china-intl-hnk/index.html",
+    "paywall": false
    }
   ],
   "heading_en": "Hong Kong: the vigil ban and the Alliance case",
@@ -241,11 +565,37 @@
   "intro": "周年纪念与各地悼念。",
   "items": [
    {
-    "title": "Heavy security in China and Hong Kong on 35th anniversary of Tiananmen crackdown",
-    "outlet": "NPR",
-    "date": "2024-06-04",
-    "url": "https://www.npr.org/2024/06/04/g-s1-2662/china-hong-kong-anniversary-tiananmen-crackdown",
+    "title": "The 37th Anniversary of the June Fourth Tiananmen Massacre: Memory Endures Amid Intensifying Repression",
+    "outlet": "Human Rights in China 中国人权",
+    "date": "2026-06-10",
+    "url": "https://news.hrichina.org/p/the-37th-anniversary-of-the-june",
     "paywall": false
+   },
+   {
+    "title": "共产主义受难者纪念基金会烛光悼念六四死难者",
+    "outlet": "美国之音 VOA",
+    "date": "2026-06-05",
+    "url": "https://www.voachinese.com/a/tiananmen-square-massacre-candlelight-vigil-20260605/8157714.html",
+    "paywall": false
+   },
+   {
+    "title": "VOA专访何晓清：六四沉冤未雪悲剧一代代重演 是因为中共权力缺乏制衡",
+    "outlet": "美国之音 VOA",
+    "date": "2026-06-04",
+    "url": "https://www.voachinese.com/a/interview-rowena-he-june-fourth-37anniversary-20260603/8157034.html",
+    "paywall": false
+   },
+   {
+    "title": "六四37週年 英媒ITN釋出天安門事件秘密拍攝影像再現歷史[影]",
+    "outlet": "中央社 CNA",
+    "date": "2026-06-04",
+    "url": "https://www.cna.com.tw/news/acn/202606045002.aspx"
+   },
+   {
+    "title": "六四37周年：高压封禁下，全球记忆继续接力",
+    "outlet": "Human Rights in China 中国人权",
+    "date": "2026-06",
+    "url": "https://news.hrichina.org/p/37-e90"
    },
    {
     "title": "Tiananmen Square anniversary shows China's ability to suppress history",
@@ -262,25 +612,17 @@
     "paywall": false
    },
    {
-    "title": "The 37th Anniversary of the June Fourth Tiananmen Massacre: Memory Endures Amid Intensifying Repression",
+    "title": "Heavy security in China and Hong Kong on 35th anniversary of Tiananmen crackdown",
+    "outlet": "NPR",
+    "date": "2024-06-04",
+    "url": "https://www.npr.org/2024/06/04/g-s1-2662/china-hong-kong-anniversary-tiananmen-crackdown",
+    "paywall": false
+   },
+   {
+    "title": "Joint Statement on the 35th Anniversary of the Tiananmen Massacre",
     "outlet": "Human Rights in China 中国人权",
-    "date": "2026-06-10",
-    "url": "https://news.hrichina.org/p/the-37th-anniversary-of-the-june",
-    "paywall": false
-   },
-   {
-    "title": "VOA专访何晓清：六四沉冤未雪悲剧一代代重演 是因为中共权力缺乏制衡",
-    "outlet": "美国之音 VOA",
-    "date": "2026-06-04",
-    "url": "https://www.voachinese.com/a/interview-rowena-he-june-fourth-37anniversary-20260603/8157034.html",
-    "paywall": false
-   },
-   {
-    "title": "共产主义受难者纪念基金会烛光悼念六四死难者",
-    "outlet": "美国之音 VOA",
-    "date": "2026-06-05",
-    "url": "https://www.voachinese.com/a/tiananmen-square-massacre-candlelight-vigil-20260605/8157714.html",
-    "paywall": false
+    "date": "2024",
+    "url": "https://hrichina.substack.com/p/joint-statement-on-the-35th-anniversary"
    },
    {
     "title": "纪念六四（专题页）",
@@ -299,11 +641,16 @@
   "intro": "各国政府声明（原文或报道）。",
   "items": [
    {
-    "title": "六四死难者终将得到昭雪：卢比奥国务卿就天安门广场屠杀事件37周年发表声明",
-    "outlet": "美国之音 VOA",
-    "date": "2026-06-03",
-    "url": "https://www.voachinese.com/a/rubio-statement-on-the-37th-anniversary-of-the-tiananmen-square-massacre-20260603/8157028.html",
-    "paywall": false
+    "title": "Hong Kong: Statement by the Spokesperson on the verdict in the ‘Hong Kong Alliance’ case",
+    "outlet": "European External Action Service 欧盟对外行动署",
+    "date": "2026-08-21",
+    "url": "https://www.eeas.europa.eu/eeas/hong-kong-statement-spokesperson-verdict-hong-kong-alliance-case_en"
+   },
+   {
+    "title": "Response to the Hong Kong Alliance leaders' national security law verdict",
+    "outlet": "GOV.UK 英国政府",
+    "date": "2026-08",
+    "url": "https://www.gov.uk/government/news/response-to-the-hong-kong-alliance-leaders-national-security-law-verdict"
    },
    {
     "title": "台湾总统赖清德六四周年撰文呼吁北京正视历史并承认真相",
@@ -313,11 +660,84 @@
     "paywall": false
    },
    {
+    "title": "六四死难者终将得到昭雪：卢比奥国务卿就天安门广场屠杀事件37周年发表声明",
+    "outlet": "美国之音 VOA",
+    "date": "2026-06-03",
+    "url": "https://www.voachinese.com/a/rubio-statement-on-the-37th-anniversary-of-the-tiananmen-square-massacre-20260603/8157028.html",
+    "paywall": false
+   },
+   {
+    "title": "天安门广场屠杀事件37周年纪念日",
+    "outlet": "U.S. Department of State 美国国务院",
+    "date": "2026-06-03",
+    "url": "https://www.state.gov/translations/chinese/20260603-the-37th-anniversary-of-the-tiananmen-square-massacre"
+   },
+   {
+    "title": "The 37th Anniversary of the Tiananmen Square Massacre",
+    "outlet": "U.S. Consulate General Hong Kong & Macau 美国驻港澳总领事馆",
+    "date": "2026-06-03",
+    "url": "https://hk.usconsulate.gov/n-2026060301/"
+   },
+   {
+    "title": "六四37週年前夕 陸委會呼籲中共推動政體改革",
+    "outlet": "中央社 CNA",
+    "date": "2026-06-03",
+    "url": "https://www.cna.com.tw/news/acn/202606030322.aspx"
+   },
+   {
+    "title": "Risch, Shaheen Statement on the 37th Anniversary of the Tiananmen Square Massacre | United States Senate Committee on Foreign Relations",
+    "outlet": "U.S. Senate Foreign Relations Committee 美国参议院外交委员会",
+    "date": "2026-06",
+    "url": "https://www.foreign.senate.gov/press/rep/release/risch-shaheen-statement-on-the-37th-anniversary-of-the-tiananmen-square-massacre"
+   },
+   {
+    "title": "六四37周年 梁文傑：兩岸民主與專制水火不容",
+    "outlet": "联合报 UDN",
+    "date": "2026",
+    "url": "https://udn.com/news/story/7331/9546271"
+   },
+   {
+    "title": "On the 36th Anniversary of the Tiananmen Square Massacre",
+    "outlet": "U.S. Department of State 美国国务院",
+    "date": "2025-06",
+    "url": "https://www.state.gov/releases/office-of-the-spokesperson/2025/06/on-the-36th-anniversary-of-the-tiananmen-square-massacre"
+   },
+   {
     "title": "Statement by Foreign Affairs Minister on 35th anniversary of Tiananmen Square",
     "outlet": "Government of Canada 加拿大外交部",
     "date": "2024-06-04",
     "url": "https://www.canada.ca/en/global-affairs/news/2024/06/statement-by-foreign-affairs-minister-on-35th-anniversary-of-tiananmen-square.html",
     "paywall": false
+   },
+   {
+    "title": "China: Statement by the Spokesperson on the 35th Anniversary of the Tiananmen Square events",
+    "outlet": "European External Action Service 欧盟对外行动署",
+    "date": "2024-06-04",
+    "url": "https://www.eeas.europa.eu/eeas/china-statement-spokesperson-35th-anniversary-tiananmen-square-events_en"
+   },
+   {
+    "title": "On the 35th Anniversary of Tiananmen Square",
+    "outlet": "U.S. Department of State 美国国务院",
+    "date": "2024-06-03",
+    "url": "https://2021-2025.state.gov/on-the-35th-anniversary-of-tiananmen-square/"
+   },
+   {
+    "title": "On the 34th Anniversary of Tiananmen Square",
+    "outlet": "U.S. Department of State 美国国务院",
+    "date": "2023-06-03",
+    "url": "https://2021-2025.state.gov/on-the-34th-anniversary-of-tiananmen-square/"
+   },
+   {
+    "title": "The 33rd Anniversary of Tiananmen Square",
+    "outlet": "U.S. Department of State 美国国务院",
+    "date": "2022-06-03",
+    "url": "https://2021-2025.state.gov/the-33rd-anniversary-of-tiananmen-square/"
+   },
+   {
+    "title": "EU spokesperson comments on 32nd commemoration of Tiananmen Square democracy protests",
+    "outlet": "European External Action Service 欧盟对外行动署",
+    "date": "2021-06",
+    "url": "https://www.eeas.europa.eu/delegations/china/eu-spokesperson-comments-32nd-commemoration-tiananmen-square-democracy-protests_en"
    }
   ],
   "heading_en": "Government statements",
