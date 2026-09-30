@@ -165,7 +165,8 @@ def collect_topics(log, today):
     topics = json.loads(TOPICS.read_text())
     added = []
     for t in topics:
-        if t["key"] != "voa":
+        base = t.get("pangea")  # 美国之音系网站（Pangea 平台）的专题栏目
+        if not base:
             continue
         try:
             s = get(t["source"])
@@ -174,7 +175,7 @@ def collect_topics(log, today):
             continue
         have = {x["url"] for x in t["items"]}
         for m in re.finditer(r'<a href="(/a/[^"]+\.html)"[^>]*title="([^"]+)"', s):
-            url = "https://www.voachinese.com" + m.group(1)
+            url = base + m.group(1)
             if url in have:
                 continue
             dm = re.search(r'class="date[^"]*"[^>]*>([^<]+)<', s[m.end():m.end() + 4000])
@@ -266,7 +267,7 @@ def main():
             return
     if total == 0:
         return
-    names = {"cdt": "中国数字时代", "x": "X #你没看过的六四", "topics": "美国之音六四专题"}
+    names = {"cdt": "中国数字时代", "x": "X #你没看过的六四", "topics": "媒体专题存档"}
     lines = [f"🕯️ freedom8964 今日自动收录 {total} 条："]
     for k, v in added.items():
         for x in v[:15]:

@@ -5385,6 +5385,916 @@
     "date": "2004-06-02",
     "url": "https://www.voachinese.com/a/a-21-a-2004-06-02-5-1-63369607/991391.html"
    }
+  ],
+  "pangea": "https://www.voachinese.com"
+ },
+ {
+  "key": "voa-cantonese",
+  "name": "美国之音粤语 VOA Cantonese：纪念六四",
+  "name_en": "Voice of America (Cantonese): June Fourth",
+  "source": "https://www.voacantonese.com/z/5844",
+  "pangea": "https://www.voacantonese.com",
+  "items": [
+   {
+    "title": "前支聯會3常委拒向國安警交資料案終極上訴 鄒幸彤質疑簡單法例變複雜怪獸",
+    "date": "2025-01-08",
+    "url": "https://www.voacantonese.com/a/former-hk-alliance-leaders-final-appeal-on-refusing-ns-data-demand-20250108/7929418.html"
+   },
+   {
+    "title": "支聯會國安案鄒幸彤申吾爾開希等海外證人視像作供被拒 質疑當局修例針對",
+    "date": "2024-10-29",
+    "url": "https://www.voacantonese.com/a/former-hk-alliance-leader-calling-overseas-witnesses-in-nsl-trial-rejected-20241029/7843244.html"
+   },
+   {
+    "title": "六四35周年香港警方銅鑼灣維園一帶嚴密佈防 學者指禁不住悼念燭光遍全球",
+    "date": "2024-06-04",
+    "url": "https://www.voacantonese.com/a/update-situation-in-hk-victoria-park-at-june-4-incident-35th-anniversary-20240604/7642087.html"
+   },
+   {
+    "title": "一名行為藝術家因公開悼念六四事件被香港警察拘留後獲釋",
+    "date": "2024-06-04",
+    "url": "https://www.voacantonese.com/a/ap-hong-kong-artist-detained-on-the-eve-of-tiananmen-crackdown-anniversary-20240603/7641102.html"
+   },
+   {
+    "title": "香港警方六四前夕維園一帶加強巡邏 貼標語獨立書店外站崗 前議員批做法荒謬",
+    "date": "2024-06-03",
+    "url": "https://www.voacantonese.com/a/reactions-to-hk-police-step-up-patrol-before-june-4-incident-35th-anniversary-20240603/7640409.html"
+   },
+   {
+    "title": "23條剛透過港警就抓捕六人，港府和北京最害怕的就是一個“特別日子”",
+    "date": "2024-05-28",
+    "url": "https://www.voacantonese.com/a/hong-kong-makes-first-arrests-under-new-local-security-law-20240528/7629829.html"
+   },
+   {
+    "title": "六四傷殘者齊志勇傳已離世 35年來録而不捨揭露真相",
+    "date": "2024-01-24",
+    "url": "https://www.voacantonese.com/a/tiananmen-s-survivor-qi-zhiyong-reportedly-dead-20240123/7451823.html"
+   },
+   {
+    "title": "香港律政司不服鄒幸彤煽惑集結脫罪終審開庭 大律師質疑控方混淆民事與刑事",
+    "date": "2023-11-22",
+    "url": "https://www.voacantonese.com/a/it-hk-top-court-hear-appeal-chow-hang-tung-unauthorized-assembly-acquittal-20231122-ry/7365491.html"
+   },
+   {
+    "title": "六四華裔學者何曉清被拒絕延長留港後被中大解僱",
+    "date": "2023-10-31",
+    "url": "https://www.voacantonese.com/a/hong-kong-denies-visa-to-prominent-tiananmen-square-scholar-20231031/7334516.html"
+   },
+   {
+    "title": "香港“六四”民調壓力下被叫停 分析：港府圖清洗港人集體回憶",
+    "date": "2023-06-08",
+    "url": "https://www.voacantonese.com/a/gf-hk-hong-kong-pollster-axes-release-of-tiananmen-anniversary-survey-20230608-ry/7128648.html"
+   },
+   {
+    "title": "辛灝年用歷史眼光解剖六四: 是改良還是革命？",
+    "date": "2023-06-08",
+    "url": "https://www.voacantonese.com/a/interview-with-xin-haonian-20230607-ry/7128374.html"
+   },
+   {
+    "title": "聯合國對香港警方拘留六四事件紀念者表示“震驚” 香港政府強烈反對及譴責",
+    "date": "2023-06-06",
+    "url": "https://www.voacantonese.com/a/kc-hong-kong-government-condemns-un-for-criticism-over-detentions-on-june-4-20230606-ry/7124817.html"
+   },
+   {
+    "title": "聯合國對香港警方拘留六四事件紀念者表示“震驚”",
+    "date": "2023-06-05",
+    "url": "https://www.voacantonese.com/a/united-nations-alarmed-by-hong-kong-june-4-detentions-20230605/7123118.html"
+   },
+   {
+    "title": "香港警方周日逮捕了23名纪念六四34周年的港人",
+    "date": "2023-06-05",
+    "url": "https://www.voacantonese.com/a/police-arrest-23-people-in-hong-kong-on-tiananmen-crackdown-anniversary-20230604/7123116.html"
+   },
+   {
+    "title": "數百人倫敦遊行到中國大使館悼念六四 “我們不會忘記”",
+    "date": "2023-06-05",
+    "url": "https://www.voacantonese.com/a/kc-we-will-not-forget-hundreds-mourn-tiananmen-dead-in-london-20230604-ry/7122935.html"
+   },
+   {
+    "title": "台北舉辦六四34週年燭光晚會 千餘民眾不畏大雨悼念",
+    "date": "2023-06-05",
+    "url": "https://www.voacantonese.com/a/june-4th-candle-light-vigil-in-taipei-20230604/7122469.html"
+   },
+   {
+    "title": "六四34週年 大批港警維園戒備 截查市民帶走多人",
+    "date": "2023-06-04",
+    "url": "https://www.voacantonese.com/a/ct-heavy-police-presence-and-arrests-of-activists-on-tiananmen-square-anniversary-in-hong-kong-20230604-ry/7122379.html"
+   },
+   {
+    "title": "政治紅線下尋找悼念空間 香港前區議員派發蠟燭喚起港人六四回憶",
+    "date": "2023-06-02",
+    "url": "https://www.voacantonese.com/a/gf-hong-kong-ex-democrat-politician-gives-out-candles-on-tiananmen-crackdown-anniversary-2-0230602-ry/7120386.html"
+   },
+   {
+    "title": "舉辦六四晚會逾30年 澳門民聯會不堪高壓宣告解散",
+    "date": "2023-06-02",
+    "url": "https://www.voacantonese.com/a/gf-macau-s-tiananmen-massacre-group-disbands-for-fear-of-new-law-20230601-ry/7118878.html"
+   },
+   {
+    "title": "香港警方沒收“國殤之柱” 創作者批“離譜”",
+    "date": "2023-05-05",
+    "url": "https://www.voacantonese.com/a/kc-creator-slams-outrageous-move-for-hong-kong-police-to-take-away-pillar-of-shame-20230505-ry/7080036.html"
+   },
+   {
+    "title": "數百港人倫敦集會紀念721白衣人襲擊事件  呼籲繼續追尋真相",
+    "date": "2022-07-22",
+    "url": "https://www.voacantonese.com/a/kc-hundreds-of-hongkongers-gather-in-london-to-commemorate-july-21-mob-attack-call-for-the-truth-20220721-ry/6668834.html"
+   },
+   {
+    "title": "香港民研：40%支持平反六四創20年新低 前區議員指市民對中國政府沒期望",
+    "date": "2022-06-14",
+    "url": "https://www.voacantonese.com/a/6616749.html"
+   },
+   {
+    "title": "香港支聯會解散後首個六四紀念日 市民自發舉電筒手機燈上街悼念盼薪火相傳",
+    "date": "2022-06-05",
+    "url": "https://www.voacantonese.com/a/6603969.html"
+   },
+   {
+    "title": "香港當局逮捕幾名紀念六四33週年的當地民眾",
+    "date": "2022-06-05",
+    "url": "https://www.voacantonese.com/a/hong-kong-detains-several-people-on-tiananmen-anniversary-20220604/6603954.html"
+   },
+   {
+    "title": "英國多地悼念六四事件 示威者試圖以“坦克”衝擊中國大使館",
+    "date": "2022-06-05",
+    "url": "https://www.voacantonese.com/a/6603572.html"
+   },
+   {
+    "title": "台北六四燭光晚會揭幕“國殤之柱” 倖存者感謝自由民主的台灣",
+    "date": "2022-06-05",
+    "url": "https://www.voacantonese.com/a/taiwan-kick-starts-june-4th-memorial-vigil-unveiling-a-scale-down-replica-of-pilar-of-shame-stature-20220604/6603466.html"
+   },
+   {
+    "title": "倫敦舉行六四紀念集會",
+    "date": "2022-06-05",
+    "url": "https://www.voacantonese.com/a/6603400.html"
+   },
+   {
+    "title": "“別忘了33年前共產黨在首都開槍殺人” 華盛頓六四特展 紀念過去也警醒世人",
+    "date": "2022-06-05",
+    "url": "https://www.voacantonese.com/a/washingtondc-june-4-exhibits-20220604/6603376.html"
+   },
+   {
+    "title": "香港中大學生“尋找民女”活動叫停 參與者慨嘆校園自由受限",
+    "date": "2022-06-04",
+    "url": "https://www.voacantonese.com/a/6603167.html"
+   },
+   {
+    "title": "六四33週年紀念日 中共、香港當局極力抹去人們對天安門血腥鎮壓的記憶",
+    "date": "2022-06-04",
+    "url": "https://www.voacantonese.com/a/china-hong-kong-scrub-tiananmen-memories-on-anniversary-20220604/6603159.html"
+   },
+   {
+    "title": "美國說：不會忘記北京天安門廣場的受害者",
+    "date": "2022-06-04",
+    "url": "https://www.voacantonese.com/a/china-s-tiananmen-victims-won-t-be-forgotten-u-s-says-20220603/6603157.html"
+   },
+   {
+    "title": "香港警方發出嚴厲警告 6月4日進入維園者都可能觸犯法律",
+    "date": "2022-06-04",
+    "url": "https://www.voacantonese.com/a/hong-kong-police-warn-against-tiananmen-anniversary-gatherings-20220603/6602111.html"
+   },
+   {
+    "title": "人權觀察發文紀念六四屠殺33週年 強調正義仍未得以伸張",
+    "date": "2022-06-04",
+    "url": "https://www.voacantonese.com/a/hrw-condemns-no-justice-33-years-after-tiananmen-massacre-20220603/6602071.html"
+   },
+   {
+    "title": "六四33週年美CECC呼籲中共公開面對向人民發動的可怕暴力",
+    "date": "2022-06-03",
+    "url": "https://www.voacantonese.com/a/us-cecc-tiananmen-33-anniversary-20220603/6601805.html"
+   },
+   {
+    "title": "香港警方呼籲六四勿非法集結 前區議員派蠟燭讓市民默默悼念",
+    "date": "2022-06-03",
+    "url": "https://www.voacantonese.com/a/cantonese-ithk-reactions-to-police-warned-not-to-test-enforce-law-on-june-4-anniversary-20220603-ry/6601792.html"
+   },
+   {
+    "title": "維園燭光晚會成絕響 港人盼六四精神薪火相傳",
+    "date": "2022-06-01",
+    "url": "https://www.voacantonese.com/a/gf-hong-kongers-to-commemorate-june-4-massacre-in-their-own-way-20220601-ry/6598718.html"
+   },
+   {
+    "title": "香港教會六四33週年前夕辦祈禱會 牧師坦言國安法下有禁忌以智慧方式紀念",
+    "date": "2022-06-01",
+    "url": "https://www.voacantonese.com/a/6598361.html"
+   },
+   {
+    "title": "台灣接棒香港高調紀念六四 “國殤之柱”將重現台北",
+    "date": "2022-05-31",
+    "url": "https://www.voacantonese.com/a/taiwan-hosts-june-4th-massacre-memoria-20220531/6596921.html"
+   },
+   {
+    "title": "香港支聯會顛覆案鄒幸彤要求初級偵訊 法庭定兩個月審期8月中展開",
+    "date": "2022-05-31",
+    "url": "https://www.voacantonese.com/a/6596711.html"
+   },
+   {
+    "title": "六四33週年忌日 天安門母親呼籲中共勇於承認歷史責任",
+    "date": "2022-05-31",
+    "url": "https://www.voacantonese.com/a/6596677.html"
+   },
+   {
+    "title": "六四週年臨近 香港可能30年來首次無任何有組織的集會",
+    "date": "2022-05-31",
+    "url": "https://www.voacantonese.com/a/hk-june-4th-comemoration-20220531/6596632.html"
+   },
+   {
+    "title": "六四前夕西方科技公司配合北京自我審查的情況正在加劇",
+    "date": "2022-05-25",
+    "url": "https://www.voacantonese.com/a/western-tech-companies-accused-of-helping-china-censor-internet-20220524/6588463.html"
+   },
+   {
+    "title": "六四紀念日將至 香港國安法法官就支聯會拒交資料案做裁決",
+    "date": "2022-05-11",
+    "url": "https://www.voacantonese.com/a/hong-kong-tiananmen-vigil-organisers-labelled-foreign-agents-20220511/6567030.html"
+   },
+   {
+    "title": "香港M+博物館撤隱諭六四畫作 評論員預計六四紀念日官方或嚴刑執法",
+    "date": "2022-05-04",
+    "url": "https://www.voacantonese.com/a/it-hk-reactions-to-m-museum-pull-politically-charged-art-works-from-display-20220504-ry/6556571.html"
+   },
+   {
+    "title": "香港支聯會顛覆案破產管理署或成法律代表 學者憂被告被代表影響司法公正",
+    "date": "2022-02-14",
+    "url": "https://www.voacantonese.com/a/6440734.html"
+   },
+   {
+    "title": "六四象徵國殤之柱捲入“騙局”爭議 創作人稱國安法下不踏足香港",
+    "date": "2022-01-04",
+    "url": "https://www.voacantonese.com/a/gf-HKU-former-council-chair-says-pillar-of-shame-is-a-lie-20220104-ry/6381064.html"
+   },
+   {
+    "title": "9名香港民主派人士參與六四非法集結案 判囚6至10個月",
+    "date": "2021-09-15",
+    "url": "https://www.voacantonese.com/a/cantonese-it-nine-hong-kong-activists-jailed-six-to-ten-months-over-banned-june-4th-vigil-2020-20210915-ry/6229448.html"
+   },
+   {
+    "title": "支聯會3名領袖被控煽動顛覆10月再訊 鄒幸彤保釋被拒籲港人別認命",
+    "date": "2021-09-10",
+    "url": "https://www.voacantonese.com/a/cantonese-it-hong-kong-alliance-three-leaders-in-court-accused-of-subversion-under-nsl-bail-denied-20210910-ry/6221232.html"
+   },
+   {
+    "title": "香港支聯會拒向警方國安處交資料 中聯辦及港府回應違法必受嚴懲",
+    "date": "2021-09-06",
+    "url": "https://www.voacantonese.com/a/cantonese-it-reactions-to-hk-alliance-will-not-hand-over-info-to-national-security-police-20210906-ry/6213876.html"
+   },
+   {
+    "title": "香港支聯會副主席：國安法下港人不能委曲求全",
+    "date": "2021-06-21",
+    "url": "https://www.voacantonese.com/a/gf-HK-alliance-vice-chairperson-Chow-Hang-Tung-do-not-give-up-20210621-ry/5936604.html"
+   },
+   {
+    "title": "香港網上集會悼念李旺陽逝世9周年 民調：62%不認同悼念六四危害國安",
+    "date": "2021-06-07",
+    "url": "https://www.voacantonese.com/a/cantonese-it-hong-kong-online-rally-commemorate-9th-anniversary-of-the-death-of-li-wangyag-20210607-ry/5919279.html"
+   },
+   {
+    "title": "香港支聯會副主席鄒幸彤保釋外出 批評警方企圖以言入罪",
+    "date": "2021-06-05",
+    "url": "https://www.voacantonese.com/a/p-it-hk-hong-kong--alliance-vice-chairman-chow-hang-tung-bailed-out-after-being-detained-for-33-hours/5917671.html"
+   },
+   {
+    "title": "“六四”獨坐維園韓東方：香港尚未死",
+    "date": "2021-06-05",
+    "url": "https://www.voacantonese.com/a/hong-kong-not-dead-yet-says-tiananmen-veteran-taking-lone-stand-in-park-for-june-4-vigil/5917624.html"
+   },
+   {
+    "title": "2021年6月4日的香港",
+    "date": "2021-06-05",
+    "url": "https://www.voacantonese.com/a/cantonese-reuters-hong-kong-in-june-4th-2021-ry/5917169.html"
+   },
+   {
+    "title": "美國兩黨政界要人發表聲明紀念六四事件32週年",
+    "date": "2021-06-05",
+    "url": "https://www.voacantonese.com/a/US-Tiananmen-massacre-anniversary-20210604/5917159.html"
+   },
+   {
+    "title": "記者手記：莫哈韋沙漠裡的六四守夜人",
+    "date": "2021-06-05",
+    "url": "https://www.voacantonese.com/a/guarding-June-4th-sculpture-park-20210604/5917156.html"
+   },
+   {
+    "title": "六四事件週年之際微軟必應圖像搜索找不到“坦克人”",
+    "date": "2021-06-05",
+    "url": "https://www.voacantonese.com/a/microsfot-bing-image-search-shows-no-result-for-tank-man-20210604/5917119.html"
+   },
+   {
+    "title": "焦點對話: 六四32週年“世代對話” 周鋒鎖 vs 洞物員",
+    "date": "2021-06-05",
+    "url": "https://www.voacantonese.com/a/pro-and-con-20210604/5917107.html"
+   },
+   {
+    "title": "眾議院議長佩洛西就六四屠殺32週年發表聲明 (全文翻譯)",
+    "date": "2021-06-05",
+    "url": "https://www.voacantonese.com/a/speaker-pelosi-statement-on-tiananmen-massacre-anniversary-20210604/5917101.html"
+   },
+   {
+    "title": "布林肯國務卿就六四屠殺32週年發表聲明 (全文翻譯)",
+    "date": "2021-06-05",
+    "url": "https://www.voacantonese.com/a/blinken-statement-tiananmen-square-202010604/5917095.html"
+   },
+   {
+    "title": "美國國會及行政當局中國委員會主席發表聲明紀念六四事件32週年",
+    "date": "2021-06-04",
+    "url": "https://www.voacantonese.com/a/statement-by-the-chairs-on-the-32-anniversary-of-the-violent-supperession-tiananmen-square--of/5916658.html"
+   },
+   {
+    "title": "天安門母親6月4日在警方的嚴密控制下祭奠她們的孩子",
+    "date": "2021-06-04",
+    "url": "https://www.voacantonese.com/a/Tiananmen-mothers-remembering-June-4-is-a-patriotic-act-20210604/5916476.html"
+   },
+   {
+    "title": "六四屠殺32年後  他們在Clubhouse找到重回天安門的感覺",
+    "date": "2021-06-04",
+    "url": "https://www.voacantonese.com/a/Years-after-the-massacre-clubhouse-brought-them-back-to-tiananmen-20210604/5916431.html"
+   },
+   {
+    "title": "中共黨史隱藏和扭曲的重大歷史事件（2）--“艱辛探索” 或是“革命恐怖”運動？",
+    "date": "2021-06-04",
+    "url": "https://www.voacantonese.com/a/distorted-facts-in-ccp-history-2-revolutionary-terror-20210604/5916412.html"
+   },
+   {
+    "title": "香港支聯會副主席鄒幸彤六四清晨被捕 警方引公安條例圍封維園",
+    "date": "2021-06-04",
+    "url": "https://www.voacantonese.com/a/cantonese-it-hong-kong-alliance-vice-char-chow-hang-tung-arrested-on-june-4th-morning-20210604-ry/5916384.html"
+   },
+   {
+    "title": "香港支聯會副主席鄒幸彤在週五早上被捕",
+    "date": "2021-06-04",
+    "url": "https://www.voacantonese.com/a/cantonese-breaking-news-hk-police-arrested-chow-hang-tung-20210603-ry/5916226.html"
+   },
+   {
+    "title": "西方學者：六四如何改變中國的現在和未來？",
+    "date": "2021-06-04",
+    "url": "https://www.voacantonese.com/a/voaweishi-20210603-voaio-how-june-fourth-changed-china-present-and-future/5915726.html"
+   },
+   {
+    "title": "親歷者回憶六四：民主和自由與青春和覺醒同步(下)",
+    "date": "2021-06-04",
+    "url": "https://www.voacantonese.com/a/four-Chinese-students-recall-Tiananmen-massacre-days-20210603-ry/5915433.html"
+   },
+   {
+    "title": "親歷者回憶六四: 民主和自由與青春和覺醒同步(上)",
+    "date": "2021-06-04",
+    "url": "https://www.voacantonese.com/a/four-Chinese-students-s-Tiananmen-Movement-in-US-20210603-ry/5915432.html"
+   },
+   {
+    "title": "人權觀察呼籲中國政府承認並承擔六四天安門大屠殺責任",
+    "date": "2021-06-04",
+    "url": "https://www.voacantonese.com/a/Human-Rights-Watch-urges-China-account-for-Tiananmen-Massacre-20210603/5915277.html"
+   },
+   {
+    "title": "香港當局將部署7000名警察嚴防六四燭光點亮香港",
+    "date": "2021-06-03",
+    "url": "https://www.voacantonese.com/a/Seven-Thousands-HK-police-on-standby-for-any-unauthorized-June-4-vigils-20210603/5915086.html"
+   },
+   {
+    "title": "香港行為藝術家與童裝店合作 六四晚派特製”燭光有罪”蠟燭悼死難者",
+    "date": "2021-06-03",
+    "url": "https://www.voacantonese.com/a/cantonese-it-hong-kong-performance-artist-distribute-special-candles-on-june-4th-night-20210603-ry/5914993.html"
+   },
+   {
+    "title": "支聯會六四紀念館遭當局突擊巡查後暫時關閉 市民批香港變得不正常",
+    "date": "2021-06-02",
+    "url": "https://www.voacantonese.com/a/cantonese-it-hong-kong-alliance-temporarily-closed-june-4th-museum-due-to-licensing-problems-20210602-ry/5913574.html"
+   },
+   {
+    "title": "澳門警方首次以違法煽顛為由禁辦六四燭光集會",
+    "date": "2021-06-02",
+    "url": "https://www.voacantonese.com/a/Macau-police-explicitly-banned-june-4th-vigil/5913501.html"
+   },
+   {
+    "title": "香港民調：47%市民支持平反六四創18年新低 支聯會指民意未逆轉",
+    "date": "2021-06-01",
+    "url": "https://www.voacantonese.com/a/cantonese-it-hk-poll-show-47-percents-support-reversion-official-stand-on-june-4th-incident/5912169.html"
+   },
+   {
+    "title": "專訪歷史學者周傑榮談六四屠殺新研究（2）",
+    "date": "2021-05-31",
+    "url": "https://www.voacantonese.com/a/interview-with-historian-Jeremy-Brown-on-his-new-new-research-into-Tiananmen-Massacre-part-two-20210531/5910785.html"
+   },
+   {
+    "title": "香港支聯會與警方商討六四燭光集會 續爭取港人合法悼念權利",
+    "date": "2021-05-25",
+    "url": "https://www.voacantonese.com/a/cantonese-it-hong-kong-alliance-discuss-june-4th-candlelight-vigil-arrangements-with-police-20210525-rry/5903489.html"
+   },
+   {
+    "title": "香港支聯會街站派蠟燭堅持悼念六四 籲市民兩手準備燭光遍地開花",
+    "date": "2021-05-10",
+    "url": "https://www.voacantonese.com/a/cantonese-it-hk-alliance-street-booths-to-promote-june-4th-incident-32nd-anniversary-vigil-20210510-ry/5884766.html"
+   },
+   {
+    "title": "香港支聯會國安法下首次洗刷國殤之柱 冀以行動戰勝恐懼延續六四燭光",
+    "date": "2021-05-03",
+    "url": "https://www.voacantonese.com/a/cantonese-it-hk-alliance-wash-pillar-of-shaem-at-hku-campus-1st-time-under-nsl-20210503-ry/5875975.html"
+   },
+   {
+    "title": "對特朗普助長國會山暴力不滿運輸部長趙小蘭宣布辭職",
+    "date": "2021-01-08",
+    "url": "https://www.voacantonese.com/a/us-trump-adm-resignation/5729956.html"
+   },
+   {
+    "title": "近百六四藝術品將永久展出 民主道路之’門’不關閉",
+    "date": "2020-06-12",
+    "url": "https://www.voacantonese.com/a/artworks-on-june-4th-to-be-released-online-20200612/5460131.html"
+   },
+   {
+    "title": "CECC委員六四31週年提出決議案  譴責六四鎮壓和破壞香港自治",
+    "date": "2020-06-05",
+    "url": "https://www.voacantonese.com/a/cecc-tiananmen-at-31-resolution-20200604/5450539.html"
+   },
+   {
+    "title": "白宮發表聲明紀念六四31週年",
+    "date": "2020-06-05",
+    "url": "https://www.voacantonese.com/a/wh-commemorating-tiananmen-massacre-06042020/5450511.html"
+   },
+   {
+    "title": "六四紀念日：許志永獲美國筆會自由寫作獎",
+    "date": "2020-06-05",
+    "url": "https://www.voacantonese.com/a/xu-zhiyong-award-pen-america-human-rights-writing-20200604/5449813.html"
+   },
+   {
+    "title": "美國國務院發言人：六四 \"不會被遺忘\"",
+    "date": "2020-06-05",
+    "url": "https://www.voacantonese.com/a/china-tiananmen-democracy-20200604/5449774.html"
+   },
+   {
+    "title": "六四31周年香港人首次非法燭光悼念 年青人高呼港獨口號",
+    "date": "2020-06-05",
+    "url": "https://www.voacantonese.com/a/cantonese-it-hong-kong-june-4th-incidnet-31st-anniversary-candlelight-vigil-20200604-ry/5449421.html"
+   },
+   {
+    "title": "天安門母親北京六四集體悼念 當局加強嚴控",
+    "date": "2020-06-04",
+    "url": "https://www.voacantonese.com/a/families-of-tiananmen-victims-marking-anni-at-cemetery-in-bj-20200604/5449171.html"
+   },
+   {
+    "title": "民調指近6成港人支持平反六四 學者憂港版國安法實施後民調變”非法”",
+    "date": "2020-06-02",
+    "url": "https://www.voacantonese.com/a/hk-survey-shows-59-support-reversion-official-stand-on-64-incident-20200602/5445762.html"
+   },
+   {
+    "title": "六四前夕- 中國輿論評說美國近日騷亂",
+    "date": "2020-06-01",
+    "url": "https://www.voacantonese.com/a/june-4th-and-us-riots-20200601/5444142.html"
+   },
+   {
+    "title": "“視覺藝術家協會”線上仍弘揚64精神",
+    "date": "2020-06-01",
+    "url": "https://www.voacantonese.com/a/visual-artists-commemoration-of-64-20200601/5444004.html"
+   },
+   {
+    "title": "鮑彤: 文革和下台令趙紫陽大徹大悟",
+    "date": "2019-10-22",
+    "url": "https://www.voacantonese.com/a/bao-tong-interview/5134340.html"
+   },
+   {
+    "title": "六四期間微信封帳號 阻止敏感數額的匯款",
+    "date": "2019-06-09",
+    "url": "https://www.voacantonese.com/a/wechat-closed-accounts-of-dissidents-08062019/4951724.html"
+   },
+   {
+    "title": "國會山審視中國正輸出威權主義",
+    "date": "2019-06-06",
+    "url": "https://www.voacantonese.com/a/us-senate-hearing-china-export-of-authoritarianism-20190606/4948079.html"
+   },
+   {
+    "title": "‘八九一代’30年反思和展望 - 民運必須整合與團結",
+    "date": "2019-06-06",
+    "url": "https://www.voacantonese.com/a/tiananmen-30-reflection-20190606/4948069.html"
+   },
+   {
+    "title": "美國國會山舉行六四三十周年大型紀念活動",
+    "date": "2019-06-05",
+    "url": "https://www.voacantonese.com/a/june-4th-capitol-hill/4946781.html"
+   },
+   {
+    "title": "六四紀念：用藝術銘記歷史",
+    "date": "2019-06-05",
+    "url": "https://www.voacantonese.com/a/tank-man/4946711.html"
+   },
+   {
+    "title": "香港維園舉行紀念“六四”三十周年燭光晚會",
+    "date": "2019-06-05",
+    "url": "https://www.voacantonese.com/a/hk-june-4th-vigil/4946702.html"
+   },
+   {
+    "title": "波士頓舉辦六四事件30週年燭光悼念會",
+    "date": "2019-06-05",
+    "url": "https://www.voacantonese.com/a/boston-tiananmen-square-30th-anniversary-events-20190604/4946508.html"
+   },
+   {
+    "title": "抹掉歷史威脅世界: 為甚麼要記住六四",
+    "date": "2019-06-05",
+    "url": "https://www.voacantonese.com/a/ERASING-HISTORY-WHY-REMEMBER-TIANANMEN-20190604/4946503.html"
+   },
+   {
+    "title": "六四紀念：用藝術銘記歷史",
+    "date": "2019-06-05",
+    "url": "https://www.voacantonese.com/a/chen-weiming-sculptor-who-designed-and-cast-the-tank-man-sculpture-20190604/4946501.html"
+   },
+   {
+    "title": "香港六四晚會人數創傘運後新高 教師傳媒人新書唱片傳承歷史",
+    "date": "2019-06-05",
+    "url": "https://www.voacantonese.com/a/hk-record-turnout-of-june-4th-vigil-new-books-and-cd-keeps-flame-alive/4946500.html"
+   },
+   {
+    "title": "美國國會山舉行六四三十週年大型紀念活動",
+    "date": "2019-06-05",
+    "url": "https://www.voacantonese.com/a/capitol-hill-june-4-rally-and-art-exhibits-06042019/4946475.html"
+   },
+   {
+    "title": "美國眾院通過決議紀念六四事件30週年 呼籲中國尊重人權",
+    "date": "2019-06-05",
+    "url": "https://www.voacantonese.com/a/cantonese-jli-house-tiananmen-resolution-20190605-ry/4946464.html"
+   },
+   {
+    "title": "天安門民運參與者發表“紀念六四宣言”",
+    "date": "2019-06-05",
+    "url": "https://www.voacantonese.com/a/tiananmen-student-protestors-statement-on-30th-anniversary-20190604/4946458.html"
+   },
+   {
+    "title": "佩洛西：人民擁有言論自由符合中國利益",
+    "date": "2019-06-05",
+    "url": "https://www.voacantonese.com/a/speaker-pelosi-on-china-political-reforms-20190604/4946452.html"
+   },
+   {
+    "title": "美國議員：人權必須是美中之間的優先議題",
+    "date": "2019-06-05",
+    "url": "https://www.voacantonese.com/a/us-china-tiananmen-20190604/4946450.html"
+   },
+   {
+    "title": "六四三十週年：中國媒體鴉雀無聲",
+    "date": "2019-06-05",
+    "url": "https://www.voacantonese.com/a/cantonese-hyz-tiananman-30-years-china-censorship20190604-ry/4945754.html"
+   },
+   {
+    "title": "國會舉辦聽證會“天安門事件30週年：審視中國鎮壓的演變”",
+    "date": "2019-06-05",
+    "url": "https://www.voacantonese.com/a/cantonese-ycl-cecc-30th-anniversary-of-tiananmen-massacre-20190604-ry/4945700.html"
+   },
+   {
+    "title": "美國主流媒體評論六四事件30週年",
+    "date": "2019-06-05",
+    "url": "https://www.voacantonese.com/a/cantonese-ybl-HOW-AMERICAN-MAINSTRAM-MEDIA-LOOK-AT-30TH-ANNIVERSARY-OF-JUNE-4TH-20190604-ry/4945671.html"
+   },
+   {
+    "title": "美國眾議院議長在國會談六四屠殺30週年",
+    "date": "2019-06-05",
+    "url": "https://www.voacantonese.com/a/PELOSI-CONGRESS-TIANANMEN-20190604/4945379.html"
+   },
+   {
+    "title": "世界各地紀念六四事件30週年 當局在天安門廣場嚴密戒備",
+    "date": "2019-06-04",
+    "url": "https://www.voacantonese.com/a/cantonese-28055842-tiananmen-square-anniversary-cnpk-20190604-ry/4944896.html"
+   },
+   {
+    "title": "英國及歐盟發表聲明紀念中共六四血腥鎮壓30週年",
+    "date": "2019-06-04",
+    "url": "https://www.voacantonese.com/a/UK-Urges-China-To-Respect-Rights-On-Tiananmen-Crackdown-Anniversary-20190604/4945133.html"
+   },
+   {
+    "title": "美國駐華使館推文並附視頻促中共交代六四真相",
+    "date": "2019-06-04",
+    "url": "https://www.voacantonese.com/a/US-Embassy-Urges-Truth-On-June4th-Massacre20190604/4945124.html"
+   },
+   {
+    "title": "六四到來中國社交媒體網友被禁言",
+    "date": "2019-06-04",
+    "url": "https://www.voacantonese.com/a/CHINESE-OVERSEAS-SAY-THEY-ARE-BLOCKED-FROM-WEIBO-20190604/4945127.html"
+   },
+   {
+    "title": "香港輿論指中國防長六四言論 彰顯官方立場‘倒退’",
+    "date": "2019-06-04",
+    "url": "https://www.voacantonese.com/a/on-the-eve-of-june-4th-20190604/4944977.html"
+   },
+   {
+    "title": "何曉清：永不遺忘、永不放棄",
+    "date": "2019-06-04",
+    "url": "https://www.voacantonese.com/a/rowena-he-on-june-4th-20190603/4944946.html"
+   },
+   {
+    "title": "推特為六四前“誤封”中國異議人士帳號道歉解釋 仍遭質疑",
+    "date": "2019-06-04",
+    "url": "https://www.voacantonese.com/a/twitter-apologizes-for-censoring-dissident-accounts-20190603/4944942.html"
+   },
+   {
+    "title": "六四30週年前夕  蔡英文會見中國民運人士",
+    "date": "2019-06-04",
+    "url": "https://www.voacantonese.com/a/china-tiannmen-tsai-protest-activist-20190603/4944937.html"
+   },
+   {
+    "title": "習近平重回原教旨主義  天安門事件可能重演",
+    "date": "2019-06-04",
+    "url": "https://www.voacantonese.com/a/xi-jinping-communism-fundamentalist-tiananmen-massacre-20190603/4944931.html"
+   },
+   {
+    "title": "一西方公司在中國壓力下屏蔽有關六四消息",
+    "date": "2019-06-04",
+    "url": "https://www.voacantonese.com/a/refinitiv-blocks-tiananmen-stories-under-pressure-by-china-20190604/4944925.html"
+   },
+   {
+    "title": "美國議員追憶六四：自由道路上中國似乎走錯方向",
+    "date": "2019-06-04",
+    "url": "https://www.voacantonese.com/a/us-congress-remembrance-june-4th-1989-20190603/4944904.html"
+   },
+   {
+    "title": "六四事件30週年之際  北京在天安門廣場加強警戒",
+    "date": "2019-06-04",
+    "url": "https://www.voacantonese.com/a/beijing-tightens-security-on-anniversary-of-june-4th-crackdown-20190604/4944901.html"
+   },
+   {
+    "title": "特別直播 - CECC與蘭托斯人權委員會舉行六四事件三十週年聽證會",
+    "date": "2019-06-04",
+    "url": "https://www.voacantonese.com/a/cantonese-online-live-cecc-and-tom-lantos-commission-hearing-20190604-ry/4944881.html"
+   },
+   {
+    "title": "香港支聯會稱超過18萬人參與六四30周年燭光集會",
+    "date": "2019-06-04",
+    "url": "https://www.voacantonese.com/a/hk-june-4th-incident-30th-anniversary-candlalight-vigil-live-q-and-a-/4944889.html"
+   },
+   {
+    "title": "美國國務卿發表六四30週年聲明 向中國人民的英雄致敬",
+    "date": "2019-06-04",
+    "url": "https://www.voacantonese.com/a/cantonese-jli-pompeo-tiananmen-30th-anniversary-statement-20190603-ry/4943867.html"
+   },
+   {
+    "title": "台灣敦促北京平反六四並“真誠悔過”",
+    "date": "2019-06-03",
+    "url": "https://www.voacantonese.com/a/taiwan-calls-on-china-to-sincerely-repent-for-tiananmen-crackdown-20190603/4943322.html"
+   },
+   {
+    "title": "民調顯示 多數港人支持平反六四",
+    "date": "2019-06-03",
+    "url": "https://www.voacantonese.com/a/survey-on-june-4th-incident-20190603/4943315.html"
+   },
+   {
+    "title": "六四30週年 紐約舉行紀念集會",
+    "date": "2019-06-03",
+    "url": "https://www.voacantonese.com/a/ny-commemorating-june-4th-ny-20190603/4943311.html"
+   },
+   {
+    "title": "中共高層六四事件前後會議“秘聞”在港出版",
+    "date": "2019-06-03",
+    "url": "https://www.voacantonese.com/a/book-tiananmen-/4943293.html"
+   },
+   {
+    "title": "支聯會創會副主席李柱銘參與六四導賞團 籲港人不放棄",
+    "date": "2019-06-03",
+    "url": "https://www.voacantonese.com/a/martin-lee-participate-in-june-4th-incident-30th-anniversary-guided-tour/4943277.html"
+   },
+   {
+    "title": "紐約舉行紀念六四30週年集會",
+    "date": "2019-06-03",
+    "url": "https://www.voacantonese.com/a/commemorating-june-4th-ny-20190603/4943264.html"
+   },
+   {
+    "title": "六四三十周年前夕 中國歌手李志仍然銷聲匿跡",
+    "date": "2019-06-03",
+    "url": "https://www.voacantonese.com/a/chinese-singer-missing/4942592.html"
+   },
+   {
+    "title": "六四前夕推特關閉中國異議人士帳號",
+    "date": "2019-06-02",
+    "url": "https://www.voacantonese.com/a/twitter-takes-down-dissidents-accounts-01062019/4942335.html"
+   },
+   {
+    "title": "魏鳳和稱六四天安門鎮壓是正確的",
+    "date": "2019-06-02",
+    "url": "https://www.voacantonese.com/a/china-defense-minister-tiananmen-justified/4942328.html"
+   },
+   {
+    "title": "香港各界短片傳承六四記憶",
+    "date": "2019-05-31",
+    "url": "https://www.voacantonese.com/a/hk-sort-films-remembering-june-4-incident-30th-anniversary-20190531/4940369.html"
+   },
+   {
+    "title": "美國國務院發言人以”大屠殺“一詞譴責六四鎮壓",
+    "date": "2019-05-31",
+    "url": "https://www.voacantonese.com/a/us-state-department-us-china-june-4th-full-on-massacre-20190530-ry/4939373.html"
+   },
+   {
+    "title": "美國會將辦六四聽證 審視中國鎮壓之演變",
+    "date": "2019-05-30",
+    "url": "https://www.voacantonese.com/a/cecc-lantos-human-rights-commission-to-hold-joint-hearing-20190930/4938597.html"
+   },
+   {
+    "title": "六四30週年紀念日前夕  中國當局強力維穩並封鎖訊息",
+    "date": "2019-05-29",
+    "url": "https://www.voacantonese.com/a/Chinese-Activists-Detained-Ahead-June-4th-Massacre20190529/4937211.html"
+   },
+   {
+    "title": "六四30週年幾位老留學生致其他老一代留學生公開信",
+    "date": "2019-05-29",
+    "url": "https://www.voacantonese.com/a/Chinese-students-usa-tiananmen-letter-20190529/4937023.html"
+   },
+   {
+    "title": "生離死別 天安門母親尤維潔口述親人遇難過程",
+    "date": "2019-05-29",
+    "url": "https://www.voacantonese.com/a/Tiananmen-Mothers-Voice-Out-For-Justice-20190528/4937006.html"
+   },
+   {
+    "title": "美國國會將舉行六四聽證  審視中國鎮壓演變",
+    "date": "2019-05-29",
+    "url": "https://www.voacantonese.com/a/cecc-lantos-hearing-tiananmen-china-20190529/4936995.html"
+   },
+   {
+    "title": "法拉盛六四圖片展引發衝突和辯論",
+    "date": "2019-05-29",
+    "url": "https://www.voacantonese.com/a/new-york-city-flushing-june-fourth-photo-show-controversy-20190527/4936987.html"
+   },
+   {
+    "title": "朱耀明牧師：港人拒絕遺忘歷史堅持尋求六四真相",
+    "date": "2019-05-28",
+    "url": "https://www.voacantonese.com/a/HK-Veteran-Cleric-and-Democrats-Keep-Up-Truth-of-Tiananmen-20190528/4935467.html"
+   },
+   {
+    "title": "香港支聯會指2200人參與六四30周年遊行",
+    "date": "2019-05-27",
+    "url": "https://www.voacantonese.com/a/hk-june-4-march/4934256.html"
+   },
+   {
+    "title": "李銳：“事已做絕，何以對天下”",
+    "date": "2019-05-27",
+    "url": "https://www.voacantonese.com/a/Li-Rui-On-June-4th-20190527/4934007.html"
+   },
+   {
+    "title": "香港支聯會指2200人參與六四30周年遊行 人數倍增",
+    "date": "2019-05-27",
+    "url": "https://www.voacantonese.com/a/hk-alliance-said-2200-people-joint-june-4-incident-30th-anniversary-march/4933966.html"
+   },
+   {
+    "title": "六四30年：被忽略的“六四抗暴者”",
+    "date": "2019-05-27",
+    "url": "https://www.voacantonese.com/a/JUNE-4TH-NEW-BOOK-20190525/4933889.html"
+   },
+   {
+    "title": "台灣紀念六四特展吸引大陸遊客駐足閱讀",
+    "date": "2019-05-27",
+    "url": "https://www.voacantonese.com/a/June-4th-Movement-Memorial-Exhibition-In-Taipei-20190524/4933883.html"
+   },
+   {
+    "title": "香港紀念“六四”三十周年大遊行",
+    "date": "2019-05-26",
+    "url": "https://www.voacantonese.com/a/hk-june-4th-march/4933105.html"
+   },
+   {
+    "title": "香港紀念“六四”三十周年大遊行",
+    "date": "2019-05-26",
+    "url": "https://www.voacantonese.com/a/hong-kong-june-4th-demo/4932950.html"
+   },
+   {
+    "title": "六四周年即將到來之際 中國網路機器人加強審查",
+    "date": "2019-05-26",
+    "url": "https://www.voacantonese.com/a/china-robot-censors/4932943.html"
+   },
+   {
+    "title": "六四臨近30週年之際  台灣強調捍衛自身民主",
+    "date": "2019-05-24",
+    "url": "https://www.voacantonese.com/a/Taiwan-Democracy-Anderson-China-June-4th-Movement-20190523/4929812.html"
+   },
+   {
+    "title": "民族之殤30祭，黃河在這裡拐了彎",
+    "date": "2019-05-21",
+    "url": "https://www.voacantonese.com/a/tiananmen-incident-30-anniversary-20190518/4926092.html"
+   },
+   {
+    "title": "天安門母親丁子霖等因 六四敏感日近被監控",
+    "date": "2019-05-20",
+    "url": "https://www.voacantonese.com/a/founder-of-tiananmen-mothers-taken-out-of-beijing-ahead-the-june-4th-anniversary-20190520/4924457.html"
+   },
+   {
+    "title": "六四屠殺30週年前夕維基百科各語言版遭中國全站封殺",
+    "date": "2019-05-15",
+    "url": "https://www.voacantonese.com/a/June-4th-Massacre-Wikipedia-Censorship-China-20190515/4918362.html"
+   },
+   {
+    "title": "從通緝到流亡，八九親歷者：沒有正義，這個國家沒有前途",
+    "date": "2019-05-14",
+    "url": "https://www.voacantonese.com/a/tiananmen-after-30-years-20190513/4916468.html"
+   },
+   {
+    "title": "鮑彤：“我們生活在'六四'制度之中”",
+    "date": "2019-05-13",
+    "url": "https://www.voacantonese.com/a/bao-tong-on-june-4th-20190513/4914878.html"
+   },
+   {
+    "title": "台灣公民團體將舉辦一系列紀念六四事件的活動",
+    "date": "2019-05-13",
+    "url": "https://www.voacantonese.com/a/4914139.html"
+   },
+   {
+    "title": "紐約大型六四紀念會：繼承發揚天安門自由民主遺產",
+    "date": "2019-05-09",
+    "url": "https://www.voacantonese.com/a/JUNE-4TH-CONCERT-20190508/4910455.html"
+   },
+   {
+    "title": "六四藝術展：對中共抹殺記憶的反抗",
+    "date": "2019-05-08",
+    "url": "https://www.voacantonese.com/a/cantonese-rs-june-4th-art-exhibition-20190507/4907320.html"
+   },
+   {
+    "title": "香港六四紀念館新館落成開放",
+    "date": "2019-04-26",
+    "url": "https://www.voacantonese.com/a/HK-JUNE-4TH-MEMORIAL-REOPEN-20190426/4892540.html"
+   },
+   {
+    "title": "前六四學生及海外民陣副主席張健突傳病逝",
+    "date": "2019-04-24",
+    "url": "https://www.voacantonese.com/a/former-june-4th-student-passed-away-unexpectedly-20190424/4889329.html"
+   },
+   {
+    "title": "網上流傳包括‘六四坦克人’短片 引發五毛謾罵",
+    "date": "2019-04-19",
+    "url": "https://www.voacantonese.com/a/tank-man-video-for-leica-sparks-outcry-in-china-ahead-of-tiananmen-anniversary-20190419/4883076.html"
+   },
+   {
+    "title": "六四30年幾次上書促中共平反前少將軍醫蔣彥永遭嚴管",
+    "date": "2019-04-19",
+    "url": "https://www.voacantonese.com/a/chinese-doctor-who-petitions-redemption-of-june-4th-under-control-20190419/4882878.html"
+   },
+   {
+    "title": "蔣彥永因病住院被嚴加看管 六四三十年當局提早維穩",
+    "date": "2019-04-18",
+    "url": "https://www.voacantonese.com/a/Ex-Chinese-Military-Doctor-Put-Under-Surveillance-20190418/4881225.html"
+   },
+   {
+    "title": "“毋忘六四號”啟動與《失憶的人民共和國：重訪天安門》",
+    "date": "2019-04-18",
+    "url": "https://www.voacantonese.com/a/cantonese-hsz-MOBILIZATION-AND-AMNESIA-OF-JUNE-4TH-20190417-ry/4880152.html"
+   },
+   {
+    "title": "嚴家其：中國30年無真相30年沒正義",
+    "date": "2019-04-16",
+    "url": "https://www.voacantonese.com/a/cantonese-rs-yan-jiaqi-june-4th-20190415-ry/4876381.html"
+   },
+   {
+    "title": "胡耀邦逝世30年忌日 家人在當局嚴控下祭拜",
+    "date": "2019-04-15",
+    "url": "https://www.voacantonese.com/a/relatives-of-ex-party-chief-under-surveillance-20190415/4876141.html"
+   },
+   {
+    "title": "胡耀邦逝世三十週年 香港評說中共開明領導人",
+    "date": "2019-04-15",
+    "url": "https://www.voacantonese.com/a/cantonese-hsz-hu-yaobang-20190414-ry/4875043.html"
+   },
+   {
+    "title": "香港六四紀念館開館前遭惡意破壞",
+    "date": "2019-04-08",
+    "url": "https://www.voacantonese.com/a/hk-june-4th-museum-vandalized/4866288.html"
+   },
+   {
+    "title": "香港支聯會及團體清明節悼六四 30週年紀念活動傳承記憶",
+    "date": "2019-04-05",
+    "url": "https://www.voacantonese.com/a/hk-alliance-civil-group-june-4-30th-anni-1st-memorial-event-20190405/4863422.html"
+   },
+   {
+    "title": "六四酒案第四名被告陳兵獲刑三年半",
+    "date": "2019-04-05",
+    "url": "https://www.voacantonese.com/a/tiananmen-1989-wine-trial-chen-bing/4863210.html"
+   },
+   {
+    "title": "“平反六四議案”再闖香港立法會以保歷史記憶",
+    "date": "2019-04-03",
+    "url": "https://www.voacantonese.com/a/hk-june-4th-resolution/4860182.html"
+   },
+   {
+    "title": "六四酒案三被告獲刑三年  緩刑四五年",
+    "date": "2019-04-03",
+    "url": "https://www.voacantonese.com/a/tiananmen-1989-wine-trial/4860014.html"
+   },
+   {
+    "title": "“平反六四議案”再闖香港立法會以保歷史記憶",
+    "date": "2019-04-03",
+    "url": "https://www.voacantonese.com/a/hk-june-4-legislative-bill/4859947.html"
+   },
+   {
+    "title": "“六四酒案”審判中國成都開庭 港人關注此案司法示範",
+    "date": "2019-04-01",
+    "url": "https://www.voacantonese.com/a/HK-Rally-June-4th-Liquor-Trial-20190401/4856637.html"
+   },
+   {
+    "title": "成都酒案四君子審判延遲 香港紀念六四活動拉開序幕",
+    "date": "2019-03-23",
+    "url": "https://www.voacantonese.com/a/hk-rally-june-4th/4843032.html"
+   },
+   {
+    "title": "成都六四酒案四君子審判延期  香港紀念六四活動拉開序幕",
+    "date": "2019-03-23",
+    "url": "https://www.voacantonese.com/a/Hong-Kong-rally-supporting-June-4th-activists-20190322/4842979.html"
+   },
+   {
+    "title": "成都六四酒案幾次延期後 將於週五開庭",
+    "date": "2019-03-18",
+    "url": "https://www.voacantonese.com/a/tiananmen-square-liquor-case-to-be-tried-20190318/4835745.html"
+   },
+   {
+    "title": "“坦克人”拉開2019年香港六四紀念活動序幕",
+    "date": "2019-01-31",
+    "url": "https://www.voacantonese.com/a/cantonese-hsz-hong-kong-june-4th-anniversary-event-20190131-ry/4766735.html"
+   }
   ]
  }
 ]
