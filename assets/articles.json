@@ -172,6 +172,93 @@
   "intro_en": "Reporting at the time (UPI, The Washington Post, The New York Times and others)."
  },
  {
+  "key": "witness",
+  "heading": "亲历者与口述",
+  "intro": "亲历者回忆、口述与访谈。",
+  "heading_en": "Witnesses and oral histories",
+  "intro_en": "Recollections, oral histories and interviews with people who were there.",
+  "items": [
+   {
+    "title": "1989民运史上的\"失踪者\"",
+    "outlet": "自由亚洲电台 RFA",
+    "date": "2024-06-02",
+    "url": "https://www.rfa.org/mandarin/yataibaodao/zhengzhi/wy-05312024183911.html"
+   },
+   {
+    "title": "洛杉矶举行\"六四\"座谈会 亲历者谈血腥场面",
+    "outlet": "自由亚洲电台 RFA",
+    "date": "2024-04-15",
+    "url": "https://www.rfa.org/mandarin/yataibaodao/kejiaowen/sc-04152024153559.html"
+   },
+   {
+    "title": "六四清场最后撤离学生：我相信天安门广场肯定有死人",
+    "outlet": "美国之音 VOA",
+    "date": "2022-06-04",
+    "url": "https://www.voachinese.com/a/6603077.html"
+   },
+   {
+    "title": "专栏|华盛顿手记·八九六四32年祭：郭健八九六四恐怖经历（下）：枪杀、遇难者、救援、尸体",
+    "outlet": "自由亚洲电台 RFA",
+    "date": "2021-06-15",
+    "url": "https://www.rfa.org/mandarin/zhuanlan/huashengdunshouji/wdbm-06152021101601.html"
+   },
+   {
+    "title": "亲历者回忆六四: 民主和自由与青春和觉醒同步(上)",
+    "outlet": "美国之音 VOA",
+    "date": "2021-06-03",
+    "url": "https://www.voachinese.com/a/four-Chinese-students-s-Tiananmen-Movement-in-US-20210603/5914899.html"
+   },
+   {
+    "title": "三十年声犹在耳: 六四亲历者回忆枪响时刻",
+    "outlet": "美国之音 VOA",
+    "date": "2019-06-03",
+    "url": "https://www.voachinese.com/a/june-4the-30-anniversary-20100603/4940430.html"
+   },
+   {
+    "title": "戒严军官回顾六四屠杀 六四权威学者：永不遗忘",
+    "outlet": "美国之音 VOA",
+    "date": "2019-06-03",
+    "url": "https://www.voachinese.com/a/voaweishi-20190603-voaio-witness-of-the-1989-tiananmen-democratic-movement/4943643.html"
+   },
+   {
+    "title": "方政、杨建利回忆六部口事件 吁勿忘六四",
+    "outlet": "自由亚洲电台 RFA",
+    "date": "2018-05-30",
+    "url": "https://www.rfa.org/mandarin/yataibaodao/renquanfazhi/yl-05302018110506.html"
+   },
+   {
+    "title": "焦点对话：六四亲历者：我经历的天安门事件",
+    "outlet": "美国之音 VOA",
+    "date": "2017-06-02",
+    "url": "https://www.voachinese.com/a/VOAWeishi-ProandCon-20170602-Unknow-stories-from-4-Chinese-My-personal-experience-during-the-1989-Tiananmen-movement/3884312.html"
+   },
+   {
+    "title": "天安门回忆：美国之音记者亲历六四风云",
+    "outlet": "美国之音 VOA",
+    "date": "2014-06-03",
+    "url": "https://www.voachinese.com/a/tiananmen-20140603/1928953.html"
+   },
+   {
+    "title": "六四真相苦行僧－吴仁华",
+    "outlet": "美国之音 VOA",
+    "date": "2014-05-21",
+    "url": "https://www.voachinese.com/a/wurenhua-20140521/1919258.html"
+   },
+   {
+    "title": "回首“六四”难属群体历程：生者与死者——八九“六四”25周年纪念与回忆（之二）",
+    "outlet": "自由亚洲电台 RFA",
+    "date": "2014-05-07",
+    "url": "https://www.rfa.org/mandarin/zhuanlan/xinlingzhilyu/bajiuliusizhuanji/mind-05072014153209.html"
+   },
+   {
+    "title": "告诉你一个真实的“六四天安门事件”（一）（图）",
+    "outlet": "自由亚洲电台 RFA",
+    "date": "2009-06-03",
+    "url": "https://www.rfa.org/mandarin/yataibaodao/64-06032009120239.html"
+   }
+  ]
+ },
+ {
   "key": "explain",
   "heading": "回顾与解读",
   "intro": "回顾、解读与专题页。",
@@ -189,6 +276,24 @@
     "date": "2026-06-03",
     "url": "https://www.amnesty.org/en/projects/the-1989-tiananmen-crackdown/",
     "paywall": false
+   },
+   {
+    "title": "【專題回顧】六四天安門事件35周年：記憶與遺忘的爭鬥",
+    "outlet": "转角国际 UDN Global",
+    "date": "2024-06-04",
+    "url": "https://global.udn.com/global_vision/story/8663/8009154"
+   },
+   {
+    "title": "35年后，打开“六四天安门”的时光胶囊",
+    "outlet": "美国之音 VOA",
+    "date": "2024-06-01",
+    "url": "https://www.voachinese.com/a/7638225.html"
+   },
+   {
+    "title": "中共党史掩盖和歪曲的重大历史事件(1): 八九六四那一夜，“人民军队” 残杀了人民",
+    "outlet": "美国之音 VOA",
+    "date": "2021-06-03",
+    "url": "https://www.voachinese.com/a/distorted-ccp-history-part-1-Tienanmen-massacre/5908517.html"
    },
    {
     "title": "Remembering the Tiananmen Square Crackdown, and the “Tank Man”",
@@ -254,6 +359,12 @@
     "date": "2009-11-13",
     "url": "https://www.history.com/this-day-in-history/june-4/tiananmen-square-massacre-takes-place",
     "paywall": false
+   },
+   {
+    "title": "The legacy of Tiananmen Square",
+    "outlet": "Al Jazeera 半岛电视台",
+    "date": "2009-06-28",
+    "url": "https://www.aljazeera.com/video/101-east/2009/6/28/the-legacy-of-tiananmen-square"
    },
    {
     "title": "Tiananmen Square through the eyes of a soldier",
@@ -395,6 +506,18 @@
     "url": "https://www.pbs.org/newshour/world/police-warn-families-of-tiananmen-crackdown-dead-not-to-visit-graves-on-37th-anniversary"
    },
    {
+    "title": "天安门母亲2026年新春聚会遭到政府的阻扰",
+    "outlet": "Human Rights in China 中国人权",
+    "date": "2026-01-15",
+    "url": "https://hrichina.substack.com/p/2026"
+   },
+   {
+    "title": "铁幕前的哀悼：在严控下六四家属坚持祭奠",
+    "outlet": "Human Rights in China 中国人权",
+    "date": "2025-06-06",
+    "url": "https://hrichina.substack.com/p/438"
+   },
+   {
     "title": "六四36周年：天安门母亲首次遭全面通讯封锁 公安严控祭奠活动",
     "outlet": "自由亚洲电台 RFA",
     "date": "2025-06-05",
@@ -414,10 +537,22 @@
     "url": "https://hrichina.substack.com/p/an-interview-with-a-tiananmen-mother"
    },
    {
+    "title": "天安门母亲: 1989年“六四”惨案三十六周年祭",
+    "outlet": "Human Rights in China 中国人权",
+    "date": "2025-05-29",
+    "url": "https://hrichina.substack.com/p/1989"
+   },
+   {
     "title": "Gathering of the “Tiananmen Mothers” for New Year 2025",
     "outlet": "Human Rights in China 中国人权",
     "date": "2025-01-06",
     "url": "https://hrichina.substack.com/p/gathering-of-the-tiananmen-mothers"
+   },
+   {
+    "title": "VOA专访: 丁子霖：中共不能回避六四屠杀",
+    "outlet": "美国之音 VOA",
+    "date": "2015-06-02",
+    "url": "https://www.voachinese.com/a/voa-special-interveiw-ding-zilin-june-4th-26-years/2804535.html"
    }
   ],
   "heading_en": "Tiananmen Mothers and families",
@@ -554,6 +689,12 @@
     "date": "2020-06-04",
     "url": "https://edition.cnn.com/2020/06/03/asia/hong-kong-tiananmen-june-4-china-intl-hnk/index.html",
     "paywall": false
+   },
+   {
+    "title": "风潮变了，“六四舞台”如何演下去？",
+    "outlet": "端传媒 Initium Media",
+    "date": "2016-06-03",
+    "url": "https://theinitium.com/zh-hans/article/20160603-hongkong-tiananmen-memory02"
    }
   ],
   "heading_en": "Hong Kong: the vigil ban and the Alliance case",
@@ -612,6 +753,12 @@
     "paywall": false
    },
    {
+    "title": "历史的回响：35年后六四的纪念与中共的镇压",
+    "outlet": "Human Rights in China 中国人权",
+    "date": "2024-06-25",
+    "url": "https://hrichina.substack.com/p/35"
+   },
+   {
     "title": "Heavy security in China and Hong Kong on 35th anniversary of Tiananmen crackdown",
     "outlet": "NPR",
     "date": "2024-06-04",
@@ -623,6 +770,24 @@
     "outlet": "Human Rights in China 中国人权",
     "date": "2024",
     "url": "https://hrichina.substack.com/p/joint-statement-on-the-35th-anniversary"
+   },
+   {
+    "title": "私人记忆：34年，一个人的六四，纪念是什么形状",
+    "outlet": "端传媒 Initium Media",
+    "date": "2023-06-03",
+    "url": "https://theinitium.com/zh-hans/article/20230603-hk-china-taiwan-personal-memory-of-64"
+   },
+   {
+    "title": "六四34周年特别报道：拾起火把，前行!",
+    "outlet": "自由亚洲电台 RFA",
+    "date": "2023-06-02",
+    "url": "https://www.rfa.org/mandarin/yataibaodao/renquanfazhi/kw-06012023130017.html"
+   },
+   {
+    "title": "六四33年：不止纪念六四本身，也纪念香港人对于六四的纪念",
+    "outlet": "端传媒 Initium Media",
+    "date": "2022-06-03",
+    "url": "https://theinitium.com/zh-hans/opinion/20220603-opinion-hk-4june"
    },
    {
     "title": "纪念六四（专题页）",
@@ -714,6 +879,12 @@
     "outlet": "European External Action Service 欧盟对外行动署",
     "date": "2024-06-04",
     "url": "https://www.eeas.europa.eu/eeas/china-statement-spokesperson-35th-anniversary-tiananmen-square-events_en"
+   },
+   {
+    "title": "美国国会\"六四\"听证 中国内外胁迫再成焦点",
+    "outlet": "自由亚洲电台 RFA",
+    "date": "2024-06-04",
+    "url": "https://www.rfa.org/mandarin/yataibaodao/zhengzhi/tj-06042024105731.html"
    },
    {
     "title": "On the 35th Anniversary of Tiananmen Square",
