@@ -1,6 +1,28 @@
 {
  "updated": "2026-09-30",
  "day": "2026-09-30",
- "cursor": 52,
- "added": []
+ "cursor": 72,
+ "added": [
+  {
+   "kind": "articles",
+   "title": "Chow Hang-tung’s Mitigation Statement Interrupted by Judge, Publishes Full Text Online",
+   "url": "https://news.hrichina.org/p/chow-hang-tungs-mitigation-statement"
+  },
+  {
+   "kind": "articles",
+   "title": "Tiananmen Square vigil organisers jailed for seven years in Hong Kong",
+   "url": "https://www.theguardian.com/world/2026/sep/11/chow-hang-tung-lee-cheuk-yan-tiananmen-square-activists-jailed-hong-kong"
+  },
+  {
+   "kind": "articles",
+   "title": "The Guardian view on the Tiananmen vigil convictions: Hong Kong too has been silenced. Others should speak out | Editorial",
+   "url": "https://www.theguardian.com/commentisfree/2026/aug/24/the-guardian-view-on-the-tiananmen-vigil-convictions-hong-kong-too-has-been-silenced-others-should-speak-out"
+  },
+  {
+   "kind": "articles",
+   "title": "Tiananmen Square vigil organisers in Hong Kong found guilty of ‘inciting subversion’",
+   "url": "https://www.theguardian.com/world/2026/aug/21/tiananmen-square-vigil-hong-kong-alliance-activists-guilty-verdict-lee-cheuk-yan-chow-hang-tung"
+  }
+ ],
+ "errors": []
 }

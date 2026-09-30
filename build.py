@@ -293,9 +293,11 @@ def cdt_block(auto, loc):
 def topics_block(topics, loc):
     """媒体专题存档：每个来源一节，按年份折叠（<details>，不用脚本）。"""
     s = strings(loc)
-    out = ['<p class="toc">' + " · ".join(f'<a href="#{t["key"]}">{t["name_en"] if loc == "en" else t["name"]}</a>' for t in topics) + "</p>"]
+    def name_of(t):
+        return t["name_en"] if loc == "en" else s2t_keep_tags(t["name"]) if loc == "zh-hant" else t["name"]
+    out = ['<p class="toc">' + " · ".join(f'<a href="#{t["key"]}">{name_of(t)}</a>' for t in topics) + "</p>"]
     for t in topics:
-        name = t["name_en"] if loc == "en" else t["name"]
+        name = name_of(t)
         src = html.escape(t["source"])
         out.append(f'<h2 id="{t["key"]}">{name} <span class="muted small">{s["count"].format(len(t["items"]))}</span></h2>')
         out.append(f'<p class="muted small"><a href="{src}" rel="noopener noreferrer" target="_blank">{src}</a></p>')
