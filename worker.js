@@ -40,6 +40,9 @@ const decode = (s) => s
   .trim();
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 function normalize(u) {
+  // YouTube 短视频网址统一成普通观看网址，避免同一视频收两次
+  const sh = u.match(/youtube\.com\/shorts\/([\w-]{11})/);
+  if (sh) return `https://www.youtube.com/watch?v=${sh[1]}`;
   try {
     const x = new URL(u);
     for (const k of [...x.searchParams.keys()]) if (/^(utm_|at_|fbclid|gclid)/.test(k)) x.searchParams.delete(k);
