@@ -10383,6 +10383,789 @@
   ]
  },
  {
+  "key": "pts",
+  "name": "公视新闻网 PNN：六四事件",
+  "name_en": "PTS News (Taiwan): June Fourth",
+  "source": "https://news.pts.org.tw/tag/3810/",
+  "items": [
+   {
+    "title": "香港禁悼念六四事件 藝術家街頭綁紅絲線遭警制止",
+    "date": "2026-06-04",
+    "url": "https://news.pts.org.tw/article/811589"
+   },
+   {
+    "title": "六四天安門事件37週年 盧比歐：中國無法抹去歷史",
+    "date": "2026-06-04",
+    "url": "https://news.pts.org.tw/article/811578"
+   },
+   {
+    "title": "總統賴清德談六四37週年 籲中國正視歷史、開啟和解對話",
+    "date": "2026-06-04",
+    "url": "https://news.pts.org.tw/article/811466"
+   },
+   {
+    "title": "六四事件爆發37年來首次 罹難者家屬稱遭禁止赴公墓祭奠",
+    "date": "2026-06-03",
+    "url": "https://news.pts.org.tw/article/811293"
+   },
+   {
+    "title": "抗命拒鎮壓六四天安門群眾 共軍將領受審影片首度曝光",
+    "date": "2025-12-24",
+    "url": "https://news.pts.org.tw/article/787381"
+   },
+   {
+    "title": "六四事件滿36週年 民團辦悼念晚會反極權擴張",
+    "date": "2025-06-04",
+    "url": "https://news.pts.org.tw/article/754564"
+   },
+   {
+    "title": "六四事件36週年 民團籲釋放中港澳良心犯",
+    "date": "2025-06-04",
+    "url": "https://news.pts.org.tw/article/754432"
+   },
+   {
+    "title": "六四前夕男翻越天安門柵欄遭逮 北京當局未表態",
+    "date": "2025-06-03",
+    "url": "https://news.pts.org.tw/article/754369"
+   },
+   {
+    "title": "ครบ 35 ปี เหตุการณ์ 4 มิ.ย. จัดงานรำลึก ณ อนุสรณ์สถานเจียงไคเช็ค",
+    "date": "2024-06-05",
+    "url": "https://news.pts.org.tw/article/698611"
+   },
+   {
+    "title": "Hoạt động tưởng niệm sự kiện Thiên An Môn tròn 35 năm",
+    "date": "2024-06-05",
+    "url": "https://news.pts.org.tw/article/698614"
+   },
+   {
+    "title": "Peringatan 35 tahun Insiden 4 Juni di Chiang Kai-Shek Memorial Hall",
+    "date": "2024-06-05",
+    "url": "https://news.pts.org.tw/article/698604"
+   },
+   {
+    "title": "六四事件35週年 民團佇民主廣場公開悼念",
+    "date": "2024-06-04",
+    "url": "https://news.pts.org.tw/article/698454"
+   },
+   {
+    "title": "六四事件35週年 北京天安門城樓全天關閉",
+    "date": "2024-06-04",
+    "url": "https://news.pts.org.tw/article/698365"
+   },
+   {
+    "title": "六四事件將屆滿35週年 「天安門母親」籲中國公開道歉",
+    "date": "2024-06-02",
+    "url": "https://news.pts.org.tw/article/698074"
+   },
+   {
+    "title": "六四天安門事件35週年前夕  前港支聯會副主席被捕",
+    "date": "2024-05-29",
+    "url": "https://news.pts.org.tw/article/697425"
+   },
+   {
+    "title": "中國前國務總理李克強今火化 上千民眾到場悼念",
+    "date": "2023-11-02",
+    "url": "https://news.pts.org.tw/article/664863"
+   },
+   {
+    "title": "六四天安門事件34週年 港警以「涉破壞社會安寧」帶走23人【圖輯】",
+    "date": "2023-06-05",
+    "url": "https://news.pts.org.tw/article/640051"
+   },
+   {
+    "title": "紀念六四事件 香港警察以「煽動」做理由掠民眾",
+    "date": "2023-06-04",
+    "url": "https://news.pts.org.tw/article/639965"
+   },
+   {
+    "title": "「中國六四」34年 被禁舞台劇「5月35日」踮臺演出",
+    "date": "2023-06-02",
+    "url": "https://news.pts.org.tw/article/639637"
+   },
+   {
+    "title": "白紙運動延燒中國 規模為六四後首見",
+    "date": "2022-12-02",
+    "url": "https://news.pts.org.tw/article/612194"
+   },
+   {
+    "title": "江澤民逝世／六四後江接任中共總書記 任內收回港澳",
+    "date": "2022-12-01",
+    "url": "https://news.pts.org.tw/article/611951"
+   },
+   {
+    "title": "白紙運動／跨世代學運與民運人士聲援 籲中共莫重演六四",
+    "date": "2022-11-30",
+    "url": "https://news.pts.org.tw/article/611797"
+   },
+   {
+    "title": "悼念烏魯木齊火厄 中國警民衝突.煏白紙運動",
+    "date": "2022-11-28",
+    "url": "https://news.pts.org.tw/article/611488"
+   },
+   {
+    "title": "白紙運動／翻牆貼文串連抗議浪潮 王丹籲準備長期抗戰",
+    "date": "2022-11-28",
+    "url": "https://news.pts.org.tw/article/611519"
+   },
+   {
+    "title": "六四事件33週年 台灣重現香港國殤之柱",
+    "date": "2022-06-05",
+    "url": "https://news.pts.org.tw/article/584137"
+   },
+   {
+    "title": "六四事件33週年  港府再度關閉維多利亞公園",
+    "date": "2022-06-04",
+    "url": "https://news.pts.org.tw/article/584079"
+   },
+   {
+    "title": "港大拆除六四國殤之柱 台民團擬募資重建「恥辱柱」",
+    "date": "2022-03-21",
+    "url": "https://news.pts.org.tw/article/572713"
+   },
+   {
+    "title": "港大64紀念雕塑「國殤之柱」突拆除 創作者表達不滿",
+    "date": "2021-12-23",
+    "url": "https://news.pts.org.tw/article/560062"
+   },
+   {
+    "title": "港人悼六四自發上街 4男2女遭警逮",
+    "date": "2021-06-05",
+    "url": "https://news.pts.org.tw/article/529437"
+   },
+   {
+    "title": "港支聯會副主席暗示前往「燭光守夜」 遭港警逮捕",
+    "date": "2021-06-04",
+    "url": "https://news.pts.org.tw/article/529412"
+   },
+   {
+    "title": "六四32週年 港府再以疫情為由禁辦集會",
+    "date": "2021-06-04",
+    "url": "https://news.pts.org.tw/article/529333"
+   },
+   {
+    "title": "六四事件32週年 天安門母親：中共無法迴避責任",
+    "date": "2021-06-01",
+    "url": "https://news.pts.org.tw/article/528763"
+   },
+   {
+    "title": "Zoom封鎖中國.香港民運人士口座 引爭議",
+    "date": "2020-06-12",
+    "url": "https://news.pts.org.tw/article/482847"
+   },
+   {
+    "title": "六四敏感時機 美國神盾級驅逐艦通過臺海",
+    "date": "2020-06-05",
+    "url": "https://news.pts.org.tw/article/481873"
+   },
+   {
+    "title": "Vigils Marking June 4 Held in Taipei, Kaohsiung|悼念六四31週年 北燭光晚會.高放天燈",
+    "date": "2020-06-05",
+    "url": "https://news.pts.org.tw/article/481856"
+   },
+   {
+    "title": "六四敏感時機 美國神盾級驅逐艦通過臺海",
+    "date": "2020-06-05",
+    "url": "https://news.pts.org.tw/article/481833"
+   },
+   {
+    "title": "六四敏感時機 美神盾級驅逐艦通過台海",
+    "date": "2020-06-05",
+    "url": "https://news.pts.org.tw/article/481811"
+   },
+   {
+    "title": "悼念六四31週年 台北燭光晚會、高雄放天燈",
+    "date": "2020-06-05",
+    "url": "https://news.pts.org.tw/article/481745"
+   },
+   {
+    "title": "美國務卿公開會見王丹 籲北京交代六四事件",
+    "date": "2020-06-04",
+    "url": "https://news.pts.org.tw/article/481725"
+   },
+   {
+    "title": "六四事件31週年 蔡：希望莫再有消失的日子",
+    "date": "2020-06-04",
+    "url": "https://news.pts.org.tw/article/481724"
+   },
+   {
+    "title": "龐佩奧接見王丹 呼籲中國公開六四真相",
+    "date": "2020-06-04",
+    "url": "https://news.pts.org.tw/article/481697"
+   },
+   {
+    "title": "蔡英文面冊刊文 紀念六四.祝福香港",
+    "date": "2020-06-04",
+    "url": "https://news.pts.org.tw/article/481696"
+   },
+   {
+    "title": "六四事件31週年 中國解放軍登陸演練",
+    "date": "2020-06-04",
+    "url": "https://news.pts.org.tw/article/481695"
+   },
+   {
+    "title": "US Secretary of State Meets with Wang Dan|六四週年 美國務卿接見王丹並公布合影",
+    "date": "2020-06-04",
+    "url": "https://news.pts.org.tw/article/481689"
+   },
+   {
+    "title": "六四週年 美國國務卿接見王丹佮六四參與者",
+    "date": "2020-06-04",
+    "url": "https://news.pts.org.tw/article/481666"
+   },
+   {
+    "title": "六四週年 美國務卿接見王丹並公布合影",
+    "date": "2020-06-04",
+    "url": "https://news.pts.org.tw/article/481638"
+   },
+   {
+    "title": "陸委會呼籲北京審視六四 中國外交部昨日回應",
+    "date": "2020-06-04",
+    "url": "https://news.pts.org.tw/article/481579"
+   },
+   {
+    "title": "時近六四 台灣朝野聲援、陸委會籲釋李明哲",
+    "date": "2020-06-03",
+    "url": "https://news.pts.org.tw/article/481562"
+   },
+   {
+    "title": "香港\"限聚令\"延到6/4 受質疑打壓六四集會",
+    "date": "2020-05-19",
+    "url": "https://news.pts.org.tw/article/479427"
+   },
+   {
+    "title": "六四60週年 中國外交部：勿干涉中國內政",
+    "date": "2019-06-05",
+    "url": "https://news.pts.org.tw/article/433654"
+   },
+   {
+    "title": "六四事件30年 公民團體舉辦紀念晚會",
+    "date": "2019-06-04",
+    "url": "https://news.pts.org.tw/article/433629"
+   },
+   {
+    "title": "六四事件影響深遠 香港人認清專制極權",
+    "date": "2019-06-04",
+    "url": "https://news.pts.org.tw/article/433616"
+   },
+   {
+    "title": "六四事件已30年 中國官媒仍全面封鎖消息",
+    "date": "2019-06-04",
+    "url": "https://news.pts.org.tw/article/433615"
+   },
+   {
+    "title": "蔡談六四 「我當總統 台灣不會在壓力下屈服」",
+    "date": "2019-06-04",
+    "url": "https://news.pts.org.tw/article/433613"
+   },
+   {
+    "title": "六四事件30年 中國官方完全封鎖歷史",
+    "date": "2019-06-03",
+    "url": "https://news.pts.org.tw/article/433530"
+   },
+   {
+    "title": "中國國防部長：六四是一場政治的動亂",
+    "date": "2019-06-03",
+    "url": "https://news.pts.org.tw/article/433469"
+   },
+   {
+    "title": "六四事件大圍捕 黃雀行動救出數百人",
+    "date": "2019-05-31",
+    "url": "https://news.pts.org.tw/article/433345"
+   },
+   {
+    "title": "六四30週年暖身遊行 籲撤逃犯條例",
+    "date": "2019-05-27",
+    "url": "https://news.pts.org.tw/article/432844"
+   },
+   {
+    "title": "六四事件30週年 辦特展盼各界勿忘歷史",
+    "date": "2019-05-24",
+    "url": "https://news.pts.org.tw/article/432707"
+   },
+   {
+    "title": "六四事件29週年 香港支聯會燭光悼念",
+    "date": "2018-06-05",
+    "url": "https://news.pts.org.tw/article/395946"
+   },
+   {
+    "title": "FORMER TIANANMEN PROTEST LEADER WANG DAN TO LEAVE TAIWAN|六四民運領袖王丹:告別台灣 將致力口述歷史",
+    "date": "2017-06-05",
+    "url": "https://news.pts.org.tw/article/360706"
+   },
+   {
+    "title": "HONG KONG HOLDS VIGIL FOR TIANANMEN SQUARE ANNIVERSARY|六四事件28周年 港燭光晚會11萬人參與",
+    "date": "2017-06-05",
+    "url": "https://news.pts.org.tw/article/360705"
+   },
+   {
+    "title": "六四事件28周年 港燭光晚會11萬人參與",
+    "date": "2017-06-05",
+    "url": "https://news.pts.org.tw/article/360694"
+   },
+   {
+    "title": "天安門事件28週年 香港支聯會辦紀念晚會",
+    "date": "2017-06-04",
+    "url": "https://news.pts.org.tw/article/360681"
+   },
+   {
+    "title": "六四天安門事件28週年 週日辦紀念晚會",
+    "date": "2017-06-02",
+    "url": "https://news.pts.org.tw/article/360470"
+   },
+   {
+    "title": "Plans to build palace museum in Hong Kong unwelcome / 引發六四事件聯想 港地鐵故宮壁惹議",
+    "date": "2017-01-11",
+    "url": "https://news.pts.org.tw/article/346502"
+   },
+   {
+    "title": "引發六四事件聯想 港地鐵故宮壁惹爭議",
+    "date": "2017-01-10",
+    "url": "https://news.pts.org.tw/article/346417"
+   },
+   {
+    "title": "六四最後一名囚犯 苗德順傳獲得釋放",
+    "date": "2016-10-15",
+    "url": "https://news.pts.org.tw/article/337874"
+   },
+   {
+    "title": "六四最後一名囚犯 苗德順傳今獲釋",
+    "date": "2016-10-15",
+    "url": "https://news.pts.org.tw/article/337861"
+   },
+   {
+    "title": "紀念六四 香港晚間舉行燭光悼念晚會",
+    "date": "2016-06-04",
+    "url": "https://news.pts.org.tw/article/324972"
+   },
+   {
+    "title": "紀念六四 香港晚間舉行燭光悼念晚會",
+    "date": "2016-06-04",
+    "url": "https://news.pts.org.tw/article/324952"
+   },
+   {
+    "title": "六四27週年 蔡:盼六四勿成兩岸難言之隱",
+    "date": "2016-06-04",
+    "url": "https://news.pts.org.tw/article/324929"
+   },
+   {
+    "title": "總統明發表六四感言 學者:促中共重人權",
+    "date": "2016-06-03",
+    "url": "https://news.pts.org.tw/article/324922"
+   },
+   {
+    "title": "綠委辦六四追思會 吾爾開希出席",
+    "date": "2016-06-03",
+    "url": "https://news.pts.org.tw/article/324897"
+   },
+   {
+    "title": "香港六四追悼晚會 逾13萬人參加",
+    "date": "2015-10-28",
+    "url": "https://news.pts.org.tw/article/298889"
+   },
+   {
+    "title": "天安門事件26週年 香港本土意識抬頭",
+    "date": "2015-10-28",
+    "url": "https://news.pts.org.tw/article/298826"
+   },
+   {
+    "title": "馬總統\"六四\"談話 呼籲中國平反\"六四\"",
+    "date": "2015-10-28",
+    "url": "https://news.pts.org.tw/article/298775"
+   },
+   {
+    "title": "六四屆滿25週年 香港18萬人悼念",
+    "date": "2014-06-05",
+    "url": "https://news.pts.org.tw/article/270757"
+   },
+   {
+    "title": "六四屆滿25週年 香港18萬人悼念",
+    "date": "2014-06-05",
+    "url": "https://news.pts.org.tw/article/270714"
+   },
+   {
+    "title": "馬籲對岸認真思考 速為六四平反",
+    "date": "2014-06-05",
+    "url": "https://news.pts.org.tw/article/270694"
+   },
+   {
+    "title": "馬向中喊話:民主法治 現正是時候",
+    "date": "2014-06-04",
+    "url": "https://news.pts.org.tw/article/270683"
+   },
+   {
+    "title": "紀念六四事件25周年 自由廣場晚會",
+    "date": "2014-06-04",
+    "url": "https://news.pts.org.tw/article/270670"
+   },
+   {
+    "title": "馬籲對岸認真思考 盡速為六四平反",
+    "date": "2014-06-04",
+    "url": "https://news.pts.org.tw/article/270659"
+   },
+   {
+    "title": "六四25週年 馬:民主法治 化解社會衝突",
+    "date": "2014-06-04",
+    "url": "https://news.pts.org.tw/article/270623"
+   },
+   {
+    "title": "六四事件25週年前夕 加強封鎖打壓",
+    "date": "2014-06-03",
+    "url": "https://news.pts.org.tw/article/270555"
+   },
+   {
+    "title": "六四事件25週年前夕 加強封鎖打壓",
+    "date": "2014-06-03",
+    "url": "https://news.pts.org.tw/article/270539"
+   },
+   {
+    "title": "王丹:中國民主或許緩慢 但一定會到來",
+    "date": "2014-06-03",
+    "url": "https://news.pts.org.tw/article/270507"
+   },
+   {
+    "title": "王丹:中民主或許緩慢 但一定會來",
+    "date": "2014-06-03",
+    "url": "https://news.pts.org.tw/article/270495"
+   },
+   {
+    "title": "官方嚴控封鎖 中國學子多不知有六四",
+    "date": "2014-06-02",
+    "url": "https://news.pts.org.tw/article/270471"
+   },
+   {
+    "title": "天安門事件25週年 六四詩選出版",
+    "date": "2014-06-02",
+    "url": "https://news.pts.org.tw/article/270423"
+   },
+   {
+    "title": "天安門事件25周年 六四詩選出版",
+    "date": "2014-06-02",
+    "url": "https://news.pts.org.tw/article/270403"
+   },
+   {
+    "title": "天安門事件25周年 六四詩選出版",
+    "date": "2014-06-01",
+    "url": "https://news.pts.org.tw/article/270399"
+   },
+   {
+    "title": "天安門事件25周年 六四詩選出版",
+    "date": "2014-06-01",
+    "url": "https://news.pts.org.tw/article/270381"
+   },
+   {
+    "title": "阻電塔施工 法官引六四事件判決無罪",
+    "date": "2014-01-09",
+    "url": "https://news.pts.org.tw/article/259401"
+   },
+   {
+    "title": "自由廣場六四晚會 陸生到場聲援",
+    "date": "2013-06-05",
+    "url": "https://news.pts.org.tw/article/242037"
+   },
+   {
+    "title": "香港紀念六四 逾5萬群眾參加晚會",
+    "date": "2013-06-05",
+    "url": "https://news.pts.org.tw/article/242036"
+   },
+   {
+    "title": "馬談六四事件 \"就像台灣的二二八\"",
+    "date": "2013-06-05",
+    "url": "https://news.pts.org.tw/article/242020"
+   },
+   {
+    "title": "馬談六四事件 \"就像台灣的二二八\"",
+    "date": "2013-06-04",
+    "url": "https://news.pts.org.tw/article/242000"
+   },
+   {
+    "title": "馬談六四事件 \"就像台灣的二二八\"",
+    "date": "2013-06-04",
+    "url": "https://news.pts.org.tw/article/241984"
+   },
+   {
+    "title": "六四事件24年 民間發起紀念晚會",
+    "date": "2013-06-03",
+    "url": "https://news.pts.org.tw/article/241869"
+   },
+   {
+    "title": "民運人士李旺陽傳自盡 外界質疑",
+    "date": "2012-06-08",
+    "url": "https://news.pts.org.tw/article/212377"
+   },
+   {
+    "title": "馬昨發表感言 今籲對岸平反六四",
+    "date": "2012-06-05",
+    "url": "https://news.pts.org.tw/article/212104"
+   },
+   {
+    "title": "六四紀念音樂會 吾爾開希聲援致詞",
+    "date": "2012-06-05",
+    "url": "https://news.pts.org.tw/article/212046"
+   },
+   {
+    "title": "港悼六四燭光晚會 18萬人創紀錄",
+    "date": "2012-06-05",
+    "url": "https://news.pts.org.tw/article/212047"
+   },
+   {
+    "title": "馬籲中國處理六四傷痛 改革第一步",
+    "date": "2012-06-04",
+    "url": "https://news.pts.org.tw/article/212018"
+   },
+   {
+    "title": "天安門母親努力23年 盼解歷史冤案",
+    "date": "2012-06-04",
+    "url": "https://news.pts.org.tw/article/212017"
+   },
+   {
+    "title": "天安門母親努力23年 盼解歷史冤案",
+    "date": "2012-06-04",
+    "url": "https://news.pts.org.tw/article/211981"
+   },
+   {
+    "title": "方勵之病逝 王丹:中國民運損失",
+    "date": "2012-04-08",
+    "url": "https://news.pts.org.tw/article/207292"
+   },
+   {
+    "title": "方勵之病逝 王丹:民運人士損失",
+    "date": "2012-04-08",
+    "url": "https://news.pts.org.tw/article/207279"
+   },
+   {
+    "title": "方勵之病逝 王丹:民運人士損失",
+    "date": "2012-04-08",
+    "url": "https://news.pts.org.tw/article/207247"
+   },
+   {
+    "title": "馬籲平反六四 釋劉曉波艾未未",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/181932"
+   },
+   {
+    "title": "\"六四\"22周年 港人絕食.籲UN調查",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/181915"
+   },
+   {
+    "title": "\"六四\"22周年 港人絕食.籲UN調查",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/181891"
+   },
+   {
+    "title": "總統籲對岸平反六四 展開政治改革",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/181881"
+   },
+   {
+    "title": "\"六四\"22周年 港人絕食.籲UN調查",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/181865"
+   },
+   {
+    "title": "六四前抗議不斷 中國軍警嚴密戒備",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/181364"
+   },
+   {
+    "title": "司徒華追思會 香港拒王丹入境",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/169740"
+   },
+   {
+    "title": "司徒華追思會 香港拒王丹入境",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/169699"
+   },
+   {
+    "title": "六四事件21週年 15萬港人燭光追悼",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/150457"
+   },
+   {
+    "title": "六四事件21年 罹難家屬公開悼念",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/150383"
+   },
+   {
+    "title": "馬總統看六四 籲中方寬待異議者",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/150381"
+   },
+   {
+    "title": "馬總統看六四 籲中方寬待異議者",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/150365"
+   },
+   {
+    "title": "六四事件21週年 馬:盼對岸記取教訓",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/150325"
+   },
+   {
+    "title": "六四事件21年 罹難家屬公開悼念",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/150324"
+   },
+   {
+    "title": "港六四燭光會 逾15萬人破紀錄",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/118685"
+   },
+   {
+    "title": "六四20週年 總統籲中國勇敢面對",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/118635"
+   },
+   {
+    "title": "香港紀念六四音樂會 表達香港人心境",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/118615"
+   },
+   {
+    "title": "六四20週年 總統籲中國勇敢面對",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/118592"
+   },
+   {
+    "title": "六四事件 香港人教育下一代莫忘",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/118579"
+   },
+   {
+    "title": "美國 華府六四20週年 國會邀學運領袖聽證",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/118557"
+   },
+   {
+    "title": "追思六四事件 今晚燭光跨夜靜坐",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/118556"
+   },
+   {
+    "title": "台灣媒體憶六四 血腥一刻永難忘",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/118492"
+   },
+   {
+    "title": "回憶六四採訪 台灣記者難忘當時",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/118482"
+   },
+   {
+    "title": "血濺天安門 台灣記者回憶採訪六四",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/118459"
+   },
+   {
+    "title": "六四事件20年 天安門撼動全中國",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/118367"
+   },
+   {
+    "title": "王丹:台灣應更關注六四與中國民主",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/117472"
+   },
+   {
+    "title": "中國六四事件20周年 受害者觸景傷情",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/113945"
+   },
+   {
+    "title": "中國現代藝展20年紀念 時機敏感遭禁",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/108401"
+   },
+   {
+    "title": "北京六四事件19年 天安門平靜升旗",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/87007"
+   },
+   {
+    "title": "六四事件18週年 為西藏人權祈福",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/77049"
+   },
+   {
+    "title": "資助大陸民運人士? 國安局否認",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/70808"
+   },
+   {
+    "title": "六四事件18週年 為西藏人權祈福",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/61566"
+   },
+   {
+    "title": "四萬港人燭光晚會 要求平反六四",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/53547"
+   },
+   {
+    "title": "追悼六四事件 香港千人大遊行",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/45735"
+   },
+   {
+    "title": "顏萬進籲政府支持中國民運人士",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/38514"
+   },
+   {
+    "title": "六四事件15年 北京公安逮13人",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/38513"
+   },
+   {
+    "title": "六四學運領袖王丹 成台北駐地作家",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/32123"
+   },
+   {
+    "title": "六四文物展 二二八紀念館展出中",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/24150"
+   },
+   {
+    "title": "香港六四燭光晚會 香港5.5萬人哀悼",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/18038"
+   },
+   {
+    "title": "四萬港人燭光晚會 要求平反六四",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/13080"
+   },
+   {
+    "title": "香港千人大遊行 追悼六四事件",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/9365"
+   },
+   {
+    "title": "六四事件15年 北京公安逮捕13人",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/6237"
+   },
+   {
+    "title": "六四事件週年將至 民運領袖感懷",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/6184"
+   },
+   {
+    "title": "六四事件15年 歐盟擬解除武器禁運",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/6183"
+   },
+   {
+    "title": "抗煞軍醫蔣彥永 上書為六四平反",
+    "date": "2011-08-02",
+    "url": "https://news.pts.org.tw/article/5211"
+   }
+  ]
+ },
+ {
   "key": "chinachange",
   "name": "中国变革 China Change：六四",
   "name_en": "China Change: June Fourth",
