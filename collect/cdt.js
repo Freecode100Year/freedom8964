@@ -1,5 +1,5 @@
 // 采集中国数字时代“六四”标签下的文章标题、网址、日期（只取列表页，不读正文）。
-// 用法：node cdt.js [页数，默认 2]  → 输出 JSON 到 stdout
+// 用法：node cdt.js [页数，默认 1；不要翻页，连续翻页会触发真人验证]  → 输出 JSON 到 stdout
 const { chromium } = require('playwright');
 const TAG = 'https://chinadigitaltimes.net/chinese/tag/%E5%85%AD%E5%9B%9B';
 const pages = parseInt(process.argv[2] || '1', 10);

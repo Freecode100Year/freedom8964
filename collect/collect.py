@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""每日自动采集中国数字时代“六四”标签的新文章标题和网址（新闻、YouTube 已改由 Cloudflare Worker 采集）（不读正文），写入 assets/auto.json，然后构建、部署、提交，并用 Telegram 汇报。
+"""每日自动采集中国数字时代“六四”标签的新文章标题和网址（新闻、YouTube 已改由 Cloudflare Worker 采集）（不读正文），写入 assets/auto.json；
+X #你没看过的六四 系列新帖（x_series.py）写入 assets/articles.json；Cloudflare 采集结果（KV）备份到 collect/kv-backup/。
+然后构建、部署、提交（提交后 .git/hooks/post-commit 自动推送 GitHub），并用 Telegram 汇报。
 
 来源（全部是白名单）：
   - 中国数字时代“六四”标签第一页（用浏览器打开，cdt.js）
@@ -162,12 +164,17 @@ def backup_kv(log):
     out = HERE / "kv-backup"
     out.mkdir(exist_ok=True)
     for k in ("articles", "videos", "meta"):
-        r = subprocess.run(["npx", "-y", "wrangler", "kv", "key", "get", "--remote",
-                            "--namespace-id=740ce332e0b3484ba516b21b6cb00937", k],
-                           cwd=SITE, capture_output=True, text=True, timeout=120)
-        try:
-            data = json.loads(r.stdout)
-        except ValueError:
+        data = None
+        for _ in range(3):  # wrangler 偶尔第一次读取失败，重试
+            r = subprocess.run(["npx", "-y", "wrangler", "kv", "key", "get", "--remote",
+                                "--namespace-id=740ce332e0b3484ba516b21b6cb00937", k],
+                               cwd=SITE, capture_output=True, text=True, timeout=120)
+            try:
+                data = json.loads(r.stdout)
+                break
+            except ValueError:
+                pass
+        if data is None:
             log.append(f"KV {k} 备份失败")
             continue
         (out / f"{k}.json").write_text(json.dumps(data, ensure_ascii=False, indent=1))
@@ -212,10 +219,13 @@ def main():
     backup_kv(log)
     if "--no-deploy" in sys.argv:
         return
-    if not subprocess.run(["git", "status", "--porcelain"], cwd=SITE, capture_output=True, text=True).stdout.strip():
+    changed = [l[3:] for l in subprocess.run(["git", "status", "--porcelain"], cwd=SITE, capture_output=True, text=True).stdout.splitlines()]
+    if not changed:
         print("没有新条目")
         return
-    steps = [["python3", "build.py"], ["npx", "-y", "wrangler", "deploy"],
+    # 只有 collect/ 下的备份变了就不用重新构建部署网站
+    site_changed = any(not f.startswith("collect/") for f in changed)
+    steps = ([["python3", "build.py"], ["npx", "-y", "wrangler", "deploy"]] if site_changed else []) + [
              ["git", "add", "-A"], ["git", "-c", "user.name=freedom8964", "-c", "user.email=noreply@freedom8964.com", "commit", "-qm", f"自动采集 {today}：新增 {total} 条" if total else f"备份 Cloudflare 采集数据 {today}"]]  # 提交后由 .git/hooks/post-commit 自动推送 GitHub
     for cmd in steps:
         r = subprocess.run(cmd, cwd=SITE, capture_output=True, text=True, timeout=600)
@@ -229,7 +239,10 @@ def main():
     for k, v in added.items():
         for x in v[:15]:
             lines.append(f"· [{names[k]}] {x['title']}")
-    lines.append("https://freedom8964.com/latest")
+    if added.get("cdt"):
+        lines.append("https://freedom8964.com/latest")
+    if added.get("x"):
+        lines.append("https://freedom8964.com/reports#x-unseen64")
     subprocess.run([str(Path.home() / "bin/tg-send"), "\n".join(lines)])
 
 

@@ -6,6 +6,9 @@ import html
 import json
 import re
 import shutil
+import subprocess
+from datetime import datetime
+from zoneinfo import ZoneInfo
 from pathlib import Path
 
 import opencc
@@ -13,7 +16,20 @@ import opencc
 ROOT = Path(__file__).parent
 DIST = ROOT / "dist"
 SITE = "https://freedom8964.com"
-UPDATED = "2026-09-24"
+
+
+def last_updated():
+    """页面或资料有未提交的改动 → 今天（美东）；否则取最后一次改动 pages/、assets/ 的提交日期。"""
+    try:
+        dirty = subprocess.run(["git", "status", "--porcelain", "--", "pages", "assets"], cwd=ROOT, capture_output=True, text=True).stdout.strip()
+        if not dirty:
+            return subprocess.run(["git", "log", "-1", "--format=%cs", "--", "pages", "assets"], cwd=ROOT, capture_output=True, text=True).stdout.strip()
+    except OSError:
+        pass
+    return datetime.now(ZoneInfo("America/New_York")).strftime("%Y-%m-%d")
+
+
+UPDATED = last_updated()
 S2T = opencc.OpenCC("s2t.json")
 
 FILES = ["index.html", "timeline.html", "victims.html", "documents.html", "hongkong.html",
@@ -184,11 +200,16 @@ def pretty_links(page):
     return re.sub(r'href="(?!https?:|/)([^"#]*?\.html)(#[^"]*)?"', fix, page)
 
 
+def s2t_keep_tags(text):
+    """简转繁，但 #话题标签 保持原文（X 上的话题标签是固定写法）。"""
+    return "".join(p if p.startswith("#") else S2T.convert(p) for p in re.split(r"(#\S+)", text))
+
+
 def heading_of(sec, loc):
     if loc == "en":
         return sec["heading_en"], sec["intro_en"]
     if loc == "zh-hant":
-        return S2T.convert(sec["heading"]), S2T.convert(sec["intro"])
+        return s2t_keep_tags(sec["heading"]), s2t_keep_tags(sec["intro"])
     return sec["heading"], sec["intro"]
 
 
@@ -234,7 +255,7 @@ def auto_item(x, loc, kind):
     else:
         meta = html.escape(x.get("outlet", ""))
     if x.get("date"):
-        meta += f" · {x['date']}"
+        meta += f" · {html.escape(x['date'])}"
     return (f'  <li><div class="t"><a href="{url}" rel="noopener noreferrer" target="_blank">{html.escape(x["title"])}</a></div>'
             f'<div class="c">{meta} · {url}</div></li>')
 
@@ -261,7 +282,7 @@ def cdt_block(auto, loc):
         parts.append(f'<h2 id="y{y}">{y} <span class="muted small">{s["count"].format(len(items))}</span></h2>')
         parts.append('<ul class="vlist">\n' + "\n".join(
             f'  <li><div class="t"><a href="{html.escape(x["url"])}" rel="noopener noreferrer" target="_blank">{html.escape(x["title"])}</a></div>'
-            f'<div class="c">{x.get("date", "")} · {html.escape(x["url"])}</div></li>' for x in items) + "\n</ul>")
+            f'<div class="c">{html.escape(x.get("date", ""))} · {html.escape(x["url"])}</div></li>' for x in items) + "\n</ul>")
     return "\n".join(parts) + "\n"
 
 

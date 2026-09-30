@@ -81,17 +81,20 @@ async function load(env) {
 async function runBatch(env, today) {
   const db = await load(env);
   const meta = db.meta;
-  if (meta.day !== today) { meta.day = today; meta.cursor = 0; meta.added = []; }
+  if (meta.day !== today) { meta.day = today; meta.cursor = 0; meta.added = []; meta.errors = []; }
   if (meta.cursor >= SOURCES.length) return { done: true, added: [] };
   // known：影像、报道栏目人工整理过的链接（由 sync_known.py 同步），不重复收
   const seen = new Set([...db.articles, ...db.videos].map((x) => x.url).concat(db.known));
   const batch = SOURCES.slice(meta.cursor, meta.cursor + BATCH);
-  const added = [];
+  const added = [], errors = [];
   for (const src of batch) {
     try {
       const r = await fetch(src.url, { headers: { "User-Agent": "Mozilla/5.0 (compatible; freedom8964-collector; +https://freedom8964.com/about)" } });
-      if (!r.ok) continue;
-      for (const it of parseFeed(await r.text())) {
+      if (!r.ok) { errors.push(`${src.name}: HTTP ${r.status}`); continue; }
+      const items = parseFeed(await r.text());
+      if (!items.length) errors.push(`${src.name}: 0 条`);
+      for (const it of items) {
+        if (!/^https?:\/\//.test(it.url)) continue; // 只收 http(s) 链接
         if (!relevant(it.title) || seen.has(it.url) || EXCLUDE.some((e) => it.url.includes(e) || it.title.includes(e))) continue;
         if (src.kind === "videos") {
           const o = await fetch("https://www.youtube.com/oembed?format=json&url=" + encodeURIComponent(it.url));
@@ -106,24 +109,26 @@ async function runBatch(env, today) {
         db[src.kind].unshift(it);
         added.push({ kind: src.kind, title: it.title, url: it.url });
       }
-    } catch (e) { /* 单个来源失败不影响其他来源 */ }
+    } catch (e) { errors.push(`${src.name}: ${String(e.message || e).slice(0, 80)}`); /* 单个来源失败不影响其他来源 */ }
   }
   meta.cursor += batch.length;
   meta.added = (meta.added || []).concat(added);
+  meta.errors = (meta.errors || []).concat(errors);
   meta.updated = today;
   await Promise.all([
     env.AUTO.put("articles", JSON.stringify(db.articles)),
     env.AUTO.put("videos", JSON.stringify(db.videos)),
     env.AUTO.put("meta", JSON.stringify(meta)),
   ]);
-  if (meta.cursor >= SOURCES.length && env.TG_BOT_TOKEN && env.TG_CHAT_ID) await report(env, meta.added, today);
+  if (meta.cursor >= SOURCES.length && env.TG_BOT_TOKEN && env.TG_CHAT_ID) await report(env, meta.added, today, meta.errors);
   return { done: meta.cursor >= SOURCES.length, added };
 }
 
-async function report(env, added, today) {
+async function report(env, added, today, errors = []) {
   const lines = added.length
     ? [`🕯️ freedom8964 ${today} 自动收录 ${added.length} 条（Cloudflare）：`, ...added.slice(0, 20).map((x) => `· [${x.kind === "videos" ? "视频" : "报道"}] ${x.title}`), "https://freedom8964.com/latest"]
     : [`freedom8964 ${today} 自动采集完成：没有新条目（Cloudflare）`];
+  if (errors.length) lines.push(`⚠️ ${errors.length}/${SOURCES.length} 个来源读取失败：`, ...errors.slice(0, 10).map((e) => `· ${e}`));
   await fetch(`https://api.telegram.org/bot${env.TG_BOT_TOKEN}/sendMessage`, {
     method: "POST", headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ chat_id: env.TG_CHAT_ID, text: lines.join("\n"), disable_web_page_preview: true }),
