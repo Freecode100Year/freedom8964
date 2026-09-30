@@ -33,7 +33,7 @@ UPDATED = last_updated()
 S2T = opencc.OpenCC("s2t.json")
 
 FILES = ["index.html", "timeline.html", "victims.html", "documents.html", "hongkong.html",
-         "museum.html", "videos.html", "reports.html", "cdt.html", "latest.html", "about.html"]
+         "museum.html", "videos.html", "reports.html", "wiki.html", "cdt.html", "latest.html", "about.html"]
 
 LOCALES = {
     "zh": {"prefix": "", "lang": "zh-Hans", "label": "简体", "src": "zh"},
@@ -44,7 +44,7 @@ LOCALES = {
 # 每种语言的界面文字；繁體由简体自动转换
 T = {
     "zh": {
-        "nav": ["首页", "大事记", "遇难者", "史料", "香港烛光", "纪念馆", "影像", "报道", "中国数字时代", "最新", "关于"],
+        "nav": ["首页", "大事记", "遇难者", "史料", "香港烛光", "纪念馆", "影像", "报道", "维基", "中国数字时代", "最新", "关于"],
         "pages": {
             "index.html": ("自由 · 八九六四", "六四事件相关信息的采集、整理与归档导航。本站不生产内容，每条记录指向原始出处。"),
             "timeline.html": ("大事记", "1989 年 4 月至 6 月的日期记录，附出处。"),
@@ -54,6 +54,7 @@ T = {
             "museum.html": ("六四纪念馆（美国）", "纪念馆筹建与发展的记录，参观信息。"),
             "videos.html": ("影像", "经核实的六四相关 YouTube 视频链接，按主题分类。"),
             "reports.html": ("报道", "媒体报道与各国政府声明链接，按主题分类，逐一核实。"),
+            "wiki.html": ("维基资料", "维基百科条目与维基文库原始文件链接，按分类排列。"),
             "cdt.html": ("中国数字时代", "中国数字时代“六四”相关标签下的文章，按年份排列，只收标题和网址。"),
             "latest.html": ("最新收录", "每天自动采集的六四相关报道、视频与中国数字时代文章，只收标题和网址。"),
             "about.html": ("关于本站", "本站定位、收录原则、更正方式与隐私说明。"),
@@ -67,7 +68,7 @@ T = {
         "l_articles": "报道", "l_videos": "视频", "l_cdt": "中国数字时代", "l_more": "全部 {} 篇 →", "l_none": "暂无", "l_added": "收录于",
     },
     "en": {
-        "nav": ["Home", "Chronology", "Victims", "Records", "Hong Kong", "Museum", "Video", "Press", "CDT", "Latest", "About"],
+        "nav": ["Home", "Chronology", "Victims", "Records", "Hong Kong", "Museum", "Video", "Press", "Wiki", "CDT", "Latest", "About"],
         "pages": {
             "index.html": ("Freedom · June Fourth 1989", "A directory for collecting, organising and archiving information about June Fourth 1989. Every record points to its original source."),
             "timeline.html": ("Chronology", "Dated records, April to June 1989, with sources."),
@@ -77,6 +78,7 @@ T = {
             "museum.html": ("June 4th Memorial Museum (USA)", "Records of the museum; visitor information."),
             "videos.html": ("Video", "Verified YouTube links about June Fourth, by topic."),
             "reports.html": ("Press", "Press reports and government statements, by topic, each verified."),
+            "wiki.html": ("Wiki", "Links to Wikipedia articles and Wikisource documents, by category."),
             "cdt.html": ("China Digital Times", "China Digital Times articles tagged with June Fourth, by year. Titles and links only."),
             "latest.html": ("Latest", "June Fourth reports, videos and China Digital Times articles collected daily. Titles and links only."),
             "about.html": ("About", "What this site is, principles, corrections and privacy."),
@@ -301,7 +303,11 @@ def main():
     videos = json.loads((ROOT / "assets/videos.json").read_text())
     articles = json.loads((ROOT / "assets/articles.json").read_text())
     n_videos = sum(len(sec["videos"]) for sec in videos)
+    # 维基百科/维基文库分类单独放在“维基资料”页
+    wiki = [sec for sec in articles if sec["key"].startswith("wiki")]
+    articles = [sec for sec in articles if not sec["key"].startswith("wiki")]
     n_articles = sum(len(sec["items"]) for sec in articles)
+    n_wiki = sum(len(sec["items"]) for sec in wiki)
     auto_path = ROOT / "assets/auto.json"
     auto = json.loads(auto_path.read_text()) if auto_path.exists() else {"videos": [], "articles": [], "cdt": []}
     n_cdt = len(auto.get("cdt", []))
@@ -312,12 +318,13 @@ def main():
         lists = {
             "{{VIDEOS}}": toc(videos, loc) + "\n".join(video_section(sec, loc) for sec in videos),
             "{{ARTICLES}}": toc(articles, loc) + "\n".join(article_section(sec, loc) for sec in articles),
+            "{{WIKI}}": toc(wiki, loc) + "\n".join(article_section(sec, loc) for sec in wiki),
             "{{LATEST}}": latest_block(auto, loc, n_cdt),
             "{{CDT_ALL}}": cdt_block(auto, loc),
         }
         for file in FILES + ["404.html"]:
             body = (ROOT / "pages" / conf["src"] / file).read_text()
-            body = (body.replace("{{VIDEO_COUNT}}", str(n_videos)).replace("{{ARTICLE_COUNT}}", str(n_articles))
+            body = (body.replace("{{VIDEO_COUNT}}", str(n_videos)).replace("{{ARTICLE_COUNT}}", str(n_articles)).replace("{{WIKI_COUNT}}", str(n_wiki))
                     .replace("{{CDT_COUNT}}", str(n_cdt)).replace("{{AUTO_UPDATED}}", auto_updated))
             if loc == "zh-hant":
                 body = to_hant(body)
@@ -344,7 +351,7 @@ def main():
     (DIST / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
         f'xmlns:xhtml="http://www.w3.org/1999/xhtml">\n{urls}\n</urlset>\n')
-    print(f"built {count} pages ({len(LOCALES)} languages), {n_videos} videos, {n_articles} articles → {DIST}")
+    print(f"built {count} pages ({len(LOCALES)} languages), {n_videos} videos, {n_articles} articles, {n_wiki} wiki → {DIST}")
 
 
 if __name__ == "__main__":
