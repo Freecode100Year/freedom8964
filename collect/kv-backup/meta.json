@@ -1,28 +1,24 @@
 {
  "updated": "2026-09-30",
  "day": "2026-09-30",
- "cursor": 72,
- "added": [
-  {
-   "kind": "articles",
-   "title": "Chow Hang-tung’s Mitigation Statement Interrupted by Judge, Publishes Full Text Online",
-   "url": "https://news.hrichina.org/p/chow-hang-tungs-mitigation-statement"
-  },
-  {
-   "kind": "articles",
-   "title": "Tiananmen Square vigil organisers jailed for seven years in Hong Kong",
-   "url": "https://www.theguardian.com/world/2026/sep/11/chow-hang-tung-lee-cheuk-yan-tiananmen-square-activists-jailed-hong-kong"
-  },
-  {
-   "kind": "articles",
-   "title": "The Guardian view on the Tiananmen vigil convictions: Hong Kong too has been silenced. Others should speak out | Editorial",
-   "url": "https://www.theguardian.com/commentisfree/2026/aug/24/the-guardian-view-on-the-tiananmen-vigil-convictions-hong-kong-too-has-been-silenced-others-should-speak-out"
-  },
-  {
-   "kind": "articles",
-   "title": "Tiananmen Square vigil organisers in Hong Kong found guilty of ‘inciting subversion’",
-   "url": "https://www.theguardian.com/world/2026/aug/21/tiananmen-square-vigil-hong-kong-alliance-activists-guilty-verdict-lee-cheuk-yan-chow-hang-tung"
-  }
+ "cursor": 131,
+ "added": [],
+ "errors": [
+  "民间历史档案库 China Unofficial Archives: HTTP 429",
+  "X x.com/whyyoutouzhele: HTTP 429",
+  "X twitter.com/whyyoutouzhele: HTTP 429",
+  "X x.com/hrichina: HTTP 429",
+  "X twitter.com/hrichina: HTTP 429",
+  "X x.com/HChina89: HTTP 429",
+  "X twitter.com/HChina89: HTTP 429",
+  "美国之音中文网 · 纪念六四: HTTP 500",
+  "美国之音中文网 · 六四记忆: HTTP 404",
+  "美国之音中文网 · 纪念六四 人物专访: HTTP 404",
+  "自由亚洲电台 · 六四35周年: HTTP 404"
  ],
- "errors": []
+ "rejected": [],
+ "pending": [],
+ "retry": [],
+ "weekly": null,
+ "finished": true
 }
