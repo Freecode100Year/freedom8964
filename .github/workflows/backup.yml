@@ -1,0 +1,36 @@
+# 每天把网站（Cloudflare）自动采集的数据备份到本仓库，并检查网站采集是否在正常运行。
+# 运行在 GitHub 上，不依赖任何服务器；检查失败时 GitHub 会发邮件通知仓库主人。
+name: 每日备份与监控
+on:
+  schedule:
+    - cron: "30 10 * * *"   # UTC 10:30 = 美东 05:30/06:30（网站 03:00 采集之后）
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 下载网站自动采集的数据
+        run: |
+          curl -fsS --retry 3 https://freedom8964.com/__export.json -o /tmp/export.json
+          python3 - <<'PY'
+          import json, datetime, pathlib, sys
+          d = json.load(open("/tmp/export.json"))
+          out = pathlib.Path("collect/kv-backup"); out.mkdir(parents=True, exist_ok=True)
+          for k, v in d.items():
+              (out / f"{k}.json").write_text(json.dumps(v, ensure_ascii=False, indent=1))
+          updated = d["meta"].get("updated", "2000-01-01")
+          age = (datetime.date.today() - datetime.date.fromisoformat(updated)).days
+          print("网站最后一次采集：", updated, f"（{age} 天前）")
+          if age >= 2:
+              sys.exit(f"网站自动采集已经 {age} 天没有运行，请检查 Cloudflare")
+          PY
+      - name: 提交备份
+        run: |
+          git config user.name freedom8964
+          git config user.email noreply@freedom8964.com
+          git add collect/kv-backup
+          git diff --cached --quiet || git commit -m "每日备份网站自动采集数据 $(date -u +%F)"
+          git push
