@@ -1,24 +1,9 @@
 {
- "updated": "2026-09-30",
- "day": "2026-09-30",
- "cursor": 131,
+ "updated": "2026-10-01",
+ "day": "2026-10-01",
+ "cursor": 15,
  "added": [],
- "errors": [
-  "民间历史档案库 China Unofficial Archives: HTTP 429",
-  "X x.com/whyyoutouzhele: HTTP 429",
-  "X twitter.com/whyyoutouzhele: HTTP 429",
-  "X x.com/hrichina: HTTP 429",
-  "X twitter.com/hrichina: HTTP 429",
-  "X x.com/HChina89: HTTP 429",
-  "X twitter.com/HChina89: HTTP 429",
-  "美国之音中文网 · 纪念六四: HTTP 500",
-  "美国之音中文网 · 六四记忆: HTTP 404",
-  "美国之音中文网 · 纪念六四 人物专访: HTTP 404",
-  "自由亚洲电台 · 六四35周年: HTTP 404"
- ],
- "rejected": [],
- "pending": [],
- "retry": [],
- "weekly": null,
- "finished": true
+ "errors": [],
+ "finished": false,
+ "srcRetry": []
 }
