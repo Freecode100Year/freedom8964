@@ -92,6 +92,16 @@ function parseFeed(xml) {
   return out;
 }
 
+// 页面访问时读 KV 的结果在同一实例里缓存 60 秒（免费版 KV 每天 10 万次读取）
+let pageCache = null;
+let lastEnsure = 0;
+async function loadForPage(env) {
+  if (pageCache && Date.now() - pageCache.t < 60000) return pageCache.db;
+  const db = await load(env);
+  pageCache = { t: Date.now(), db };
+  return db;
+}
+
 async function load(env) {
   const keys = ["articles", "videos", "meta", "known", "topics_new", "wiki_new", "known_topics", "cdt_new", "x_new", "x_seen"];
   const [a, v, m, k, tn, wn, kt, cn, xn, xs] = await Promise.all(keys.map((x) => env.AUTO.get(x, "json")));
@@ -189,6 +199,9 @@ async function runBatch(env, today) {
   const save = () => Promise.all(["articles", "videos", "topics_new", "wiki_new", "cdt_new", "x_new", "x_seen", "meta"]
     .map((k) => env.AUTO.put(k, JSON.stringify(k === "meta" ? meta : db[k]))));
 
+  // 只剩“等待重试”的来源且还没到时间：不读写数据库，告诉闹钟到点再来
+  if (meta.cursor >= SOURCES.length && !meta.pending.length && (meta.srcRetry || []).length && meta.srcRetry.every((x) => x.at > Date.now()))
+    return { done: false, added: [], used, wait: Math.min(...meta.srcRetry.map((x) => x.at)) };
   if (meta.cursor < SOURCES.length || meta.pending.length || (meta.srcRetry || []).length) {
     const r = await collectStep(env, db, meta, today, sub, () => used);
     meta.updated = today;
@@ -205,7 +218,10 @@ async function runBatch(env, today) {
         w.list = dow === 6 ? [...new Set([...db.known, ...db.known_topics.filter((_, i) => i % 40 === 0),
           ...db.articles.map((x) => x.url), ...db.videos.map((x) => x.url)])] : SITE_PAGES;
       }
-      while (w.cursor < w.list.length && used < BUDGET) {
+      // 每分钟：死链检查最多 25 个、档案馆存档最多 5 个（单次闹钟有 15 分钟上限，也别给档案馆压力）
+      const lim = w.kind === "archive" ? 5 : 25;
+      let k = 0;
+      while (w.cursor < w.list.length && k++ < lim) {
         const u = w.list[w.cursor++];
         if (w.kind === "archive") { try { await sub("https://web.archive.org/save/" + u, { headers: UA }, 60000); } catch {} continue; }
         const dead = await deadLink(u, sub);
@@ -366,6 +382,7 @@ async function runLight(env, today) {
     await env.AUTO.put("cdt_new", JSON.stringify(db.cdt_new));
     const meta = db.meta; meta.added = (meta.added || []).concat(added.map((c) => ({ kind: "cdt", title: c.title, url: c.url })));
     await env.AUTO.put("meta", JSON.stringify(meta));
+    if (env.TG_BOT_TOKEN) await tg(env, [`🕯️ freedom8964 中国数字时代新收 ${added.length} 篇：`, ...added.map((c) => "· " + c.title), "https://freedom8964.com/cdt"]);
   }
 }
 
@@ -470,9 +487,10 @@ export class Collector extends DurableObject {
     const meta = (await this.env.AUTO.get("meta", "json")) || {};
     let done = true;
     // 新的一天到了采集钟点，或今天的采集还没做完 → 继续每日采集；否则做轻量检查
-    if (meta.day !== date ? hour >= RUN_HOUR_NY : !meta.finished) done = (await runBatch(this.env, date)).done;
+    let wait = 0;
+    if (meta.day !== date ? hour >= RUN_HOUR_NY : !meta.finished) { const r = await runBatch(this.env, date); done = r.done; wait = r.wait || 0; }
     else { try { await runLight(this.env, date); } catch {} }
-    await this.ctx.storage.setAlarm(done ? Math.min(nextRunNY(), Date.now() + 2 * 3600000) : Date.now() + 60000);
+    await this.ctx.storage.setAlarm(done ? Math.min(nextRunNY(), Date.now() + 2 * 3600000) : Math.max(wait, Date.now() + 60000));
   }
   async runNow() {
     const r = await runBatch(this.env, nyNow().date);
@@ -495,7 +513,7 @@ export default {
     }
     // 公开导出网站自动采集的数据（全是公开链接），供 GitHub 每日备份
     if (url.pathname === "/__export.json") {
-      const db = await load(env);
+      const db = await loadForPage(env);
       const { pending, retry, rejected, weekly, ...m } = db.meta;
       return Response.json({ meta: m, articles: db.articles, videos: db.videos, topics_new: db.topics_new, wiki_new: db.wiki_new, cdt_new: db.cdt_new, x_new: db.x_new },
         { headers: { "Cache-Control": "no-store" } });
@@ -516,17 +534,18 @@ export default {
     const m = url.pathname.match(/^\/(?:(en|zh-hant)\/)?(latest|topics|wiki|cdt|reports)(?:\.html)?$/);
     if (!m || !res.ok || !(res.headers.get("content-type") || "").includes("text/html")) return res;
     const lang = m[1] || "zh";
-    ctx.waitUntil(collector(env).ensure());
+    // 顺带确保闹钟在走（同一实例 10 分钟最多查一次，节省 Durable Object 请求额度）
+    if (Date.now() - lastEnsure > 600000) { lastEnsure = Date.now(); ctx.waitUntil(collector(env).ensure()); }
     if (m[2] !== "latest") {
       // 媒体专题存档 / 维基资料：在页面顶部的 <div id="auto-new"> 里插入网站自动采集、尚未并入静态页面的新条目（流式改写，不读整页）
-      const db = await load(env);
+      const db = await loadForPage(env);
       const block = renderNew(newGroups(m[2], db, lang), lang);
       const headers = new Headers(res.headers);
       headers.set("Cache-Control", "public, max-age=300");
       return new HTMLRewriter().on("div#auto-new", { element(el) { el.setInnerContent(block, { html: true }); } })
         .transform(new Response(res.body, { status: res.status, headers }));
     }
-    const db = await load(env);
+    const db = await loadForPage(env);
     let html = await res.text();
     html = html.replace("<!--AUTO-ARTICLES-->", renderList(db.articles, "articles", lang))
                .replace("<!--AUTO-VIDEOS-->", renderList(db.videos, "videos", lang))
