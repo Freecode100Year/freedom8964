@@ -12,7 +12,7 @@
     "binding": "ASSETS",
     "not_found_handling": "404-page",
     // “最新收录”“媒体专题存档”“维基资料”页先经过 Worker（填入 KV 里的每日采集结果），其他页面直接走静态资源
-    "run_worker_first": ["/__collect", "/latest", "/latest.html", "/en/latest", "/en/latest.html", "/zh-hant/latest", "/zh-hant/latest.html", "/topics", "/topics.html", "/en/topics", "/en/topics.html", "/zh-hant/topics", "/zh-hant/topics.html", "/wiki", "/wiki.html", "/en/wiki", "/en/wiki.html", "/zh-hant/wiki", "/zh-hant/wiki.html"]
+    "run_worker_first": ["/__collect", "/__probe", "/__export.json", "/cdt", "/cdt.html", "/en/cdt", "/en/cdt.html", "/zh-hant/cdt", "/zh-hant/cdt.html", "/reports", "/reports.html", "/en/reports", "/en/reports.html", "/zh-hant/reports", "/zh-hant/reports.html", "/latest", "/latest.html", "/en/latest", "/en/latest.html", "/zh-hant/latest", "/zh-hant/latest.html", "/topics", "/topics.html", "/en/topics", "/en/topics.html", "/zh-hant/topics", "/zh-hant/topics.html", "/wiki", "/wiki.html", "/en/wiki", "/en/wiki.html", "/zh-hant/wiki", "/zh-hant/wiki.html"]
   },
   // 每日自动采集（结果存 KV）
   "kv_namespaces": [{ "binding": "AUTO", "id": "740ce332e0b3484ba516b21b6cb00937" }],

@@ -54,6 +54,8 @@ def get(key):
 known = set()
 for s in videos: known |= {f"https://www.youtube.com/watch?v={v['id']}" for v in s["videos"]}
 for s in articles: known |= {a["url"] for a in s["items"]}
+auto = SITE / "assets/auto.json"
+if auto.exists(): known |= {x["url"] for x in json.loads(auto.read_text()).get("cdt", [])}  # 中国数字时代（静态页已有的）
 put("known", sorted(known))
 put("known_topics", sorted({x["url"] for t in topics for x in t["items"]}))
 for key in ("videos", "articles"):

@@ -269,7 +269,7 @@ def latest_block(auto, loc, n_cdt):
     s = strings(loc)
     items = sorted([x for x in auto.get("cdt", []) if x.get("added") != "archive"] or auto.get("cdt", []),
                    key=lambda x: (x.get("added", ""), x.get("date", "")), reverse=True)[:20]
-    cdt = ('<h2 id="cdt">' + s["l_cdt"] + ' <span class="muted small">' + s["count"].format(len(items)) + '</span></h2>\n<ul class="vlist">\n'
+    cdt = ('<!--AUTO-CDT-->\n<h2 id="cdt">' + s["l_cdt"] + ' <span class="muted small">' + s["count"].format(len(items)) + '</span></h2>\n<ul class="vlist">\n'
            + ("\n".join(auto_item(x, loc, "cdt") for x in items) or f'  <li class="muted">{s["l_none"]}</li>')
            + f'\n</ul>\n<p class="small"><a href="cdt.html">{s["l_more"].format(n_cdt)}</a></p>')
     return "<!--AUTO-ARTICLES-->\n<!--AUTO-VIDEOS-->\n" + cdt + "\n"
