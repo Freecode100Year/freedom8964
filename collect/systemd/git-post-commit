@@ -1,3 +1,3 @@
 #!/bin/sh
-# 每次提交后自动推送到 GitHub 备份（后台进行，失败发 Telegram）
-( git push -q origin HEAD 2>/tmp/f8964-push.err || "$HOME/bin/tg-send" "⚠️ freedom8964 推送 GitHub 失败：$(tail -c 300 /tmp/f8964-push.err)" ) >/dev/null 2>&1 &
+# 每次提交后自动推送到 GitHub（先合并 GitHub 上每日备份的提交；后台进行，失败发 Telegram）
+( git pull -q --rebase origin master 2>/tmp/f8964-push.err && git push -q origin HEAD 2>>/tmp/f8964-push.err || "$HOME/bin/tg-send" "⚠️ freedom8964 推送 GitHub 失败：$(tail -c 300 /tmp/f8964-push.err)" ) >/dev/null 2>&1 &

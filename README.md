@@ -14,8 +14,9 @@ A directory for collecting, organising and archiving information about the 1989 
 | `assets/articles.json` | 报道栏目：媒体报道与政府声明（只收标题和网址） |
 | `assets/auto.json` | 自动采集的中国数字时代文章 |
 | `build.py` | 生成静态网站到 `dist/` |
-| `worker.js` | Cloudflare Worker：每天美东 3:00 自动采集新闻订阅源与 YouTube 官方频道（Durable Object 闹钟），并在访问时填充“最新收录”页 |
-| `collect/` | 服务器端采集：中国数字时代“六四”标签（`cdt.js`、`collect.py`），互联网档案馆历史存档整理（`cdt_wayback.py`、`cdt_parse.py`） |
+| `worker.js` | Cloudflare Worker，网站的全部自动化都在这里，不依赖任何服务器：每天美东 3:00 采集（Durable Object 闹钟）新闻订阅源、YouTube 官方频道与六四播放列表、媒体专题栏目（`collect/topic_sources.json`）、维基分类（`collect/wiki_sources.json`）、中国数字时代官方订阅源（白天另每 2 小时检查）、X #你没看过的六四；每条新链接先实际打开核实，打不开次日重试，连续 3 天打不开不收；结果存 KV，访问时插入“最新收录”“媒体专题存档”“维基资料”“中国数字时代”“报道”页；每周六死链检查、每周日提交互联网档案馆；Telegram 日报 |
+| `.github/workflows/backup.yml` | GitHub Actions：每天把网站自动采集的数据（`/__export.json`）备份到 `collect/kv-backup/`，网站超过 2 天没采集则运行失败（GitHub 发邮件提醒） |
+| `collect/` | 人工整理与旧版工具：`sync_known.py`（改了资料后同步已收录名单并生成来源配置，需重新部署）、`manual/`（核实与并入工具）、`collect.py` 等（旧的服务器端采集，已停用） |
 
 ## 构建与部署
 
