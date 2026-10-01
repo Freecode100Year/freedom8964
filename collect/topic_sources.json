@@ -150,14 +150,6 @@
   "key": "chinachange",
   "label": "中国变革 China Change：六四",
   "label_en": "China Change: June Fourth",
-  "name": "中国变革 China Change：六四（标签 546291823）",
-  "type": "wp",
-  "url": "https://chinachange.org/wp-json/wp/v2/posts?tags=546291823&per_page=20&_fields=link,title,date"
- },
- {
-  "key": "chinachange",
-  "label": "中国变革 China Change：六四",
-  "label_en": "China Change: June Fourth",
   "name": "中国变革 China Change：六四（标签 16390269）",
   "type": "wp",
   "url": "https://chinachange.org/wp-json/wp/v2/posts?tags=16390269&per_page=20&_fields=link,title,date"
