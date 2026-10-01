@@ -1,9 +1,12 @@
 {
  "updated": "2026-10-01",
  "day": "2026-10-01",
- "cursor": 15,
+ "cursor": 131,
  "added": [],
- "errors": [],
- "finished": false,
+ "errors": [
+  "X x.com/HChina89: HTTP 429",
+  "X twitter.com/HChina89: HTTP 429"
+ ],
+ "finished": true,
  "srcRetry": []
 }
