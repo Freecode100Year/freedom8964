@@ -26,12 +26,13 @@ const SOURCES = [
   ...TOPIC_SOURCES.map((t) => ({ kind: "topics", ...t })),
   // 中国数字时代：官方订阅源（每页 10 篇），按分类/标题筛出六四相关；白天另有每 2 小时一次的轻量检查
   ...[1, 2, 3].map((n) => ({ kind: "cdt", name: `中国数字时代 订阅源第 ${n} 页`, url: `https://chinadigitaltimes.net/chinese/feed${n > 1 ? "?paged=" + n : ""}` })),
-  // X #你没看过的六四：从互联网档案馆列出最近存档过的帖子编号，再用 X 官方接口逐条核实
-  ...X_ACCOUNTS.flatMap((a) => ["x.com", "twitter.com"].map((h) => ({ kind: "x", name: `X ${h}/${a}`, acct: a, host: h }))),
+
   ...WIKI_SOURCES.map((w) => ({ kind: "wiki", name: `${w.host} ${w.cat}`, url: `https://${w.host}/w/api.php?action=query&list=categorymembers&cmtitle=${encodeURIComponent(w.cat)}&cmlimit=500&cmnamespace=0&format=json`, ...w })),
-  ...Object.entries(channels).map(([id, c]) => ({
+  // X #你没看过的六四：从互联网档案馆列出最近存档过的帖子编号，再用 X 官方接口逐条核实（与 YouTube 频道交错，避免连续请求档案馆被限流）
+  ...Object.entries(channels).flatMap(([id, c], i) => [...(i % 6 === 0 && i / 6 < X_ACCOUNTS.length * 2
+    ? [{ kind: "x", name: `X ${["x.com", "twitter.com"][(i / 6) % 2]}/${X_ACCOUNTS[Math.floor(i / 12)]}`, acct: X_ACCOUNTS[Math.floor(i / 12)], host: ["x.com", "twitter.com"][(i / 6) % 2] }] : []), {
     kind: "videos", name: c.name, channel_url: c.url, url: `https://www.youtube.com/feeds/videos.xml?channel_id=${id}`,
-  })),
+  }]),
   ...Object.entries(playlists).map(([id, p]) => ({
     kind: "videos", name: p.name, channel_url: p.url, url: `https://www.youtube.com/feeds/videos.xml?playlist_id=${id}`, trusted: true,
   })),
@@ -180,6 +181,7 @@ async function runBatch(env, today) {
     meta.retry = [];
     meta.weekly = null;
     meta.finished = false;
+    meta.srcRetry = [];
   }
   meta.pending = meta.pending || []; meta.retry = meta.retry || []; meta.rejected = meta.rejected || [];
   let used = 0;
@@ -187,7 +189,7 @@ async function runBatch(env, today) {
   const save = () => Promise.all(["articles", "videos", "topics_new", "wiki_new", "cdt_new", "x_new", "x_seen", "meta"]
     .map((k) => env.AUTO.put(k, JSON.stringify(k === "meta" ? meta : db[k]))));
 
-  if (meta.cursor < SOURCES.length || meta.pending.length) {
+  if (meta.cursor < SOURCES.length || meta.pending.length || (meta.srcRetry || []).length) {
     const r = await collectStep(env, db, meta, today, sub, () => used);
     meta.updated = today;
     await save();
@@ -266,16 +268,33 @@ async function collectStep(env, db, meta, today, sub, used) {
   };
 
   await verifyQueue();
+  // 读取失败的来源（限流、临时故障）当天隔 10 分钟重试，最多 2 次
+  meta.srcRetry = meta.srcRetry || [];
+  const fail = (idx, msg) => {
+    const r = meta.srcRetry.find((x) => x.i === idx);
+    const tries = r ? r.n : 0;
+    if (tries < 2) { if (r) { r.n++; r.at = Date.now() + 600000; } else meta.srcRetry.push({ i: idx, n: 1, at: Date.now() + 600000 }); }
+    else { meta.srcRetry = meta.srcRetry.filter((x) => x.i !== idx); errors.push(msg); }
+  };
+  const nextSource = () => {
+    if (meta.cursor < SOURCES.length) return meta.cursor++;
+    const r = meta.srcRetry.find((x) => x.at <= Date.now());
+    return r ? r.i : -1;
+  };
   let n = 0;
-  while (meta.cursor < SOURCES.length && n < BATCH && used() < BUDGET - 5) {
-    const src = SOURCES[meta.cursor++]; n++;
+  while (n < BATCH && used() < BUDGET - 5) {
+    const idx = nextSource();
+    if (idx < 0) break;
+    const src = SOURCES[idx]; n++;
+    const ok = () => { meta.srcRetry = meta.srcRetry.filter((x) => x.i !== idx); };
     try {
       let cands = [];
       if (src.kind === "x") {
         // 互联网档案馆查询较慢，给 2 分钟
         const from = new Date(Date.parse(today) - X_DAYS * 86400000).toISOString().slice(0, 10).replace(/-/g, "");
         const r = await sub(`https://web.archive.org/cdx/search/cdx?url=${src.host}/${src.acct}/status/&matchType=prefix&from=${from}&fl=original&collapse=urlkey&limit=5000`, { headers: UA }, 120000);
-        if (!r.ok) { errors.push(`${src.name}: HTTP ${r.status}`); continue; }
+        if (!r.ok) { fail(idx, `${src.name}: HTTP ${r.status}`); continue; }
+        ok();
         const since = Date.parse(today) - X_DAYS * 86400000;
         for (const m of (await r.text()).matchAll(/\/status\/(\d{15,})/g)) {
           const id = m[1];
@@ -285,7 +304,8 @@ async function collectStep(env, db, meta, today, sub, used) {
         }
       } else {
         const r = await sub(src.url, { headers: UA });
-        if (!r.ok) { errors.push(`${src.name}: HTTP ${r.status}`); continue; }
+        if (!r.ok) { fail(idx, `${src.name}: HTTP ${r.status}`); continue; }
+        ok();
         const body = await r.text();
         if (src.kind === "wiki") {
           for (const m of JSON.parse(body).query.categorymembers) {
@@ -317,7 +337,7 @@ async function collectStep(env, db, meta, today, sub, used) {
         seen.add(c.url);
         meta.pending.push(c);
       }
-    } catch (e) { errors.push(`${src.name}: ${String(e.message || e).slice(0, 80)}`); }
+    } catch (e) { fail(idx, `${src.name}: ${String(e.message || e).slice(0, 80)}`); }
   }
   await verifyQueue();
   // X 已查编号只留查询窗口内的
@@ -325,7 +345,7 @@ async function collectStep(env, db, meta, today, sub, used) {
   db.x_seen = [...new Set(db.x_seen)].filter((id) => xTime(id) >= since);
   meta.added = (meta.added || []).concat(added);
   meta.errors = (meta.errors || []).concat(errors);
-  return { done: meta.cursor >= SOURCES.length && !meta.pending.length, added };
+  return { done: meta.cursor >= SOURCES.length && !meta.pending.length && !meta.srcRetry.length, added };
 }
 
 // 白天每 2 小时一次的轻量检查：中国数字时代订阅源第 1 页（一天发文较多，每天一次会漏）
