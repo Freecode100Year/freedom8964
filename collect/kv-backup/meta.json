@@ -1,9 +1,59 @@
 {
- "updated": "2026-10-01",
- "day": "2026-10-01",
+ "updated": "2026-10-02",
+ "day": "2026-10-02",
  "cursor": 131,
- "added": [],
+ "added": [
+  {
+   "kind": "articles",
+   "title": "六四難屬滿意維園燭光晚會參與人數 (視頻)",
+   "url": "https://rfa.org/cantonese/news/HK-June4-06052015083722.html"
+  },
+  {
+   "kind": "articles",
+   "title": "流亡美國民運人士六四集會談中國未來 (視頻)",
+   "url": "https://rfa.org/cantonese/news/DC-64-06052015103041.html"
+  },
+  {
+   "kind": "articles",
+   "title": "洛杉磯六四晚會 港人列席介紹雨傘運動 (視頻)",
+   "url": "https://rfa.org/cantonese/news/US-June4-06052015104001.html"
+  },
+  {
+   "kind": "articles",
+   "title": "六四活動後  港九出現遊行一度推撞 (視頻)",
+   "url": "https://rfa.org/cantonese/news/HK-protest-06042015141446.html"
+  },
+  {
+   "kind": "articles",
+   "title": "支聯會稱13.5萬人出席六四晚會 (視頻)",
+   "url": "https://rfa.org/cantonese/news/Live-HK-06042015123041.html"
+  },
+  {
+   "kind": "articles",
+   "title": "香港學生和本土派團體 “另起爐灶”悼念六四 (視頻)",
+   "url": "https://rfa.org/cantonese/news/HK-student-06042015095942.html"
+  },
+  {
+   "kind": "articles",
+   "title": "2015年港、台、美等地六四紀念活動(視頻)",
+   "url": "https://rfa.org/cantonese/june4_2005/junefour-26th-2015-06062015152038.html"
+  },
+  {
+   "kind": "articles",
+   "title": "六四大遊行  平反一起撐 (視頻)",
+   "url": "https://rfa.org/cantonese/news/hk-junefour-march-05312015100924.html"
+  },
+  {
+   "kind": "articles",
+   "title": "黃之鋒到大馬出席六四活動被拒入境 (視頻)",
+   "url": "https://rfa.org/cantonese/news/HK-repatriate-05262015093805.html"
+  }
+ ],
  "errors": [
+  "X x.com/whyyoutouzhele: HTTP 429",
+  "X twitter.com/whyyoutouzhele: HTTP 429",
+  "X x.com/hrichina: HTTP 429",
+  "X twitter.com/hrichina: HTTP 429",
   "X x.com/HChina89: HTTP 429",
   "X twitter.com/HChina89: HTTP 429"
  ],
