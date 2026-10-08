@@ -28,11 +28,10 @@ const SOURCES = [
   ...[1, 2, 3].map((n) => ({ kind: "cdt", name: `中国数字时代 订阅源第 ${n} 页`, url: `https://chinadigitaltimes.net/chinese/feed${n > 1 ? "?paged=" + n : ""}` })),
 
   ...WIKI_SOURCES.map((w) => ({ kind: "wiki", name: `${w.host} ${w.cat}`, url: `https://${w.host}/w/api.php?action=query&list=categorymembers&cmtitle=${encodeURIComponent(w.cat)}&cmlimit=500&cmnamespace=0&format=json`, ...w })),
-  // X #你没看过的六四：从互联网档案馆列出最近存档过的帖子编号，再用 X 官方接口逐条核实（与 YouTube 频道交错，避免连续请求档案馆被限流）
-  ...Object.entries(channels).flatMap(([id, c], i) => [...(i % 6 === 0 && i / 6 < X_ACCOUNTS.length * 2
-    ? [{ kind: "x", name: `X ${["x.com", "twitter.com"][(i / 6) % 2]}/${X_ACCOUNTS[Math.floor(i / 12)]}`, acct: X_ACCOUNTS[Math.floor(i / 12)], host: ["x.com", "twitter.com"][(i / 6) % 2] }] : []), {
+  // 用户 2026-10-08 要求：不再采集 X（推特）；已收录的 X 帖文保留展示
+  ...Object.entries(channels).map(([id, c]) => ({
     kind: "videos", name: c.name, channel_url: c.url, url: `https://www.youtube.com/feeds/videos.xml?channel_id=${id}`,
-  }]),
+  })),
   ...Object.entries(playlists).map(([id, p]) => ({
     kind: "videos", name: p.name, channel_url: p.url, url: `https://www.youtube.com/feeds/videos.xml?playlist_id=${id}`, trusted: true,
   })),
@@ -283,6 +282,8 @@ async function collectStep(env, db, meta, today, sub, used) {
     }
   };
 
+  meta.pending = meta.pending.filter((c) => c.kind !== "x");
+  meta.retry = (meta.retry || []).filter((c) => c.kind !== "x");
   await verifyQueue();
   // 读取失败的来源（限流、临时故障）当天隔 10 分钟重试，最多 2 次
   meta.srcRetry = meta.srcRetry || [];

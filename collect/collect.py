@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """每日自动采集中国数字时代“六四”标签的新文章标题和网址（新闻、YouTube 已改由 Cloudflare Worker 采集）（不读正文），写入 assets/auto.json；
-X #你没看过的六四 系列新帖（x_series.py）写入 assets/articles.json；
+（X 推特采集已于 2026-10-08 按用户要求停止）
 把网站（Cloudflare）自动采集、已打开核实的媒体专题与维基新条目并入 assets/topics.json、articles.json；Cloudflare 采集结果（KV）备份到 collect/kv-backup/。
 然后构建、部署、提交（提交后 .git/hooks/post-commit 自动推送 GitHub），并用 Telegram 汇报。
 
@@ -22,7 +22,6 @@ from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 
-import x_series
 
 HERE = Path(__file__).parent
 SITE = HERE.parent
@@ -276,10 +275,6 @@ def main():
     except Exception as e:
         added["topics"], added["wiki"] = [], []
         log.append(f"合并 Cloudflare 新条目失败：{e}")
-    try:
-        added["x"] = [] if dry else x_series.collect(log)
-    except Exception as e:
-        log.append(f"X 系列图片展失败：{e}")
     total = sum(len(v) for v in added.values())
     stamp = datetime.now().strftime("%F %T")
     with LOG.open("a") as f:
