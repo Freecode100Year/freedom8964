@@ -1,1 +1,20 @@
-{}
+{
+ "wikien-event": [
+  {
+   "title": "Stage 64",
+   "url": "https://en.wikipedia.org/wiki/Stage_64",
+   "date": "",
+   "added": "2026-10-09",
+   "outlet": "Wikipedia"
+  }
+ ],
+ "wikien-people": [
+  {
+   "title": "The People Will Not Forget",
+   "url": "https://en.wikipedia.org/wiki/The_People_Will_Not_Forget",
+   "date": "",
+   "added": "2026-10-09",
+   "outlet": "Wikipedia"
+  }
+ ]
+}
