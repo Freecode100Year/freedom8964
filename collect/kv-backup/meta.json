@@ -1,19 +1,8 @@
 {
- "updated": "2026-10-12",
- "day": "2026-10-12",
+ "updated": "2026-10-13",
+ "day": "2026-10-13",
  "cursor": 125,
- "added": [
-  {
-   "kind": "topics",
-   "title": "與台灣建交58週年 史瓦帝尼國王第二十度率團訪台",
-   "url": "https://news.pts.org.tw/article/830831"
-  },
-  {
-   "kind": "wiki",
-   "title": "同乡社团家乡市集嘉年华",
-   "url": "https://zh.wikipedia.org/wiki/%E5%90%8C%E4%B9%A1%E7%A4%BE%E5%9B%A2%E5%AE%B6%E4%B9%A1%E5%B8%82%E9%9B%86%E5%98%89%E5%B9%B4%E5%8D%8E"
-  }
- ],
+ "added": [],
  "errors": [],
  "finished": true,
  "srcRetry": []
