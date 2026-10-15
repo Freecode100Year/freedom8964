@@ -1,9 +1,11 @@
 {
- "updated": "2026-10-14",
- "day": "2026-10-14",
+ "updated": "2026-10-15",
+ "day": "2026-10-15",
  "cursor": 125,
  "added": [],
- "errors": [],
+ "errors": [
+  "The Washington Post: HTTP 502"
+ ],
  "finished": true,
  "srcRetry": []
 }
