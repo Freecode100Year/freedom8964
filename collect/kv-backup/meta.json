@@ -1,11 +1,12 @@
 {
- "updated": "2026-10-19",
- "day": "2026-10-19",
+ "updated": "2026-10-20",
+ "day": "2026-10-20",
  "cursor": 125,
  "added": [],
  "errors": [
   "公视新闻网 PNN：六四事件: 0 条",
-  "The Washington Post: HTTP 502"
+  "The Washington Post: HTTP 502",
+  "Amnesty International 国际特赦组织: The operation was aborted due to timeout"
  ],
  "finished": true,
  "srcRetry": []
