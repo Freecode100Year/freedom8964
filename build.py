@@ -175,7 +175,7 @@ def layout(loc, file, body):
 <footer class="site-foot">
   <div class="wrap">
     <p>{s["foot1"]}</p>
-    <p>{s["foot2"]}{UPDATED} · <a href="{up}{LOCALES[loc]["prefix"]}about.html">{s["foot_link"]}</a> · <a href="https://github.com/Freecode100Year/freedom8964" rel="noopener">{s["source"]}</a></p>
+    <p>{s["foot2"]}{UPDATED} · <a href="{up}{LOCALES[loc]["prefix"]}about.html">{s["foot_link"]}</a> · <a href="https://github.com/Freecode100Year/freedom8964.com" rel="noopener">{s["source"]}</a></p>
   </div>
 </footer>
 </body>

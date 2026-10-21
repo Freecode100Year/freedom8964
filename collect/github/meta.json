@@ -1,0 +1,22 @@
+{
+ "day": "2026-10-21",
+ "cursor": 125,
+ "added": [
+  {
+   "kind": "videos",
+   "title": "“突然开枪了！”查建英亲历六四",
+   "url": "https://www.youtube.com/watch?v=iZySWmCJ3_c"
+  }
+ ],
+ "errors": [
+  "公视新闻网 PNN：六四事件: 0 条",
+  "The Washington Post: HTTP 502",
+  "Amnesty International 国际特赦组织: HTTP 403",
+  "The Diplomat：天安门: HTTP 403"
+ ],
+ "rejected": [],
+ "pending": [],
+ "retry": [],
+ "srcRetry": [],
+ "updated": "2026-10-21"
+}
