@@ -3,3 +3,4 @@ dist/
 node_modules/
 .xseen.json
 __pycache__/
+_site/

@@ -1,13 +1,22 @@
 # 每天把网站（Cloudflare）自动采集的数据备份到本仓库，检查网站采集是否在正常运行，
 # 然后在 GitHub 上独立采集一次（collect/github_collect.mjs，与网站同一套来源和核实规则），结果存到 collect/github/。
+# 最后用网站源码和当天的采集数据生成 GitHub Pages 镜像站（https://freecode100year.github.io/freedom8964.com/）。
 # 运行在 GitHub 上，不依赖任何服务器；失败时 GitHub 会发邮件通知仓库主人。
-name: 每日备份、监控与采集
+name: 每日备份、监控、采集与镜像
 on:
   schedule:
     - cron: "30 10 * * *"   # UTC 10:30 = 美东 05:30/06:30（网站 03:00 采集之后）
   workflow_dispatch:
+    inputs:
+      again:
+        description: "今天已经采集过也重新采集一遍"
+        type: boolean
+        default: false
 permissions:
   contents: write
+concurrency:
+  group: daily
+  cancel-in-progress: false
 jobs:
   backup:
     runs-on: ubuntu-latest
@@ -42,7 +51,7 @@ jobs:
       # 网站监控失败（上一步）也照样采集：Cloudflare 出问题时 GitHub 这边不停
       - name: GitHub 每日采集
         if: ${{ !cancelled() }}
-        run: node collect/github_collect.mjs
+        run: node collect/github_collect.mjs ${{ inputs.again && '--again' || '' }}
       - name: 提交采集结果
         if: ${{ !cancelled() }}
         run: |
@@ -51,3 +60,34 @@ jobs:
           git add collect/github
           git diff --cached --quiet || git commit -m "GitHub 每日自动采集 $(date -u +%F)"
           git pull --rebase -q && git push
+  pages:
+    # 采集失败也照样发布镜像（用已有的数据）
+    needs: backup
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0   # build.py 用提交历史算“最后更新”日期
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: 生成镜像站
+        run: |
+          sudo apt-get install -y -qq python3-opencc >/dev/null || pip install opencc
+          python3 build.py
+          node collect/pages_build.mjs /freedom8964.com
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deploy
+        uses: actions/deploy-pages@v4

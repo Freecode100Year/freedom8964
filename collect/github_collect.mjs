@@ -29,8 +29,8 @@ const db = {
 };
 const meta = read("collect/github/meta.json", {});
 const today = nyNow().date;
-if (meta.day !== today) {
-  // 新的一天：从头读来源；昨天打不开的条目放回队列重试（同网站 Worker）
+if (meta.day !== today || process.argv.includes("--again")) {
+  // 新的一天（或手动要求重跑）：从头读来源；昨天打不开的条目放回队列重试（同网站 Worker）
   meta.day = today; meta.cursor = 0; meta.added = []; meta.errors = []; meta.rejected = [];
   meta.pending = (meta.retry || []).filter((c) => (c.tries || 0) < MAX_TRIES);
   meta.retry = []; meta.srcRetry = [];

@@ -5,6 +5,8 @@ A directory for collecting, organising and archiving information about the 1989 
 
 网站：https://freedom8964.com （简体 / 繁體 / English）
 
+GitHub Pages 镜像（每天随 GitHub 自动采集更新）：https://freecode100year.github.io/freedom8964.com/
+
 ## 结构
 
 | 路径 | 作用 |
@@ -15,8 +17,9 @@ A directory for collecting, organising and archiving information about the 1989 
 | `assets/auto.json` | 自动采集的中国数字时代文章 |
 | `build.py` | 生成静态网站到 `dist/` |
 | `worker.js` | Cloudflare Worker，网站的全部自动化都在这里，不依赖任何服务器：每天美东 3:00 采集（Durable Object 闹钟）新闻订阅源、YouTube 官方频道与六四播放列表、媒体专题栏目（`collect/topic_sources.json`）、维基分类（`collect/wiki_sources.json`）、中国数字时代官方订阅源（白天另每 2 小时检查）；X（推特）已于 2026-10-08 停止采集，已收录帖文保留；每条新链接先实际打开核实，打不开次日重试，连续 3 天打不开不收；结果存 KV，访问时插入“最新收录”“媒体专题存档”“维基资料”“中国数字时代”“报道”页；每周六死链检查、每周日提交互联网档案馆；Telegram 日报 |
+| `collect/render.js`、`collect/pages_build.mjs` | 采集结果的网页片段（Worker 与镜像共用）；生成 GitHub Pages 镜像（`_site/`） |
 | `collect/core.js` | 采集核心（来源白名单、关键词过滤、订阅源解析、核实规则），网站 Worker 和 GitHub Actions 共用 |
-| `.github/workflows/backup.yml` | GitHub Actions，每天 UTC 10:30：① 把网站自动采集的数据（`/__export.json`）备份到 `collect/kv-backup/`，网站超过 2 天没采集则运行失败（GitHub 发邮件提醒）；② 在 GitHub 上独立采集一次（`collect/github_collect.mjs`，同一套来源和核实规则，不依赖 Cloudflare），网站和人工资料里还没有的新链接存到 `collect/github/`，最近 30 天的列表见 [`collect/github/README.md`](collect/github/README.md) |
+| `.github/workflows/backup.yml` | GitHub Actions，每天 UTC 10:30：① 把网站自动采集的数据（`/__export.json`）备份到 `collect/kv-backup/`，网站超过 2 天没采集则运行失败（GitHub 发邮件提醒）；② 在 GitHub 上独立采集一次（`collect/github_collect.mjs`，同一套来源和核实规则，不依赖 Cloudflare），网站和人工资料里还没有的新链接存到 `collect/github/`，最近 30 天的列表见 [`collect/github/README.md`](collect/github/README.md)；③ 用网站源码和两边的采集数据生成并发布 GitHub Pages 镜像站 |
 | `collect/` | 人工整理与旧版工具：`sync_known.py`（改了资料后同步已收录名单并生成来源配置，需重新部署）、`manual/`（核实与并入工具）、`collect.py` 等（旧的服务器端采集，已停用） |
 
 ## 构建与部署
