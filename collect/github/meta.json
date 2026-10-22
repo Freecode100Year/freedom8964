@@ -1,16 +1,15 @@
 {
- "day": "2026-10-21",
+ "day": "2026-10-22",
  "cursor": 125,
  "added": [],
  "errors": [
   "公视新闻网 PNN：六四事件: 0 条",
   "The Washington Post: HTTP 502",
-  "Amnesty International 国际特赦组织: HTTP 403",
   "民间历史档案库 China Unofficial Archives: HTTP 403"
  ],
  "rejected": [],
  "pending": [],
  "retry": [],
  "srcRetry": [],
- "updated": "2026-10-21"
+ "updated": "2026-10-22"
 }
